@@ -19,7 +19,7 @@ func main() {
 	mvc.Configure(app.Party("/songs"), songs)
 
 	app.Run(
-		iris.Addr("localhost:8080"),
+		iris.Addr(":8080"),
 		iris.WithoutServerError(iris.ErrServerClosed),
 		iris.WithOptimizations,
 		)
