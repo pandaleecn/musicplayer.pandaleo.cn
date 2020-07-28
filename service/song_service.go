@@ -34,7 +34,7 @@ func (s *songService) GetByID(id int64) (datamodels.Song, bool) {
 	})
 }
 
-func (s *songService) UpdatePosterAndGenreById(id int64, poster string, link string) (datamodels.Song, error) {
+func (s *songService) UpdatePosterAndLinkByID(id int64, poster string, link string) (datamodels.Song, error) {
 	return s.repo.InsertOrUpdate(datamodels.Song{
 		ID: id,
 		Poster: poster,

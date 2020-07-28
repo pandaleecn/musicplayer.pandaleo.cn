@@ -29,7 +29,7 @@ type SongController struct {
 	Service service.SongService
 }
 
-func (c *SongController) GetBy(id int64) (movie datamodels.Song, found bool)  {
+func (c *SongController) GetBy(id int64) (song datamodels.Song, found bool)  {
 	return c.Service.GetByID(id)
 }
 
