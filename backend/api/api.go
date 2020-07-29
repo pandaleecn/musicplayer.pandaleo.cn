@@ -29,6 +29,8 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 			// routes per METHOD ( we already have the per path through parties.)
 			handler := NewCategoryHandler(categoryService)
 
+			cat.Get("/test", handler.Test)
+
 			cat.Get("/", handler.List)
 			cat.Post("/", handler.Create)
 			cat.Put("/", handler.Update)

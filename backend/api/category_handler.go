@@ -36,6 +36,15 @@ func (h *CategoryHandler) GetByID(ctx iris.Context) {
 	ctx.JSON(cat)
 }
 
+func (h *CategoryHandler) Test(ctx iris.Context)  {
+	//channelinfos := entity.Channelinfos{}
+
+	c := &entity.Channelinfo{"aa", "bb", "cc"}
+	//append(channelinfos, c)
+
+	ctx.JSON(c)
+}
+
 func (h *CategoryHandler) List(ctx iris.Context) {
 	q := ctx.Request().URL.Query()
 	opts := sql.ParseListOptions(q)
