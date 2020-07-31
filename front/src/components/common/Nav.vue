@@ -36,7 +36,34 @@ export default {
     return {
       activeMenu: '',
       // name用于高亮设置，url用于跳转
-      menus: [
+      menus: [{
+        id: 6,
+        name: 'SetUp',
+        url: 'PermissionsMange',
+        description: '系统设置',
+        icon: 'iconfont icon-settings',
+        is_show: true,
+        children: [{
+          id: 7,
+          name: 'PermissionsMange',
+          url: 'PermissionsMange',
+          description: '权限管理',
+          icon: '',
+        }, {
+          id: 8,
+          name: 'RoleMange',
+          url: 'RoleMange',
+          description: '角色管理',
+          icon: '',
+        }, {
+          id: 9,
+          name: 'UsersMange',
+          url: 'UsersMange',
+          description: '账号管理',
+          icon: '',
+        }
+        ]
+      }
       ]
     }
   },

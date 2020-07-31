@@ -17,7 +17,6 @@ Vue.use(VueAxios, axios)
 router.beforeEach(async (to, from, next) => {
   if (to.meta.requireAuth) {
     if (!utils.getCookie('token')) { // 没有登录则跳转/login页，进行登录
-      console.log(123)
       next({
         name: 'Login',
         query: {

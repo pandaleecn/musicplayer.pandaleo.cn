@@ -75,7 +75,7 @@ export default new Router({
       name: 'Login',
       meta: {
         title: '登录页',
-        requireAuth: true,
+        requireAuth: false,
       },
       component: Login
     }

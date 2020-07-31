@@ -4,7 +4,6 @@
       <div class='login'>
         <h1 style="color: #002446">IrisAdminApi</h1>
         <h3 class="logoText">develop from snowlyg</h3>
-        <h6 class="logoText">演示账号/密码 : username / 123456</h6>
         <div class="form text-center loginForm">
           <el-row>
             <el-col class="margin-bottom">
@@ -26,9 +25,9 @@
                          @click="login"
                          :loading="loading">登录</el-button>
             </el-col>
-            <el-col class="margin-bottom">
+            <!-- <el-col class="margin-bottom">
               <a @click="reset_data">重置系统数据</a>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
       </div>
