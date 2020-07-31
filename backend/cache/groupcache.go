@@ -60,6 +60,10 @@ func (c *Cache) Get(ctx context.Context, key string, dest groupcache.Sink) error
 			v = new(entity.Category)
 		case *entity.Product:
 			v = new(entity.Product)
+		case *entity.Song:
+			v = new(entity.Song)
+		case *entity.Sheet:
+			v = new(entity.Sheet)
 		}
 
 		err = c.service.GetByID(ctx, v, id)
@@ -80,6 +84,10 @@ func (c *Cache) Get(ctx context.Context, key string, dest groupcache.Sink) error
 			v = new(entity.Categories)
 		case *entity.Product:
 			v = new(entity.Products)
+		case *entity.Song:
+			v = new(entity.Song)
+		case *entity.Sheet:
+			v = new(entity.Sheet)
 		}
 
 		err = c.service.List(ctx, v, opts)
@@ -95,7 +103,6 @@ func (c *Cache) Get(ctx context.Context, key string, dest groupcache.Sink) error
 	if err != nil {
 		return err
 	}
-
 	return dest.SetBytes(b, time.Now().Add(c.maxAge))
 }
 

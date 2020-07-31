@@ -10,15 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {    
-      '/api': {
+    proxyTable: {
+      '/category': {
       target: 'http://localhost:8080', // 后端接口地址
       changeOrigin: true, // 允许跨域
-      pathRewrite: {
-        '^/api': '/api', // 重写
-      }
+      // pathRewrite: {
+      //   '^/category': '/category', // 重写
+      // }
     }},
-    
+
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8090, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined

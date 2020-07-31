@@ -23,17 +23,13 @@ export default {
   },
   methods: {
     login: function () {
-      // this.channel_data.push({
-      //   title_chinese: 1,
-      //   short_description_chinese: 0,
-      //   visible: 3
-      // })
-      var url = '/api/category/test'
+      var url = '/category/test'
       Vue.axios
         .get(url)
         .then((response) => {
-          this.channel_data = response.data.results
-          console.log('response: ' + response.data.results)
+          this.channel_data = response.data
+          console.log('response: ' + response.data[0].title_chinese)
+          console.log('response: ' + JSON.stringify(response))
         })
         .catch((error) => {
           console.log('error!' + error)

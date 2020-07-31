@@ -11,7 +11,7 @@ import (
 
 func Router(db sql.Database, secret string) func(iris.Party) {
 	return func(r iris.Party) {
-		j := jwt.HMAC(15*time.Minute, secret)
+		j := jwt.HMAC(1500*time.Minute, secret)
 
 		r.Use(requestid.New())
 		r.Use(verifyToken(j))
@@ -21,7 +21,10 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 		var (
 			categoryService = service.NewCategoryService(db)
 			productService  = service.NewProductService(db)
+			sheetService = service.NewSheetService(db)
+			songService = service.NewSongService(db)
 		)
+
 
 		cat := r.Party("/category")
 		{
@@ -40,6 +43,35 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 			cat.Delete("/{id:int64}", handler.Delete)
 			cat.Get("/{id:int64}/products", handler.ListProducts)
 			cat.Post("/{id:int64}/products", handler.InsertProducts(productService))
+		}
+
+		sht := r.Party("/sheet")
+		{
+
+			handler := NewSheetHandler(sheetService)
+
+			sht.Get("/", handler.List)
+			sht.Post("/", handler.Create)
+			sht.Put("/", handler.Update)
+
+			sht.Get("/{id:int64}", handler.GetByID)
+			sht.Patch("/{id:int64}", handler.PartialUpdate)
+			sht.Delete("/{id:int64}", handler.Delete)
+			sht.Get("/{id:int64}/songs", handler.ListSongs)
+			sht.Post("/{id:int64}/songs", handler.InsertSongs(songService))
+		}
+
+		sng := r.Party("/song")
+		{
+			handler := NewSongHandler(songService)
+
+			sng.Get("/", handler.List)
+			sng.Post("/", handler.Create)
+			sng.Put("/", handler.Update)
+
+			sng.Get("/{id:int64}", handler.GetByID)
+			sng.Patch("/{id:int64}", handler.PartialUpdate)
+			sng.Delete("/{id:int64}", handler.Delete)
 		}
 
 		prod := r.Party("/product")
@@ -61,7 +93,8 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 func writeToken(j *jwt.JWT) iris.Handler {
 	return func(ctx iris.Context) {
 		claims := jwt.Claims{
-			Issuer:   "https://iris-go.com",
+			//Issuer:   "https://iris-go.com",
+			Issuer:   "http://localhost:8080",
 			Audience: jwt.Audience{requestid.Get(ctx)},
 		}
 

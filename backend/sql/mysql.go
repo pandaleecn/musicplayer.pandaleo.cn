@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"log"
 )
 
 type MySQL struct {
@@ -56,14 +57,16 @@ func (db *MySQL) Select(ctx context.Context, dest interface{}, query string, arg
 		return err
 	}
 	defer rows.Close()
-
 	if scannable, ok := dest.(Scannable); ok {
+		log.Printf("问题的起点， rows = %s", rows)
 		return scannable.Scan(rows)
 	}
 
 	if !rows.Next() {
+
 		return ErrNoRows
 	}
+
 	return rows.Scan(dest)
 }
 

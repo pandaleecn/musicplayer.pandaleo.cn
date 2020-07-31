@@ -2,6 +2,7 @@ package entity
 
 import (
 	"database/sql"
+	"log"
 	"time"
 )
 
@@ -33,6 +34,7 @@ func (p *Product) ValidateInsert() bool {
 }
 
 func (p *Product) Scan(rows *sql.Rows) error {
+	log.Printf("%s", rows)
 	p.CreatedAt = new(time.Time)
 	p.UpdatedAt = new(time.Time)
 	return rows.Scan(&p.ID, &p.CategoryID, &p.Title, &p.ImageURL, &p.Price, &p.Description, &p.CreatedAt, &p.UpdatedAt)

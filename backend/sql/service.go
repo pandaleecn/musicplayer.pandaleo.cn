@@ -106,6 +106,7 @@ func (s *Service) List(ctx context.Context, dest interface{}, opts ListOptions) 
 	}
 
 	q, args := opts.BuildQuery()
+
 	return s.db.Select(ctx, dest, q, args...)
 }
 

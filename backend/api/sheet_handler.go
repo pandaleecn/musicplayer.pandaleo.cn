@@ -7,65 +7,55 @@ import (
 	"musicplayer/sql"
 )
 
-type CategoryHandler struct {
+type SheetHandler struct {
 	// [...options]
 
-	service *service.CategoryService
+	service *service.SheetService
 }
 
-func NewCategoryHandler(service *service.CategoryService) *CategoryHandler {
-	return &CategoryHandler{service}
+func NewSheetHandler(service *service.SheetService) *SheetHandler {
+	return &SheetHandler{service}
 }
 
-func (h *CategoryHandler) GetByID(ctx iris.Context) {
+func (h *SheetHandler) GetByID(ctx iris.Context) {
 	id := ctx.Params().GetInt64Default("id", 0)
 
-	var cat entity.Category
-	err := h.service.GetByID(ctx.Request().Context(), &cat, id)
+	var sht entity.Sheet
+	err := h.service.GetByID(ctx.Request().Context(), &sht, id)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			writeEntityNotFound(ctx)
 			return
 		}
 
-		debugf("CategoryHandler.GetByID(id=%d): %v", id, err)
+		debugf("SheetHandler.GetByID(id=%d): %v", id, err)
 		writeInternalServerError(ctx)
 		return
 	}
 
-	ctx.JSON(cat)
+	ctx.JSON(sht)
 }
 
-func (h *CategoryHandler) Test(ctx iris.Context)  {
-	//channelinfos := entity.Channelinfos{}
-
-	c := entity.Channelinfo{"aa", "bb", "cc"}
-	//append(channelinfos, c)
-	var balance []entity.Channelinfo
-	balance = append(balance,c)
-	ctx.JSON(balance)
-}
-
-func (h *CategoryHandler) List(ctx iris.Context) {
+func (h *SheetHandler) List(ctx iris.Context) {
 	q := ctx.Request().URL.Query()
 	opts := sql.ParseListOptions(q)
 
 	// initialize here in order to return an empty json array `[]` instead of `null`.
-	categories := entity.Categories{}
-	err := h.service.List(ctx.Request().Context(), &categories, opts)
+	sheets := entity.Sheets{}
+	err := h.service.List(ctx.Request().Context(), &sheets, opts)
 	if err != nil && err != sql.ErrNoRows {
-		debugf("CategoryHandler.List(DB) (limit=%d offset=%d where=%s=%v): %v",
+		debugf("SheetHandler.List(DB) (limit=%d offset=%d where=%s=%v): %v %s",
 			opts.Limit, opts.Offset, opts.WhereColumn, opts.WhereValue, err)
 
 		writeInternalServerError(ctx)
 		return
 	}
 
-	ctx.JSON(categories)
+	ctx.JSON(sheets)
 }
 
-func (h *CategoryHandler) Create(ctx iris.Context) {
-	var cat entity.Category
+func (h *SheetHandler) Create(ctx iris.Context) {
+	var cat entity.Sheet
 	if err := ctx.ReadJSON(&cat); err != nil {
 		return
 	}
@@ -77,7 +67,7 @@ func (h *CategoryHandler) Create(ctx iris.Context) {
 			return
 		}
 
-		debugf("CategoryHandler.Create(DB): %v", err)
+		debugf("SheetHandler.Create(DB): %v", err)
 		writeInternalServerError(ctx)
 		return
 	}
@@ -87,8 +77,8 @@ func (h *CategoryHandler) Create(ctx iris.Context) {
 	ctx.JSON(iris.Map{cat.PrimaryKey(): id})
 }
 
-func (h *CategoryHandler) Update(ctx iris.Context) {
-	var cat entity.Category
+func (h *SheetHandler) Update(ctx iris.Context) {
+	var cat entity.Sheet
 	if err := ctx.ReadJSON(&cat); err != nil {
 		return
 	}
@@ -100,7 +90,7 @@ func (h *CategoryHandler) Update(ctx iris.Context) {
 			return
 		}
 
-		debugf("CategoryHandler.Update(DB): %v", err)
+		debugf("SheetHandler.Update(DB): %v", err)
 		writeInternalServerError(ctx)
 		return
 	}
@@ -113,7 +103,7 @@ func (h *CategoryHandler) Update(ctx iris.Context) {
 	ctx.StatusCode(status)
 }
 
-func (h *CategoryHandler) PartialUpdate(ctx iris.Context) {
+func (h *SheetHandler) PartialUpdate(ctx iris.Context) {
 	id := ctx.Params().GetInt64Default("id", 0)
 
 	var attrs map[string]interface{}
@@ -128,7 +118,7 @@ func (h *CategoryHandler) PartialUpdate(ctx iris.Context) {
 			return
 		}
 
-		debugf("CategoryHandler.PartialUpdate(DB): %v", err)
+		debugf("SheetHandler.PartialUpdate(DB): %v", err)
 		writeInternalServerError(ctx)
 		return
 	}
@@ -141,12 +131,12 @@ func (h *CategoryHandler) PartialUpdate(ctx iris.Context) {
 	ctx.StatusCode(status)
 }
 
-func (h *CategoryHandler) Delete(ctx iris.Context) {
+func (h *SheetHandler) Delete(ctx iris.Context) {
 	id := ctx.Params().GetInt64Default("id", 0)
 
 	affected, err := h.service.DeleteByID(ctx.Request().Context(), id)
 	if err != nil {
-		debugf("CategoryHandler.Delete(DB): %v", err)
+		debugf("SheetHandler.Delete(DB): %v", err)
 		writeInternalServerError(ctx)
 		return
 	}
@@ -159,52 +149,54 @@ func (h *CategoryHandler) Delete(ctx iris.Context) {
 	ctx.StatusCode(status)
 }
 
-func (h *CategoryHandler) ListProducts(ctx iris.Context) {
+
+
+func (h *SheetHandler) ListSongs(ctx iris.Context) {
 	id := ctx.Params().GetInt64Default("id", 0)
 
 	// NOTE: could add cache here too.
 
 	q := ctx.Request().URL.Query()
-	opts := sql.ParseListOptions(q).Where("category_id", id)
-	opts.Table = "products"
+	opts := sql.ParseListOptions(q).Where("sheet_id", id)
+	opts.Table = "songs"
 	if opts.OrderByColumn == "" {
 		opts.OrderByColumn = "updated_at"
 	}
 
-	var products entity.Products
-	err := h.service.List(ctx.Request().Context(), &products, opts)
+	var songs entity.Songs
+	err := h.service.List(ctx.Request().Context(), &songs, opts)
 	if err != nil {
-		debugf("CategoryHandler.ListProducts(DB) (table=%s where=%s=%v limit=%d offset=%d): %v",
+		debugf("SheetHandler.ListSongs(DB) (table=%s where=%s=%v limit=%d offset=%d): %v",
 			opts.Table, opts.WhereColumn, opts.WhereValue, opts.Limit, opts.Offset, err)
 
 		writeInternalServerError(ctx)
 		return
 	}
 
-	ctx.JSON(products)
+	ctx.JSON(songs)
 }
 
-func (h *CategoryHandler) InsertProducts(productService *service.ProductService) iris.Handler {
+func (h *SheetHandler) InsertSongs(songService *service.SongService) iris.Handler {
 	return func(ctx iris.Context) {
-		categoryID := ctx.Params().GetInt64Default("id", 0)
+		sheetID := ctx.Params().GetInt64Default("id", 0)
 
-		var products []entity.Product
-		if err := ctx.ReadJSON(&products); err != nil {
+		var songs []entity.Song
+		if err := ctx.ReadJSON(&songs); err != nil {
 			return
 		}
 
-		for i := range products {
-			products[i].CategoryID = categoryID
+		for i := range songs {
+			songs[i].ID = sheetID
 		}
 
-		inserted, err := productService.BatchInsert(ctx.Request().Context(), products)
+		inserted, err := songService.BatchInsert(ctx.Request().Context(), songs)
 		if err != nil {
 			if err == sql.ErrUnprocessable {
 				ctx.StopWithJSON(iris.StatusUnprocessableEntity, newError(iris.StatusUnprocessableEntity, ctx.Request().Method, ctx.Path(), "required fields are missing"))
 				return
 			}
 
-			debugf("CategoryHandler.InsertProducts(DB): %v", err)
+			debugf("SheetHandler.InsertProducts(DB): %v", err)
 			writeInternalServerError(ctx)
 			return
 		}
