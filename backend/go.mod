@@ -24,6 +24,7 @@ require (
 	github.com/kataras/iris v11.1.1+incompatible
 	github.com/kataras/iris/v12 v12.1.8
 	github.com/onsi/ginkgo v1.13.0 // indirect
+	github.com/silenceper/gowatch v0.0.0-20200624073703-8e473a9db258 // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/snowlyg/ffmpegTest v0.0.0-20200622024906-dccce0b26ff6
 	github.com/snowlyg/gotransformer v0.1.0

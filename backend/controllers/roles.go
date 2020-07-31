@@ -1,17 +1,15 @@
 package controllers
 
 import (
-	"github.com/kataras/iris"
-	"gopkg.in/go-playground/validator.v8"
 	"time"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/kataras/iris/v12"
-	"usicplayer.pandaleo.cn/backend/libs"
-	"usicplayer.pandaleo.cn/backend/models"
-	"usicplayer.pandaleo.cn/backend/transformer"
-	"usicplayer.pandaleo.cn/backend/validates"
 	gf "github.com/snowlyg/gotransformer"
+	"musicplayer.pandaleo.cn/backend/libs"
+	"musicplayer.pandaleo.cn/backend/models"
+	"musicplayer.pandaleo.cn/backend/transformer"
+	"musicplayer.pandaleo.cn/backend/validates"
 )
 
 /**

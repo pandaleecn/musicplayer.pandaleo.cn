@@ -1,179 +1,63 @@
-package models
+package routes
 
 import (
-	"fmt"
-	"strconv"
-	"time"
-
-	"github.com/fatih/color"
-	"github.com/iris-contrib/middleware/jwt"
-	"github.com/jameskeane/bcrypt"
-	"github.com/jinzhu/gorm"
-	"musicplayer.pandaleo.cn/backend/libs"
+	"github.com/betacraft/yaag/irisyaag"
+	"github.com/kataras/iris/v12"
+	"musicplayer.pandaleo.cn/backend/config"
+	"musicplayer.pandaleo.cn/backend/controllers"
+	"musicplayer.pandaleo.cn/backend/middleware"
 	"musicplayer.pandaleo.cn/backend/sysinit"
-	"musicplayer.pandaleo.cn/backend/validates"
+	"os"
 )
 
-type User struct {
-	gorm.Model
-
-	Name     string `gorm:"not null VARCHAR(191)"`
-	Username string `gorm:"unique;VARCHAR(191)"`
-	Password string `gorm:"not null VARCHAR(191)"`
-}
-
-func NewUser(id uint, username string) *User {
-	return &User{
-		Model: gorm.Model{
-			ID:        id,
-			CreatedAt: time.Now(),
-			UpdatedAt: time.Now(),
-		},
-		Username: username,
-	}
-}
-
-func NewUserByStruct(ru *validates.CreateUpdateUserRequest) *User {
-	return &User{
-		Model: gorm.Model{
-			ID:        0,
-			CreatedAt: time.Now(),
-			UpdatedAt: time.Now(),
-		},
-		Username: ru.Username,
-		Name:     ru.Name,
-		Password: libs.HashPassword(ru.Password),
-	}
-}
-
-func (u *User) GetUserByUsername() {
-	IsNotFound(sysinit.Db.Where("username = ?", u.Username).First(u).Error)
-}
-
-func (u *User) GetUserById() {
-	IsNotFound(sysinit.Db.Where("id = ?", u.ID).First(u).Error)
-}
-
-/**
- * 通过 id 删除用户
- * @method DeleteUserById
- */
-func (u *User) DeleteUser() {
-	if err := sysinit.Db.Delete(u).Error; err != nil {
-		color.Red(fmt.Sprintf("DeleteUserByIdErr:%s \n ", err))
-	}
-}
-
-/**
- * 获取所有的账号
- * @method GetAllUser
- * @param  {[type]} name string [description]
- * @param  {[type]} username string [description]
- * @param  {[type]} orderBy string [description]
- * @param  {[type]} offset int    [description]
- * @param  {[type]} limit int    [description]
- */
-func GetAllUsers(name, orderBy string, offset, limit int) []*User {
-	var users []*User
-	q := GetAll(name, orderBy, offset, limit)
-	if err := q.Find(&users).Error; err != nil {
-		color.Red(fmt.Sprintf("GetAllUserErr:%s \n ", err))
-		return nil
-	}
-	return users
-}
-
-/**
- * 创建
- * @method CreateUser
- * @param  {[type]} kw string [description]
- * @param  {[type]} cp int    [description]
- * @param  {[type]} mp int    [description]
- */
-func (u *User) CreateUser(aul *validates.CreateUpdateUserRequest) {
-	u.Password = libs.HashPassword(aul.Password)
-	if err := sysinit.Db.Create(u).Error; err != nil {
-		color.Red(fmt.Sprintf("CreateUserErr:%s \n ", err))
-	}
-
-	addRoles(aul, u)
-
-	return
-}
-
-/**
- * 更新
- * @method UpdateUser
- * @param  {[type]} kw string [description]
- * @param  {[type]} cp int    [description]
- * @param  {[type]} mp int    [description]
- */
-func (u *User) UpdateUser(uj *validates.CreateUpdateUserRequest) {
-	uj.Password = libs.HashPassword(uj.Password)
-	if err := Update(u, uj); err != nil {
-		color.Red(fmt.Sprintf("UpdateUserErr:%s \n ", err))
-	}
-
-	addRoles(uj, u)
-}
-
-func addRoles(uj *validates.CreateUpdateUserRequest, user *User) {
-	if len(uj.RoleIds) > 0 {
-		userId := strconv.FormatUint(uint64(user.ID), 10)
-		if _, err := sysinit.Enforcer.DeleteRolesForUser(userId); err != nil {
-			color.Red(fmt.Sprintf("CreateUserErr:%s \n ", err))
+func App(api *iris.Application) {
+	//api.Favicon("./static/favicons/favicon.ico")
+	app := api.Party("/", middleware.CrsAuth()).AllowMethods(iris.MethodOptions)
+	{
+		staticPath := config.Root + "resources/app/static"
+		if len(os.Getenv("GOPATH")) == 0 {
+			staticPath = "resources/app/static"
 		}
+		app.HandleDir("/static", staticPath)
+		app.Get("/", func(ctx iris.Context) { // 首页模块
+			_ = ctx.View("app/index.html")
+		})
 
-		for _, roleId := range uj.RoleIds {
-			roleId := strconv.FormatUint(uint64(roleId), 10)
-			if _, err := sysinit.Enforcer.AddRoleForUser(userId, roleId); err != nil {
-				color.Red(fmt.Sprintf("CreateUserErr:%s \n ", err))
-			}
-		}
-	}
-}
+		v1 := app.Party("/v1")
+		{
+			v1.Post("/admin/login", controllers.UserLogin)
+			v1.Use(irisyaag.New())
+			v1.PartyFunc("/admin", func(app iris.Party) {
+				app.Get("/resetData", controllers.ResetData)
+				casbinMiddleware := middleware.New(sysinit.Enforcer)               //casbin for gorm                                                   // <- IMPORTANT, register the middleware.
+				app.Use(middleware.JwtHandler().Serve, casbinMiddleware.ServeHTTP) //登录验证
+				app.Get("/logout", controllers.UserLogout).Name = "退出"
 
-/**
- * 判断用户是否登录
- * @method CheckLogin
- * @param  {[type]}  id       int    [description]
- * @param  {[type]}  password string [description]
- */
-func (u *User) CheckLogin(password string) (*Token, bool, string) {
-	if u.ID == 0 {
-		return nil, false, "用户不存在"
-	} else {
-		if ok := bcrypt.Match(password, u.Password); ok {
-			token := jwt.NewTokenWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-				"exp": time.Now().Add(time.Hour * time.Duration(1)).Unix(),
-				"iat": time.Now().Unix(),
+				app.PartyFunc("/users", func(users iris.Party) {
+					users.Get("/", controllers.GetAllUsers).Name = "用户列表"
+					users.Get("/{id:uint}", controllers.GetUser).Name = "用户详情"
+					users.Post("/", controllers.CreateUser).Name = "创建用户"
+					users.Put("/{id:uint}", controllers.UpdateUser).Name = "编辑用户"
+					users.Delete("/{id:uint}", controllers.DeleteUser).Name = "删除用户"
+					users.Get("/profile", controllers.GetProfile).Name = "个人信息"
+				})
+				app.PartyFunc("/roles", func(roles iris.Party) {
+					roles.Get("/", controllers.GetAllRoles).Name = "角色列表"
+					roles.Get("/{id:uint}", controllers.GetRole).Name = "角色详情"
+					roles.Post("/", controllers.CreateRole).Name = "创建角色"
+					roles.Put("/{id:uint}", controllers.UpdateRole).Name = "编辑角色"
+					roles.Delete("/{id:uint}", controllers.DeleteRole).Name = "删除角色"
+				})
+				app.PartyFunc("/permissions", func(permissions iris.Party) {
+					permissions.Get("/", controllers.GetAllPermissions).Name = "权限列表"
+					permissions.Get("/{id:uint}", controllers.GetPermission).Name = "权限详情"
+					permissions.Post("/import", controllers.ImportPermission).Name = "导入权限"
+					permissions.Post("/", controllers.CreatePermission).Name = "创建权限"
+					permissions.Put("/{id:uint}", controllers.UpdatePermission).Name = "编辑权限"
+					permissions.Delete("/{id:uint}", controllers.DeletePermission).Name = "删除权限"
+				})
 			})
-			tokenString, _ := token.SignedString([]byte("HS2JDFKhu7Y1av7b"))
-
-			oauthToken := new(OauthToken)
-			oauthToken.Token = tokenString
-			oauthToken.UserId = u.ID
-			oauthToken.Secret = "secret"
-			oauthToken.Revoked = false
-			oauthToken.ExpressIn = time.Now().Add(time.Hour * time.Duration(1)).Unix()
-			oauthToken.CreatedAt = time.Now()
-
-			response := oauthToken.OauthTokenCreate()
-
-			return response, true, "登陆成功"
-		} else {
-			return nil, false, "用户名或密码错误"
 		}
 	}
-}
 
-/**
-* 用户退出登陆
-* @method UserAdminLogout
-* @param  {[type]} ids string [description]
- */
-func UserAdminLogout(userId uint) bool {
-	ot := OauthToken{}
-	ot.UpdateOauthTokenByUserId(userId)
-	return ot.Revoked
 }

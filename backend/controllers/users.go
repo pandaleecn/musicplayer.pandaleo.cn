@@ -1,8 +1,6 @@
 package controllers
 
 import (
-	"github.com/kataras/iris"
-	"gopkg.in/go-playground/validator.v8"
 	"strconv"
 	"time"
 

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/kataras/iris"
 	"musicplayer.pandaleo.cn/backend/libs"
 	"os"
 	"time"

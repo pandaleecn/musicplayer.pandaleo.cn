@@ -54,7 +54,7 @@ const utils = {
       setTimeout(fun, 1000 / 60);
     };
 
-    function scrollTo (element, endOffset, params) {
+    function scrollTo(element, endOffset, params) {
       var startOffset;
       var scrollProp;
       if (params.horizontal) {
@@ -73,7 +73,7 @@ const utils = {
 
       forward = (distance > 0);
 
-      function scroll () {
+      function scroll() {
         var speed = 2 + Math.abs(endOffset - startOffset) / 5;
         if (!forward) {
           speed = -speed;
