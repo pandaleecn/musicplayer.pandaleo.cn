@@ -20,7 +20,7 @@ func main() {
 
 	db, err := sql.ConnectMySQL(dsn)
 	if err != nil {
-		log.Fatalf("error connsecting to the MySQL database: %v", err)
+		log.Fatalf("error connecting to the MySQL database: %v", err)
 	}
 
 	secret := getenv("JWT_SECRET", "EbnJO3bwmX")
