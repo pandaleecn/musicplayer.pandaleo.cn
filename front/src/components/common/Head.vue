@@ -5,8 +5,7 @@
         <img src="@/assets/logo_top.png">
         <span style="top: -10px;">IrisAdminApi</span>
       </div>
-      <el-dropdown class="user_d"
-                   @command="handleCommand">
+      <el-dropdown class="user_d">
         <span class="el-dropdown-link">
           <img src="../../assets/index-head.png"
                class="user_d-img" />
