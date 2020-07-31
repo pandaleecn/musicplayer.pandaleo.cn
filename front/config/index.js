@@ -11,13 +11,14 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/category': {
-      target: 'http://localhost:8080', // 后端接口地址
-      changeOrigin: true, // 允许跨域
-      // pathRewrite: {
-      //   '^/category': '/category', // 重写
-      // }
-    }},
+      '/api': {
+        target: 'http://localhost:8080', // 后端接口地址
+        changeOrigin: true, // 允许跨域
+        // pathRewrite: {
+        //   '^/category': '/category', // 重写
+        // }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -30,7 +31,7 @@ module.exports = {
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
-    useEslint: true,
+    useEslint: false,
     // If true, eslint errors and warnings will also be shown in the error overlay
     // in the browser.
     showEslintErrorsInOverlay: false,

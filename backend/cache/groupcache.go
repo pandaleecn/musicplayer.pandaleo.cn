@@ -56,14 +56,14 @@ func (c *Cache) Get(ctx context.Context, key string, dest groupcache.Sink) error
 		}
 
 		switch c.service.RecordInfo().(type) {
-		case *entity.Category:
-			v = new(entity.Category)
-		case *entity.Product:
-			v = new(entity.Product)
 		case *entity.Song:
 			v = new(entity.Song)
 		case *entity.Sheet:
 			v = new(entity.Sheet)
+		case *entity.User:
+			v = new(entity.User)
+		case *entity.Role:
+			v = new(entity.Role)
 		}
 
 		err = c.service.GetByID(ctx, v, id)
@@ -80,14 +80,14 @@ func (c *Cache) Get(ctx context.Context, key string, dest groupcache.Sink) error
 		opts := sql.ParseListOptions(q)
 
 		switch c.service.RecordInfo().(type) {
-		case *entity.Category:
-			v = new(entity.Categories)
-		case *entity.Product:
-			v = new(entity.Products)
 		case *entity.Song:
-			v = new(entity.Song)
+			v = new(entity.Songs)
 		case *entity.Sheet:
-			v = new(entity.Sheet)
+			v = new(entity.Sheets)
+		case *entity.User:
+			v = new(entity.Users)
+		case *entity.Role:
+			v = new(entity.Roles)
 		}
 
 		err = c.service.List(ctx, v, opts)

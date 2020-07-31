@@ -44,22 +44,6 @@ func (h *SongHandler) GetByID(ctx iris.Context) {
 
 func (h *SongHandler) List(ctx iris.Context) {
 
-	//q := ctx.Request().URL.Query()
-	//opts := sql.ParseListOptions(q)
-
-	// initialize here in order to return an empty json array `[]` instead of `null`.
-	//songs := entity.Songs{}
-	//err := h.service.List(ctx.Request().Context(), &songs, opts)
-	//if err != nil && err != sql.ErrNoRows {
-	//	debugf("SheetHandler.List(DB) (limit=%d offset=%d where=%s=%v): %v %s",
-	//		opts.Limit, opts.Offset, opts.WhereColumn, opts.WhereValue, err)
-	//
-	//	writeInternalServerError(ctx)
-	//	return
-	//}
-	//
-	//ctx.JSON(songs)
-
 	key := ctx.Request().URL.RawQuery
 
 	songs := []byte("[]")

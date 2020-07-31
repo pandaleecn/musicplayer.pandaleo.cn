@@ -7,7 +7,7 @@ import (
 
 type Role struct {
 	ID          int64      `db:"id" json:"id"`
-	Name      	string     `db:"title" json:"title"`
+	Name      	string     `db:"name" json:"name"`
 	CreatedAt   *time.Time `db:"created_at" json:"created_at"`
 	UpdatedAt   *time.Time `db:"updated_at" json:"updated_at"`
 }
@@ -22,10 +22,6 @@ func (r *Role) PrimaryKey() string {
 
 func (r *Role) SortBy() string {
 	return "updated_at"
-}
-
-func (r *Role) ValidateInsert() bool {
-	return r.ID > 0 && r.Name != ""
 }
 
 func (r *Role) Scan(rows *sql.Rows) error {

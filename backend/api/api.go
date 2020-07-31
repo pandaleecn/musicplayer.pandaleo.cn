@@ -19,33 +19,13 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 		r.Get("/token", writeToken(j))
 
 		var (
-			categoryService = service.NewCategoryService(db)
-			productService  = service.NewProductService(db)
 			sheetService = service.NewSheetService(db)
 			songService = service.NewSongService(db)
+			userService = service.NewUserService(db)
+			roleService = service.NewRoleService(db)
 		)
 
-
-		cat := r.Party("/category")
-		{
-			// TODO: new Use to add middlewares to specific
-			// routes per METHOD ( we already have the per path through parties.)
-			handler := NewCategoryHandler(categoryService)
-
-			cat.Get("/test", handler.Test)
-
-			cat.Get("/", handler.List)
-			cat.Post("/", handler.Create)
-			cat.Put("/", handler.Update)
-
-			cat.Get("/{id:int64}", handler.GetByID)
-			cat.Patch("/{id:int64}", handler.PartialUpdate)
-			cat.Delete("/{id:int64}", handler.Delete)
-			cat.Get("/{id:int64}/products", handler.ListProducts)
-			cat.Post("/{id:int64}/products", handler.InsertProducts(productService))
-		}
-
-		sht := r.Party("/sheet")
+		sht := r.Party("/api/sheet")
 		{
 
 			handler := NewSheetHandler(sheetService)
@@ -61,7 +41,7 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 			sht.Post("/{id:int64}/songs", handler.InsertSongs(songService))
 		}
 
-		sng := r.Party("/song")
+		sng := r.Party("/api/song")
 		{
 			handler := NewSongHandler(songService)
 
@@ -74,17 +54,30 @@ func Router(db sql.Database, secret string) func(iris.Party) {
 			sng.Delete("/{id:int64}", handler.Delete)
 		}
 
-		prod := r.Party("/product")
+		usr := r.Party("/api/user")
 		{
-			handler := NewProductHandler(productService)
+			handler := NewUserHandler(userService)
 
-			prod.Get("/", handler.List)
-			prod.Post("/", handler.Create)
-			prod.Put("/", handler.Update)
+			usr.Get("/", handler.List)
+			usr.Post("/", handler.Create)
+			usr.Put("/", handler.Update)
 
-			prod.Get("/{id:int64}", handler.GetByID)
-			prod.Patch("/{id:int64}", handler.PartialUpdate)
-			prod.Delete("/{id:int64}", handler.Delete)
+			usr.Get("/{id:int64}", handler.GetByID)
+			usr.Patch("/{id:int64}", handler.PartialUpdate)
+			usr.Delete("/{id:int64}", handler.Delete)
+		}
+
+		rol := r.Party("/api/role")
+		{
+			handler := NewRoleHandler(roleService)
+
+			rol.Get("/", handler.List)
+			rol.Post("/", handler.Create)
+			rol.Put("/", handler.Update)
+
+			rol.Get("/{id:int64}", handler.GetByID)
+			rol.Patch("/{id:int64}", handler.PartialUpdate)
+			rol.Delete("/{id:int64}", handler.Delete)
 		}
 
 	}

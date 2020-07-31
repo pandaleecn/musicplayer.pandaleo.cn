@@ -24,7 +24,7 @@ func (s *UserService) Insert(ctx context.Context, e entity.User) (int64, error) 
 		return 0, sql.ErrUnprocessable
 	}
 
-	q := fmt.Sprintf(`INSERT INTO %s (roles_id, user_name, pass_word, avatar, age, signature)
+	q := fmt.Sprintf(`INSERT INTO %s (role_id, user_name, pass_word, avatar, age, signature)
 	VALUES (?,?,?,?,?,?);`, e.TableName())
 
 	res, err := s.DB().Exec(ctx, q, e.RoleID, e.UserName, e.PassWord, e.Avatar, e.Age, e.Signature)
@@ -55,7 +55,7 @@ func (s *UserService) BatchInsert(ctx context.Context, users []entity.User) (int
 		args = append(args, []interface{}{u.RoleID, u.UserName, u.PassWord, u.Avatar, u.Age, u.Signature}...)
 	}
 
-	q := fmt.Sprintf("INSERT INTO %s (roles_id, user_name, pass_word, avatar, age, signature) VALUES %s;",
+	q := fmt.Sprintf("INSERT INTO %s (role_id, user_name, pass_word, avatar, age, signature) VALUES %s;",
 		s.RecordInfo().TableName(),
 		strings.Join(valuesLines, ", "))
 
@@ -71,7 +71,7 @@ func (s *UserService) BatchInsert(ctx context.Context, users []entity.User) (int
 func (s *UserService) Update(ctx context.Context, e entity.User) (int, error) {
 	q := fmt.Sprintf(`UPDATE %s
     SET
-	    roles_id = ?,
+	    role_id = ?,
 	    user_name = ?,
 	    pass_word = ?,
 	    avatar = ?,
@@ -100,5 +100,5 @@ var userUpdateSchema = map[string]reflect.Kind{
 // PartialUpdate accepts a key-value map to
 // update the record based on the given "id".
 func (s *UserService) PartialUpdate(ctx context.Context, id int64, attrs map[string]interface{}) (int, error) {
-	return s.Service.PartialUpdate(ctx, id, productUpdateSchema, attrs)
+	return s.Service.PartialUpdate(ctx, id, userUpdateSchema, attrs)
 }

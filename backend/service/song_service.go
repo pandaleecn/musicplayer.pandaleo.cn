@@ -24,10 +24,10 @@ func (s *SongService) Insert(ctx context.Context, e entity.Song) (int64, error) 
 		return 0, sql.ErrUnprocessable
 	}
 
-	q := fmt.Sprintf(`INSERT INTO %s (sheet_id, name, singer, image_url, description)
-	VALUES (?,?,?,?,?);`, e.TableName())
+	q := fmt.Sprintf(`INSERT INTO %s (sheet_id, name, singer, link, image_url, description)
+	VALUES (?,?,?,?,?,?);`, e.TableName())
 
-	res, err := s.DB().Exec(ctx, q, e.SheetID, e.Name, e.Singer, e.ImageURL, e.Description)
+	res, err := s.DB().Exec(ctx, q, e.SheetID, e.Name, e.Singer,e.Link, e.ImageURL, e.Description)
 	if err != nil {
 		return 0, err
 	}
@@ -51,11 +51,11 @@ func (s *SongService) BatchInsert(ctx context.Context, songs []entity.Song) (int
 			return 0, sql.ErrUnprocessable
 		}
 
-		valuesLines = append(valuesLines, "(?,?,?,?,?)")
+		valuesLines = append(valuesLines, "(?,?,?,?,?,?)")
 		args = append(args, []interface{}{s.SheetID, s.Name, s.Singer, s.ImageURL, s.Description}...)
 	}
 
-	q := fmt.Sprintf("INSERT INTO %s (sheet_id, title, singer, image_url, description) VALUES %s;",
+	q := fmt.Sprintf("INSERT INTO %s (sheet_id, title, singer, link, image_url, description) VALUES %s;",
 		s.RecordInfo().TableName(),
 		strings.Join(valuesLines, ", "))
 
@@ -74,11 +74,12 @@ func (s *SongService) Update(ctx context.Context, e entity.Song) (int, error) {
 	    sheet_id = ?,
 	    name = ?,
 	    singer = ?,
+		link = ?,
 	    image_url = ?,
 	    description = ?
 	WHERE %s = ?;`, e.TableName(), e.PrimaryKey())
 
-	res, err := s.DB().Exec(ctx, q, e.SheetID, e.Name, e.Singer, e.ImageURL, e.Description, e.ID)
+	res, err := s.DB().Exec(ctx, q, e.SheetID, e.Name, e.Singer, e.Link, e.Link, e.ImageURL, e.Description, e.ID)
 	if err != nil {
 		return 0, err
 	}
@@ -91,6 +92,7 @@ var songUpdateSchema = map[string]reflect.Kind{
 	"sheet_id": reflect.Int,
 	"name":       reflect.String,
 	"singer":   reflect.String,
+	"link":		reflect.String,
 	"image_url":       reflect.String,
 	"description": reflect.String,
 }

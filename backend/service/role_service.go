@@ -21,7 +21,6 @@ func (s *RoleService) Insert(ctx context.Context, e entity.Role) (int64, error) 
 	if e.Name == "" {
 		return 0, sql.ErrUnprocessable
 	}
-
 	q := fmt.Sprintf(`INSERT INTO %s (name)
 	VALUES (?);`, e.TableName())
 
@@ -57,5 +56,5 @@ var roleUpdateSchema = map[string]reflect.Kind{
 }
 
 func (s *RoleService) PartialUpdate(ctx context.Context, id int64, attrs map[string]interface{}) (int, error) {
-	return s.Service.PartialUpdate(ctx, id, categoryUpdateSchema, attrs)
+	return s.Service.PartialUpdate(ctx, id, roleUpdateSchema, attrs)
 }

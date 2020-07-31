@@ -7,7 +7,7 @@ import (
 
 type User struct {
 	ID          int64      `db:"id" json:"id"`
-	RoleID  	int64	   `db:"roles_id" json:"roles_id"`
+	RoleID  	int64	   `db:"role_id" json:"role_id"`
 	UserName	string     `db:"user_name" json:"user_name"`
 	PassWord    string     `db:"pass_word" json:"pass_word"`
 	Avatar		string     `db:"avatar" json:"avatar"`
@@ -30,13 +30,13 @@ func (u *User) SortBy() string {
 }
 
 func (u *User) ValidateInsert() bool {
-	return u.RoleID > 0 && u.UserName != "" && u.PassWord != "" && u.Avatar != "" && u.Signature != ""
+	return u.RoleID > 0 && u.UserName != "" && u.PassWord != "" && u.Avatar != "" && u.Age > 0 && u.Signature != ""
 }
 
 func (u *User) Scan(rows *sql.Rows) error {
 	u.CreatedAt = new(time.Time)
 	u.UpdatedAt = new(time.Time)
-	return rows.Scan(&u.ID, &u.RoleID, &u.UserName, &u.PassWord, &u.Avatar, &u.Signature, &u.CreatedAt, &u.UpdatedAt)
+	return rows.Scan(&u.ID, &u.RoleID, &u.UserName, &u.PassWord, &u.Avatar, &u.Age, &u.Signature, &u.CreatedAt, &u.UpdatedAt)
 }
 
 type Users []*User

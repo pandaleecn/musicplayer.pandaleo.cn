@@ -3,9 +3,9 @@
     <h1>{{ msg }}</h1>
     <el-button type="primary" @click="login">Show Channels</el-button>
     <el-table :data="channel_data" border justify="center" style="width: 100%">
-      <el-table-column prop="title_chinese" label="ChannelName"></el-table-column>
-      <el-table-column prop="short_description_chinese" label="Description"></el-table-column>
-      <el-table-column prop="visible" label="Visible"></el-table-column>
+      <el-table-column prop="user_name" label="ChannelName"></el-table-column>
+      <el-table-column prop="pass_word" label="Description"></el-table-column>
+      <el-table-column prop="avatar" label="Visible"></el-table-column>
     </el-table>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     login: function () {
-      var url = '/category/test'
+      var url = '/api/user?offset=0&limit=30'
       Vue.axios
         .get(url)
         .then((response) => {
