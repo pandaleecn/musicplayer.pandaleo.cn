@@ -171,7 +171,28 @@ const utils = {
   //账号详情
   getAdminsDetail: (id) => axios.get(`v1/admin/users/${id}`),
 
+  /*----------------歌曲管理-------------------*/
+  //歌曲列表
+  getSongs: (datas) => axios.get(`v1/admin/songs`, datas),
+  //新增歌曲
+  postSongs: (form) => axios.post(`v1/admin/songs`, {
+    name: form.Name,
+    display_name: form.DisplayName,
+    permissions_ids: form.permissions_ids
+  }),
+  //编辑歌曲
+  putSongs: (form) => axios.put(`v1/admin/songs/${form.Id}`, {
+    name: form.Name,
+    display_name: form.DisplayName,
+    permissions_ids: form.permissions_ids
+  }),
+  //删除歌曲
+  deleteSongs: (id) => axios.delete(`v1/admin/songs/${id}`),
+  //歌曲详情
+  getSongsDetail: (id) => axios.get(`v1/admin/songs/${id}`),
+
 };
+
 
 // 请求拦截器
 axios.interceptors.request.use(

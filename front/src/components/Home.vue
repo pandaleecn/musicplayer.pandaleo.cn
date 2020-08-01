@@ -10,7 +10,7 @@
 							</el-col>
 							<el-col :span="19">
 								<p class="admin-home-p1">您好，{{UserProfile.Name}}，祝你开心每一天！</p>
-								<p class="admin-home-p2">欢迎来到，IrisAdminApi</p>
+								<p class="admin-home-p2">欢迎来到，音乐播放器</p>
 							</el-col>
 						</el-row>
 					</el-col>
@@ -22,22 +22,22 @@
 				</el-row>
 				<div class="admin-home-rowb">
 					<div class="admin-home-rowb-a">
-						<p class="admin-home-rowb-a-p1">订单创建流程</p>
+						<p class="admin-home-rowb-a-p1">歌曲创建流程</p>
 						<el-row class="admin-home-rowb-a-row">
 							<el-col :span="6" class="admin-home-rowb-a-row-col xian">
 								<i class="iconfont icon-ic_dns admin-home-rowb-a-row-icon"></i>
 								<div class="admin-home-rowb-a-o"></div>
-								<p class="admin-home-rowb-a-pc">选择方案类型</p>
+								<p class="admin-home-rowb-a-pc">选择专辑</p>
 							</el-col>
 							<el-col :span="6" class="admin-home-rowb-a-row-col xian">
 								<i class="iconfont icon-account-box admin-home-rowb-a-row-icon"></i>
 								<div class="admin-home-rowb-a-o"></div>
-								<p class="admin-home-rowb-a-pc">选择客户</p>
+								<p class="admin-home-rowb-a-pc">选择歌手</p>
 							</el-col>
 							<el-col :span="6" class="admin-home-rowb-a-row-col xian">
 								<i class="iconfont icon-ic_assignment admin-home-rowb-a-row-icon"></i>
 								<div class="admin-home-rowb-a-o"></div>
-								<p class="admin-home-rowb-a-pc">完善订单信息</p>
+								<p class="admin-home-rowb-a-pc">完善歌曲</p>
 							</el-col>
 							<el-col :span="6">
 								<i class="iconfont icon-ic_check_circle admin-home-rowb-a-row-icon"></i>

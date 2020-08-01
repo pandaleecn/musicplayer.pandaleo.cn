@@ -2,7 +2,7 @@
   <div class='loginBox'>
     <div class="login_main">
       <div class='login'>
-        <h1 style="color: #002446">IrisAdminApi</h1>
+        <h1 style="color: #002446">音乐播放器</h1>
         <h3 class="logoText">develop from snowlyg</h3>
         <h6 class="logoText">演示账号/密码 : username / 123456</h6>
         <div class="form text-center loginForm">

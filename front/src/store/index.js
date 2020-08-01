@@ -17,6 +17,11 @@ const store = new Vuex.Store({
             queryData: {},
             total: 0
 		},
+		SongsData: {
+            ListData: [],
+            queryData: {},
+            total: 0
+		},
 		AdminsData: {
             ListData: [],
             queryData: {},
@@ -32,6 +37,9 @@ const store = new Vuex.Store({
 		},
 		RolesData(state, data) {
 			state.RolesData.ListData = data
+		},
+		SongsData(state, data) {
+			state.SongsData.ListData = data
 		},
 		AdminsData(state, data) {
 			state.AdminsData.ListData = data
@@ -59,6 +67,13 @@ const store = new Vuex.Store({
 		},datas) {
 			const data = await utils.getRoles(datas);
 			commit('RolesData', data.data.data)
+		},
+		async getSongs({
+			state,
+			commit
+		},datas) {
+			const data = await utils.getSongs(datas);
+			commit('SongsData', data.data.data)
 		},
 		async getAdmins({
 			state,

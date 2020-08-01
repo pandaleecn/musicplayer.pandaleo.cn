@@ -11,7 +11,8 @@ import RoleMange from '@/components/SetUp/RoleMange'
 import AddRole from '@/components/SetUp/RoleMange/AddRole'
 import UsersMange from '@/components/SetUp/UsersMange'
 import AddUsers from '@/components/SetUp/UsersMange/AddUsers'
-
+import SongMange from '@/components/ResourceMange/SongMange'
+import AddSong from '@/components/ResourceMange/SongMange/AddSong'
 
 const parentComponent = {
 	template: `<router-view></router-view>`
@@ -33,6 +34,45 @@ export default new Router({
 			},
 			component: Home,
 		}, {
+			path: 'ResourceMange',
+			name: 'ResourceMange',
+			meta: {
+				title: '资源管理',
+				requireAuth: true,
+			},
+			component: parentComponent,
+			children: [{
+				path: 'SongMange',
+				name: 'SongMange',
+				meta: {
+					title: '歌曲管理',
+					requireAuth: true,
+					cid: 11
+				},
+				component: SongMange,
+			},
+			{
+				path: 'AddSong',
+				name: 'AddSong',
+				meta: {
+					title: '新增歌曲',
+					requireAuth: true,
+					cid: 11
+				},
+				component: AddSong,
+			},
+			{
+				path: 'EditSong',
+				name: 'EditSong',
+				meta: {
+					title: '编辑歌曲',
+					requireAuth: true,
+					cid: 11
+				},
+				component: AddSong,
+			}
+		]
+		},{
 			path: 'SetUp',
 			name: 'SetUp',
 			meta: {

@@ -56,6 +56,13 @@ func App(api *iris.Application) {
 					permissions.Put("/{id:uint}", controllers.UpdatePermission).Name = "编辑权限"
 					permissions.Delete("/{id:uint}", controllers.DeletePermission).Name = "删除权限"
 				})
+				app.PartyFunc("/songs", func(songs iris.Party) {
+					songs.Get("/", controllers.GetAllSongs).Name = "歌曲列表"
+					songs.Get("/{id:uint}", controllers.GetSong).Name = "歌曲详情"
+					songs.Post("/", controllers.CreateSong).Name = "新增歌曲"
+					songs.Put("/{id:uint}", controllers.UpdateSong).Name = "编辑歌曲"
+					songs.Delete("/{id:uint}", controllers.DeleteSong).Name = "删除歌曲"
+				})
 			})
 		}
 	}

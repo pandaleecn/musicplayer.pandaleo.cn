@@ -30,6 +30,21 @@
         activeMenu: '',
         // name用于高亮设置，url用于跳转
         menus: [{
+          id: 10,
+          name: 'ResourceMange',
+          url: 'ResourceMange',
+          description: '资源管理',
+          icon: 'iconfont icon-settings',
+          is_show: true,
+          children: [{
+            id: 11,
+            name: 'SongMange',
+            url: 'SongMange',
+            description: '歌曲管理',
+            icon: ''
+          }]
+        },
+        {
           id: 6,
           name: 'SetUp',
           url: 'PermissionsMange',
