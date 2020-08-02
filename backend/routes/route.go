@@ -1,13 +1,14 @@
 package routes
 
 import (
+	"os"
+
 	"github.com/betacraft/yaag/irisyaag"
 	"github.com/kataras/iris/v12"
 	"musicplayer.pandaleo.cn/backend/config"
 	"musicplayer.pandaleo.cn/backend/controllers"
 	"musicplayer.pandaleo.cn/backend/middleware"
 	"musicplayer.pandaleo.cn/backend/sysinit"
-	"os"
 )
 
 func App(api *iris.Application) {

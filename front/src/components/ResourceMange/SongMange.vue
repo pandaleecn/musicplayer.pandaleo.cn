@@ -53,7 +53,7 @@
                 },
                 customFilters: [{
                     vals: '',
-                    props: ['DisplayName', 'Name'],
+                    props: ['Name', 'Name'],
                 }, {
                     vals: []
                 }, {

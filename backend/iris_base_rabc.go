@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/kataras/iris/v12/context"
 	"musicplayer.pandaleo.cn/backend/libs"
 	"os"
 	"time"
@@ -29,6 +30,13 @@ func NewLogFile() *os.File {
 
 func NewApp() *iris.Application {
 	api := iris.New()
+	api.Options("{root:path}", func(context context.Context) {
+		context.Header("Access-Control-Allow-Credentials", "true")
+		context.Header("Access-Control-Allow-Headers", "Origin,Authorization,Content-Type,Accept,X-Total,X-Limit,X-Offset")
+		context.Header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS,HEAD")
+		context.Header("Access-Control-Allow-Origin", "*")
+		context.Header("Access-Control-Expose-Headers", "Content-Length,Content-Encoding,Content-Type")
+	})
 	api.Logger().SetLevel("debug")
 
 	htmlPath := config.Root + "resources"

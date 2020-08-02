@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/go-playground/validator/v10"
+	gf "github.com/snowlyg/gotransformer"
 	"musicplayer.pandaleo.cn/backend/models"
 	"musicplayer.pandaleo.cn/backend/transformer"
 	"musicplayer.pandaleo.cn/backend/validates"
-	gf "github.com/snowlyg/gotransformer"
 
 	"github.com/kataras/iris/v12"
 )

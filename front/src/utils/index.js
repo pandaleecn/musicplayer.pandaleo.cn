@@ -177,14 +177,14 @@ const utils = {
   //新增歌曲
   postSongs: (form) => axios.post(`v1/admin/songs`, {
     name: form.Name,
-    display_name: form.DisplayName,
-    permissions_ids: form.permissions_ids
+    url: form.Url,
+    aritist: form.Aitist
   }),
   //编辑歌曲
   putSongs: (form) => axios.put(`v1/admin/songs/${form.Id}`, {
     name: form.Name,
-    display_name: form.DisplayName,
-    permissions_ids: form.permissions_ids
+    url: form.Url,
+    aritist: form.Aitist
   }),
   //删除歌曲
   deleteSongs: (id) => axios.delete(`v1/admin/songs/${id}`),
@@ -282,5 +282,6 @@ axios.interceptors.response.use(
 
 // 基础url utils/apiUrl.js 文件设置
 axios.defaults.baseURL = `${api_url}/`;
+
 
 export default utils
