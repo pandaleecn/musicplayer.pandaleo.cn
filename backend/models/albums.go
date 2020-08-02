@@ -7,6 +7,5 @@ type Album struct {
 
 	Name		string `gorm:"not null VARCHAR(191)"`
 	Cover		string `gorm:"VARCHAR(191)"`
-	ArtistID	int		`gorm:"VARCHAR(191)"`
-	Artist		Artist	`gorm:"foreignkey:ArtistID"`
+	ArtistID	int	 	`gorm:"VARCHAR(191)"`
 }

@@ -88,6 +88,7 @@ export default {
       uploaddomain: 'https://up-z0.qiniup.com', // 七牛云的上传地址（华南区）
       qiniuaddr: 'http://files.pandaleo.cn', // 七牛云的图片外链地址
       uploadPicUrl: '', // 提交到后台图片地址
+      originName: '',
       fileList: []
     }
   },
@@ -193,15 +194,17 @@ export default {
 
     },
     beforeSongUpload (file) {
-      var time = new Date().format('yyyy-MM-dd HH:mm:ss')
+      var date = new Date().format('yyyy-MM-dd')
+      var time = new Date().toLocaleTimeString().replace(/:/g, '-')
       let dot = file.name.lastIndexOf('.')
       let fileOriginName = file.name.substring(0, dot)
-      var fileName = fileOriginName + '-' + time + '.mp3'
+      this.originName = fileOriginName
+      var fileName = fileOriginName + '-' + date + time + '.mp3'
       this.QiniuData.key = fileName
     },
     uploadSuccess (response, file, fileList) {
       this.ruleForm.Url = `${this.qiniuaddr}/${this.QiniuData.key}`
-      console.log(this.QiniuData.key)
+      this.ruleForm.Name = this.originName
     },
     uploadError (err, file, fileList) {
       console.log('歌曲上传失败！')

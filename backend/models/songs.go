@@ -16,8 +16,8 @@ type Song struct {
 	Name		string	`gorm:"not null VARCHAR(191)"`
 	Url			string	`gorm:"VARCHAR(191)"`
 	Cover	 	string 	`gorm:"VARCHAR(191)"`
-	ArtistID	int		`gorm:"VARCHAR(191)"`
-	Artist		Artist	`gorm:"foreignkey:ArtistID"`
+	ArtistID	uint	`gorm:"VARCHAR(191)"`
+	UserID		uint	`gorm:"VARCHAR(191)"`
 	Lrc			string	`gorm:"VARCHAR(191)"`
 }
 
@@ -43,6 +43,7 @@ func NewSongByStruct(vs *validates.CreateUpdateSongRequest) *Song {
 		Url:	vs.Url,
 		Cover:	vs.Cover,
 		ArtistID:	vs.ArtistID,
+		UserID:		vs.UserID,
 	}
 }
 

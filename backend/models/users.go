@@ -145,7 +145,7 @@ func (u *User) CheckLogin(password string) (*Token, bool, string) {
 	} else {
 		if ok := bcrypt.Match(password, u.Password); ok {
 			token := jwt.NewTokenWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-				"exp": time.Now().Add(time.Hour * time.Duration(1)).Unix(),
+				"exp": time.Now().Add(99999 * time.Hour * time.Duration(1)).Unix(),
 				"iat": time.Now().Unix(),
 			})
 			tokenString, _ := token.SignedString([]byte("HS2JDFKhu7Y1av7b"))

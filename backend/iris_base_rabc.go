@@ -54,6 +54,8 @@ func NewApp() *iris.Application {
 		&models.Stream{},
 		&models.Song{},
 		&models.Artist{},
+		&models.Album{},
+		&models.Playlist{},
 	)
 
 	iris.RegisterOnInterrupt(func() {

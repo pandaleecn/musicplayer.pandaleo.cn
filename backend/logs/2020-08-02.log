@@ -3568,3 +3568,300 @@ Application started. Press CTRL+C to shut down.
 [DBUG] 2020/08/02 22:35 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.59638026e+09 iat:1.59637666e+09] jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA true}
 [DBUG] 2020/08/02 22:35 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA
 [DBUG] 2020/08/02 22:35 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.59638026e+09 iat:1.59637666e+09] jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA true}
+[DBUG] 2020/08/02 23:08 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA
+[DBUG] 2020/08/02 23:08 Error parsing token: Token is expired
+[DBUG] 2020/08/02 23:09 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA
+[DBUG] 2020/08/02 23:09 Error parsing token: Token is expired
+[INFO] 2020/08/02 23:09 username 登录系统
+[DBUG] 2020/08/02 23:09 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:09 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:09 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:09 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:09 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:09 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:10 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:10 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:10 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:10 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:10 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:10 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:10 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:10 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:10 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:10 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:10 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:10 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000332660 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:32 [./routes\route.go:65] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:65] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:68] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:61] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetAllSongs() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:62] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:63] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:63] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:64] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:32 [./iris_base_rabc.go:33] OPTIONS: /{root:path} -> main.NewApp.func1()
+[DBUG] 2020/08/02 23:32 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/02 23:32 [./routes\route.go:68] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/02 23:32 Application: 1 registered view engine(s)
+[DBUG] 2020/08/02 23:32 Application: running using 1 host(s)
+[DBUG] 2020/08/02 23:32 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/02 23:32 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/02 23:32 Host: register startup notifier
+[DBUG] 2020/08/02 23:32 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/02 23:32 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/02 23:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000506740 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000506740 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000506740 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:33 [./routes\route.go:65] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:65] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:68] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:61] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetAllSongs() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:62] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:63] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:63] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:64] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:33 [./iris_base_rabc.go:33] OPTIONS: /{root:path} -> main.NewApp.func1()
+[DBUG] 2020/08/02 23:33 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/02 23:33 [./routes\route.go:68] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/02 23:33 Application: 1 registered view engine(s)
+[DBUG] 2020/08/02 23:33 Application: running using 1 host(s)
+[DBUG] 2020/08/02 23:33 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/02 23:33 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/02 23:33 Host: register startup notifier
+[DBUG] 2020/08/02 23:33 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/02 23:33 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/02 23:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc0005e0460 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc0005e0460 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc0005e0460 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc0005e0460 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:39 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU1MDEsImlhdCI6MTU5NjM3MTkwMX0.P9piW0imbPUOPCTTxS5Nf-FQOn3lkIp7EvXgUbzNvVs
+[DBUG] 2020/08/02 23:39 Error parsing token: Token is expired
+[INFO] 2020/08/02 23:39 aaa 登录系统
+[DBUG] 2020/08/02 23:42 [./routes\route.go:65] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:65] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:68] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:61] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetAllSongs() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:62] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:63] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:63] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:64] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/02 23:42 [./iris_base_rabc.go:33] OPTIONS: /{root:path} -> main.NewApp.func1()
+[DBUG] 2020/08/02 23:42 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/02 23:42 [./routes\route.go:68] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/02 23:42 Application: 1 registered view engine(s)
+[DBUG] 2020/08/02 23:42 Application: running using 1 host(s)
+[DBUG] 2020/08/02 23:42 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/02 23:42 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/02 23:42 Host: register startup notifier
+[DBUG] 2020/08/02 23:42 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/02 23:42 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/02 23:42 Token extracted: yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODYzNDksImlhdCI6MTU5NjM4Mjc0OX0.OTliPnlJAPX0FGEh1d3DI2CoaRtGMGixh5Pbck4hh50
+[DBUG] 2020/08/02 23:42 Error parsing token: invalid character 'È' looking for beginning of value
+[DBUG] 2020/08/02 23:42 Token extracted: yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODYzNDksImlhdCI6MTU5NjM4Mjc0OX0.OTliPnlJAPX0FGEh1d3DI2CoaRtGMGixh5Pbck4hh50
+[DBUG] 2020/08/02 23:42 Error parsing token: invalid character 'È' looking for beginning of value
+[INFO] 2020/08/02 23:42 aaa 登录系统
+[DBUG] 2020/08/02 23:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/02 23:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/02 23:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/03 00:09 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:09 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/03 00:09 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:09 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.596384594e+09 iat:1.596380994e+09] LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok true}
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:11 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:11 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:14 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:14 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:14 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:14 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:14 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:14 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:14 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:14 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:14 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:14 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:14 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:14 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:15 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:16 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:16 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:16 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:16 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:16 Error parsing token: Token is expired
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODQ1OTQsImlhdCI6MTU5NjM4MDk5NH0.LWYEMKCMUqF7iD1IQvQIqSOdR7p_FDEsO-hCsL0KOok
+[DBUG] 2020/08/03 00:16 Error parsing token: Token is expired
+[INFO] 2020/08/03 00:16 username 登录系统
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
+[DBUG] 2020/08/03 00:16 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4
+[DBUG] 2020/08/03 00:16 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTYzODEzODcsImlhdCI6MTU5NjM4NDk4N30.gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 0xc000410040 map[alg:HS256 typ:JWT] map[exp:1.956381387e+09 iat:1.596384987e+09] gJxeZzH4nDyNL1oqz27TXF5--DF1grJCELqtt0XNwb4 true}
