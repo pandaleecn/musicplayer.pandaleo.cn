@@ -64,6 +64,9 @@ func App(api *iris.Application) {
 					songs.Put("/{id:uint}", controllers.UpdateSong).Name = "编辑歌曲"
 					songs.Delete("/{id:uint}", controllers.DeleteSong).Name = "删除歌曲"
 				})
+				app.PartyFunc("/qiniutoken", func(qiniu iris.Party) {
+					qiniu.Get("/", controllers.GetQiniuToken).Name = "七牛token"
+				})
 			})
 		}
 	}

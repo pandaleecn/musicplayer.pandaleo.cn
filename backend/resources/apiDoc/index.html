@@ -143,6 +143,10 @@
             
                 <li role="presentation"><a href="#21top" role="tab" data-toggle="tab">GET : /v1/admin/users/10</a></li>
             
+                <li role="presentation"><a href="#22top" role="tab" data-toggle="tab">GET : /v1/admin/qiniutoken</a></li>
+            
+                <li role="presentation"><a href="#23top" role="tab" data-toggle="tab">GET : /v1/admin/songs/2</a></li>
+            
         <ul>
     </div>
     <div class="col-md-8 tab-content">
@@ -329,6 +333,100 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"重置数据成功\",\"data\":[{\"name\":\"/v1/admin/users\",\"display_name\":\"创建用户\",\"description\":\"创建用户\",\"act\":\"POST\"},{\"name\":\"/v1/admin/users/{id:uint}\",\"display_name\":\"编辑用户\",\"description\":\"编辑用户\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/users/{id:uint}\",\"display_name\":\"用户详情\",\"description\":\"用户详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/users/{id:uint}\",\"display_name\":\"删除用户\",\"description\":\"删除用户\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/users\",\"display_name\":\"用户列表\",\"description\":\"用户列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/users/profile\",\"display_name\":\"个人信息\",\"description\":\"个人信息\",\"act\":\"GET\"},{\"name\":\"/v1/admin/roles\",\"display_name\":\"角色列表\",\"description\":\"角色列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/roles/{id:uint}\",\"display_name\":\"角色详情\",\"description\":\"角色详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/logout\",\"display_name\":\"退出\",\"description\":\"退出\",\"act\":\"GET\"},{\"name\":\"/v1/admin/roles\",\"display_name\":\"创建角色\",\"description\":\"创建角色\",\"act\":\"POST\"},{\"name\":\"/v1/admin/roles/{id:uint}\",\"display_name\":\"编辑角色\",\"description\":\"编辑角色\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/roles/{id:uint}\",\"display_name\":\"删除角色\",\"description\":\"删除角色\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/permissions\",\"display_name\":\"权限列表\",\"description\":\"权限列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/permissions/{id:uint}\",\"display_name\":\"权限详情\",\"description\":\"权限详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/permissions/import\",\"display_name\":\"导入权限\",\"description\":\"导入权限\",\"act\":\"POST\"},{\"name\":\"/v1/admin/permissions\",\"display_name\":\"创建权限\",\"description\":\"创建权限\",\"act\":\"POST\"},{\"name\":\"/v1/admin/permissions/{id:uint}\",\"display_name\":\"编辑权限\",\"description\":\"编辑权限\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/permissions/{id:uint}\",\"display_name\":\"删除权限\",\"description\":\"删除权限\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/songs\",\"display_name\":\"歌曲列表\",\"description\":\"歌曲列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/songs/{id:uint}\",\"display_name\":\"歌曲详情\",\"description\":\"歌曲详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/songs\",\"display_name\":\"新增歌曲\",\"description\":\"新增歌曲\",\"act\":\"POST\"},{\"name\":\"/v1/admin/songs/{id:uint}\",\"display_name\":\"编辑歌曲\",\"description\":\"编辑歌曲\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/songs/{id:uint}\",\"display_name\":\"删除歌曲\",\"description\":\"删除歌曲\",\"act\":\"DELETE\"}]}");
                             document.getElementById('response-body-0-1').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer false</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-0-2">{&#34;status&#34;:true,&#34;msg&#34;:&#34;重置数据成功&#34;,&#34;data&#34;:[{&#34;name&#34;:&#34;/v1/admin/logout&#34;,&#34;display_name&#34;:&#34;退出&#34;,&#34;description&#34;:&#34;退出&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/users&#34;,&#34;display_name&#34;:&#34;用户列表&#34;,&#34;description&#34;:&#34;用户列表&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/users/{id:uint}&#34;,&#34;display_name&#34;:&#34;用户详情&#34;,&#34;description&#34;:&#34;用户详情&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/users&#34;,&#34;display_name&#34;:&#34;创建用户&#34;,&#34;description&#34;:&#34;创建用户&#34;,&#34;act&#34;:&#34;POST&#34;},{&#34;name&#34;:&#34;/v1/admin/users/{id:uint}&#34;,&#34;display_name&#34;:&#34;编辑用户&#34;,&#34;description&#34;:&#34;编辑用户&#34;,&#34;act&#34;:&#34;PUT&#34;},{&#34;name&#34;:&#34;/v1/admin/users/{id:uint}&#34;,&#34;display_name&#34;:&#34;删除用户&#34;,&#34;description&#34;:&#34;删除用户&#34;,&#34;act&#34;:&#34;DELETE&#34;},{&#34;name&#34;:&#34;/v1/admin/songs/{id:uint}&#34;,&#34;display_name&#34;:&#34;删除歌曲&#34;,&#34;description&#34;:&#34;删除歌曲&#34;,&#34;act&#34;:&#34;DELETE&#34;},{&#34;name&#34;:&#34;/v1/admin/users/profile&#34;,&#34;display_name&#34;:&#34;个人信息&#34;,&#34;description&#34;:&#34;个人信息&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/roles&#34;,&#34;display_name&#34;:&#34;角色列表&#34;,&#34;description&#34;:&#34;角色列表&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/roles/{id:uint}&#34;,&#34;display_name&#34;:&#34;角色详情&#34;,&#34;description&#34;:&#34;角色详情&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/roles&#34;,&#34;display_name&#34;:&#34;创建角色&#34;,&#34;description&#34;:&#34;创建角色&#34;,&#34;act&#34;:&#34;POST&#34;},{&#34;name&#34;:&#34;/v1/admin/roles/{id:uint}&#34;,&#34;display_name&#34;:&#34;编辑角色&#34;,&#34;description&#34;:&#34;编辑角色&#34;,&#34;act&#34;:&#34;PUT&#34;},{&#34;name&#34;:&#34;/v1/admin/roles/{id:uint}&#34;,&#34;display_name&#34;:&#34;删除角色&#34;,&#34;description&#34;:&#34;删除角色&#34;,&#34;act&#34;:&#34;DELETE&#34;},{&#34;name&#34;:&#34;/v1/admin/permissions&#34;,&#34;display_name&#34;:&#34;权限列表&#34;,&#34;description&#34;:&#34;权限列表&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/permissions/{id:uint}&#34;,&#34;display_name&#34;:&#34;权限详情&#34;,&#34;description&#34;:&#34;权限详情&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/permissions/import&#34;,&#34;display_name&#34;:&#34;导入权限&#34;,&#34;description&#34;:&#34;导入权限&#34;,&#34;act&#34;:&#34;POST&#34;},{&#34;name&#34;:&#34;/v1/admin/permissions&#34;,&#34;display_name&#34;:&#34;创建权限&#34;,&#34;description&#34;:&#34;创建权限&#34;,&#34;act&#34;:&#34;POST&#34;},{&#34;name&#34;:&#34;/v1/admin/permissions/{id:uint}&#34;,&#34;display_name&#34;:&#34;编辑权限&#34;,&#34;description&#34;:&#34;编辑权限&#34;,&#34;act&#34;:&#34;PUT&#34;},{&#34;name&#34;:&#34;/v1/admin/permissions/{id:uint}&#34;,&#34;display_name&#34;:&#34;删除权限&#34;,&#34;description&#34;:&#34;删除权限&#34;,&#34;act&#34;:&#34;DELETE&#34;},{&#34;name&#34;:&#34;/v1/admin/songs&#34;,&#34;display_name&#34;:&#34;歌曲列表&#34;,&#34;description&#34;:&#34;歌曲列表&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/songs/{id:uint}&#34;,&#34;display_name&#34;:&#34;歌曲详情&#34;,&#34;description&#34;:&#34;歌曲详情&#34;,&#34;act&#34;:&#34;GET&#34;},{&#34;name&#34;:&#34;/v1/admin/songs&#34;,&#34;display_name&#34;:&#34;新增歌曲&#34;,&#34;description&#34;:&#34;新增歌曲&#34;,&#34;act&#34;:&#34;POST&#34;},{&#34;name&#34;:&#34;/v1/admin/songs/{id:uint}&#34;,&#34;display_name&#34;:&#34;编辑歌曲&#34;,&#34;description&#34;:&#34;编辑歌曲&#34;,&#34;act&#34;:&#34;PUT&#34;},{&#34;name&#34;:&#34;/v1/admin/qiniutoken&#34;,&#34;display_name&#34;:&#34;七牛token&#34;,&#34;description&#34;:&#34;七牛token&#34;,&#34;act&#34;:&#34;GET&#34;}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"重置数据成功\",\"data\":[{\"name\":\"/v1/admin/logout\",\"display_name\":\"退出\",\"description\":\"退出\",\"act\":\"GET\"},{\"name\":\"/v1/admin/users\",\"display_name\":\"用户列表\",\"description\":\"用户列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/users/{id:uint}\",\"display_name\":\"用户详情\",\"description\":\"用户详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/users\",\"display_name\":\"创建用户\",\"description\":\"创建用户\",\"act\":\"POST\"},{\"name\":\"/v1/admin/users/{id:uint}\",\"display_name\":\"编辑用户\",\"description\":\"编辑用户\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/users/{id:uint}\",\"display_name\":\"删除用户\",\"description\":\"删除用户\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/songs/{id:uint}\",\"display_name\":\"删除歌曲\",\"description\":\"删除歌曲\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/users/profile\",\"display_name\":\"个人信息\",\"description\":\"个人信息\",\"act\":\"GET\"},{\"name\":\"/v1/admin/roles\",\"display_name\":\"角色列表\",\"description\":\"角色列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/roles/{id:uint}\",\"display_name\":\"角色详情\",\"description\":\"角色详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/roles\",\"display_name\":\"创建角色\",\"description\":\"创建角色\",\"act\":\"POST\"},{\"name\":\"/v1/admin/roles/{id:uint}\",\"display_name\":\"编辑角色\",\"description\":\"编辑角色\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/roles/{id:uint}\",\"display_name\":\"删除角色\",\"description\":\"删除角色\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/permissions\",\"display_name\":\"权限列表\",\"description\":\"权限列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/permissions/{id:uint}\",\"display_name\":\"权限详情\",\"description\":\"权限详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/permissions/import\",\"display_name\":\"导入权限\",\"description\":\"导入权限\",\"act\":\"POST\"},{\"name\":\"/v1/admin/permissions\",\"display_name\":\"创建权限\",\"description\":\"创建权限\",\"act\":\"POST\"},{\"name\":\"/v1/admin/permissions/{id:uint}\",\"display_name\":\"编辑权限\",\"description\":\"编辑权限\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/permissions/{id:uint}\",\"display_name\":\"删除权限\",\"description\":\"删除权限\",\"act\":\"DELETE\"},{\"name\":\"/v1/admin/songs\",\"display_name\":\"歌曲列表\",\"description\":\"歌曲列表\",\"act\":\"GET\"},{\"name\":\"/v1/admin/songs/{id:uint}\",\"display_name\":\"歌曲详情\",\"description\":\"歌曲详情\",\"act\":\"GET\"},{\"name\":\"/v1/admin/songs\",\"display_name\":\"新增歌曲\",\"description\":\"新增歌曲\",\"act\":\"POST\"},{\"name\":\"/v1/admin/songs/{id:uint}\",\"display_name\":\"编辑歌曲\",\"description\":\"编辑歌曲\",\"act\":\"PUT\"},{\"name\":\"/v1/admin/qiniutoken\",\"display_name\":\"七牛token\",\"description\":\"七牛token\",\"act\":\"GET\"}]}");
+                            document.getElementById('response-body-0-2').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
@@ -1009,6 +1107,100 @@
                 
                 <hr>
             
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-1-7">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:{&#34;Id&#34;:13,&#34;Name&#34;:&#34;name&#34;,&#34;Username&#34;:&#34;username&#34;,&#34;RoleName&#34;:&#34;管理员&#34;,&#34;RoleIds&#34;:[12],&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:55&#43;08:00&#34;}}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":{\"Id\":13,\"Name\":\"name\",\"Username\":\"username\",\"RoleName\":\"管理员\",\"RoleIds\":[12],\"CreatedAt\":\"2020-08-02T20:37:55+08:00\"}}");
+                            document.getElementById('response-body-1-7').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
         </div>
         
         <div id="2top"  role="tabpanel" class="tab-pane col-md-10">
@@ -1381,6 +1573,100 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":123,\"Name\":\"/v1/admin/users\",\"DisplayName\":\"创建用户\",\"Description\":\"创建用户\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":124,\"Name\":\"/v1/admin/users/{id:uint}\",\"DisplayName\":\"编辑用户\",\"Description\":\"编辑用户\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":125,\"Name\":\"/v1/admin/users/{id:uint}\",\"DisplayName\":\"用户详情\",\"Description\":\"用户详情\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":126,\"Name\":\"/v1/admin/users/{id:uint}\",\"DisplayName\":\"删除用户\",\"Description\":\"删除用户\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":127,\"Name\":\"/v1/admin/users\",\"DisplayName\":\"用户列表\",\"Description\":\"用户列表\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":128,\"Name\":\"/v1/admin/users/profile\",\"DisplayName\":\"个人信息\",\"Description\":\"个人信息\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":129,\"Name\":\"/v1/admin/roles\",\"DisplayName\":\"角色列表\",\"Description\":\"角色列表\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":130,\"Name\":\"/v1/admin/roles/{id:uint}\",\"DisplayName\":\"角色详情\",\"Description\":\"角色详情\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":131,\"Name\":\"/v1/admin/logout\",\"DisplayName\":\"退出\",\"Description\":\"退出\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":132,\"Name\":\"/v1/admin/roles\",\"DisplayName\":\"创建角色\",\"Description\":\"创建角色\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":133,\"Name\":\"/v1/admin/roles/{id:uint}\",\"DisplayName\":\"编辑角色\",\"Description\":\"编辑角色\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":134,\"Name\":\"/v1/admin/roles/{id:uint}\",\"DisplayName\":\"删除角色\",\"Description\":\"删除角色\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":135,\"Name\":\"/v1/admin/permissions\",\"DisplayName\":\"权限列表\",\"Description\":\"权限列表\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":136,\"Name\":\"/v1/admin/permissions/{id:uint}\",\"DisplayName\":\"权限详情\",\"Description\":\"权限详情\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":137,\"Name\":\"/v1/admin/permissions/import\",\"DisplayName\":\"导入权限\",\"Description\":\"导入权限\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":138,\"Name\":\"/v1/admin/permissions\",\"DisplayName\":\"创建权限\",\"Description\":\"创建权限\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":139,\"Name\":\"/v1/admin/permissions/{id:uint}\",\"DisplayName\":\"编辑权限\",\"Description\":\"编辑权限\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":140,\"Name\":\"/v1/admin/permissions/{id:uint}\",\"DisplayName\":\"删除权限\",\"Description\":\"删除权限\",\"CreatedAt\":\"2020-08-02T12:26:27+08:00\"},{\"Id\":141,\"Name\":\"/v1/admin/songs\",\"DisplayName\":\"歌曲列表\",\"Description\":\"歌曲列表\",\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"},{\"Id\":142,\"Name\":\"/v1/admin/songs/{id:uint}\",\"DisplayName\":\"歌曲详情\",\"Description\":\"歌曲详情\",\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"},{\"Id\":143,\"Name\":\"/v1/admin/songs\",\"DisplayName\":\"新增歌曲\",\"Description\":\"新增歌曲\",\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"},{\"Id\":144,\"Name\":\"/v1/admin/songs/{id:uint}\",\"DisplayName\":\"编辑歌曲\",\"Description\":\"编辑歌曲\",\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"},{\"Id\":145,\"Name\":\"/v1/admin/songs/{id:uint}\",\"DisplayName\":\"删除歌曲\",\"Description\":\"删除歌曲\",\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"}]}");
                             document.getElementById('response-body-2-3').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-2-4">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:[{&#34;Id&#34;:193,&#34;Name&#34;:&#34;/v1/admin/logout&#34;,&#34;DisplayName&#34;:&#34;退出&#34;,&#34;Description&#34;:&#34;退出&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:194,&#34;Name&#34;:&#34;/v1/admin/users&#34;,&#34;DisplayName&#34;:&#34;用户列表&#34;,&#34;Description&#34;:&#34;用户列表&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:195,&#34;Name&#34;:&#34;/v1/admin/users/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;用户详情&#34;,&#34;Description&#34;:&#34;用户详情&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:196,&#34;Name&#34;:&#34;/v1/admin/users&#34;,&#34;DisplayName&#34;:&#34;创建用户&#34;,&#34;Description&#34;:&#34;创建用户&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:197,&#34;Name&#34;:&#34;/v1/admin/users/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;编辑用户&#34;,&#34;Description&#34;:&#34;编辑用户&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:198,&#34;Name&#34;:&#34;/v1/admin/users/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;删除用户&#34;,&#34;Description&#34;:&#34;删除用户&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:199,&#34;Name&#34;:&#34;/v1/admin/songs/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;删除歌曲&#34;,&#34;Description&#34;:&#34;删除歌曲&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:200,&#34;Name&#34;:&#34;/v1/admin/users/profile&#34;,&#34;DisplayName&#34;:&#34;个人信息&#34;,&#34;Description&#34;:&#34;个人信息&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:53&#43;08:00&#34;},{&#34;Id&#34;:201,&#34;Name&#34;:&#34;/v1/admin/roles&#34;,&#34;DisplayName&#34;:&#34;角色列表&#34;,&#34;Description&#34;:&#34;角色列表&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:202,&#34;Name&#34;:&#34;/v1/admin/roles/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;角色详情&#34;,&#34;Description&#34;:&#34;角色详情&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:203,&#34;Name&#34;:&#34;/v1/admin/roles&#34;,&#34;DisplayName&#34;:&#34;创建角色&#34;,&#34;Description&#34;:&#34;创建角色&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:204,&#34;Name&#34;:&#34;/v1/admin/roles/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;编辑角色&#34;,&#34;Description&#34;:&#34;编辑角色&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:205,&#34;Name&#34;:&#34;/v1/admin/roles/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;删除角色&#34;,&#34;Description&#34;:&#34;删除角色&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:206,&#34;Name&#34;:&#34;/v1/admin/permissions&#34;,&#34;DisplayName&#34;:&#34;权限列表&#34;,&#34;Description&#34;:&#34;权限列表&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:207,&#34;Name&#34;:&#34;/v1/admin/permissions/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;权限详情&#34;,&#34;Description&#34;:&#34;权限详情&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:208,&#34;Name&#34;:&#34;/v1/admin/permissions/import&#34;,&#34;DisplayName&#34;:&#34;导入权限&#34;,&#34;Description&#34;:&#34;导入权限&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:209,&#34;Name&#34;:&#34;/v1/admin/permissions&#34;,&#34;DisplayName&#34;:&#34;创建权限&#34;,&#34;Description&#34;:&#34;创建权限&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:210,&#34;Name&#34;:&#34;/v1/admin/permissions/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;编辑权限&#34;,&#34;Description&#34;:&#34;编辑权限&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:211,&#34;Name&#34;:&#34;/v1/admin/permissions/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;删除权限&#34;,&#34;Description&#34;:&#34;删除权限&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:212,&#34;Name&#34;:&#34;/v1/admin/songs&#34;,&#34;DisplayName&#34;:&#34;歌曲列表&#34;,&#34;Description&#34;:&#34;歌曲列表&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:213,&#34;Name&#34;:&#34;/v1/admin/songs/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;歌曲详情&#34;,&#34;Description&#34;:&#34;歌曲详情&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:214,&#34;Name&#34;:&#34;/v1/admin/songs&#34;,&#34;DisplayName&#34;:&#34;新增歌曲&#34;,&#34;Description&#34;:&#34;新增歌曲&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:215,&#34;Name&#34;:&#34;/v1/admin/songs/{id:uint}&#34;,&#34;DisplayName&#34;:&#34;编辑歌曲&#34;,&#34;Description&#34;:&#34;编辑歌曲&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;},{&#34;Id&#34;:216,&#34;Name&#34;:&#34;/v1/admin/qiniutoken&#34;,&#34;DisplayName&#34;:&#34;七牛token&#34;,&#34;Description&#34;:&#34;七牛token&#34;,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":193,\"Name\":\"/v1/admin/logout\",\"DisplayName\":\"退出\",\"Description\":\"退出\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":194,\"Name\":\"/v1/admin/users\",\"DisplayName\":\"用户列表\",\"Description\":\"用户列表\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":195,\"Name\":\"/v1/admin/users/{id:uint}\",\"DisplayName\":\"用户详情\",\"Description\":\"用户详情\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":196,\"Name\":\"/v1/admin/users\",\"DisplayName\":\"创建用户\",\"Description\":\"创建用户\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":197,\"Name\":\"/v1/admin/users/{id:uint}\",\"DisplayName\":\"编辑用户\",\"Description\":\"编辑用户\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":198,\"Name\":\"/v1/admin/users/{id:uint}\",\"DisplayName\":\"删除用户\",\"Description\":\"删除用户\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":199,\"Name\":\"/v1/admin/songs/{id:uint}\",\"DisplayName\":\"删除歌曲\",\"Description\":\"删除歌曲\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":200,\"Name\":\"/v1/admin/users/profile\",\"DisplayName\":\"个人信息\",\"Description\":\"个人信息\",\"CreatedAt\":\"2020-08-02T20:37:53+08:00\"},{\"Id\":201,\"Name\":\"/v1/admin/roles\",\"DisplayName\":\"角色列表\",\"Description\":\"角色列表\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":202,\"Name\":\"/v1/admin/roles/{id:uint}\",\"DisplayName\":\"角色详情\",\"Description\":\"角色详情\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":203,\"Name\":\"/v1/admin/roles\",\"DisplayName\":\"创建角色\",\"Description\":\"创建角色\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":204,\"Name\":\"/v1/admin/roles/{id:uint}\",\"DisplayName\":\"编辑角色\",\"Description\":\"编辑角色\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":205,\"Name\":\"/v1/admin/roles/{id:uint}\",\"DisplayName\":\"删除角色\",\"Description\":\"删除角色\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":206,\"Name\":\"/v1/admin/permissions\",\"DisplayName\":\"权限列表\",\"Description\":\"权限列表\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":207,\"Name\":\"/v1/admin/permissions/{id:uint}\",\"DisplayName\":\"权限详情\",\"Description\":\"权限详情\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":208,\"Name\":\"/v1/admin/permissions/import\",\"DisplayName\":\"导入权限\",\"Description\":\"导入权限\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":209,\"Name\":\"/v1/admin/permissions\",\"DisplayName\":\"创建权限\",\"Description\":\"创建权限\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":210,\"Name\":\"/v1/admin/permissions/{id:uint}\",\"DisplayName\":\"编辑权限\",\"Description\":\"编辑权限\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":211,\"Name\":\"/v1/admin/permissions/{id:uint}\",\"DisplayName\":\"删除权限\",\"Description\":\"删除权限\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":212,\"Name\":\"/v1/admin/songs\",\"DisplayName\":\"歌曲列表\",\"Description\":\"歌曲列表\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":213,\"Name\":\"/v1/admin/songs/{id:uint}\",\"DisplayName\":\"歌曲详情\",\"Description\":\"歌曲详情\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":214,\"Name\":\"/v1/admin/songs\",\"DisplayName\":\"新增歌曲\",\"Description\":\"新增歌曲\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":215,\"Name\":\"/v1/admin/songs/{id:uint}\",\"DisplayName\":\"编辑歌曲\",\"Description\":\"编辑歌曲\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"},{\"Id\":216,\"Name\":\"/v1/admin/qiniutoken\",\"DisplayName\":\"七牛token\",\"Description\":\"七牛token\",\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"}]}");
+                            document.getElementById('response-body-2-4').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
@@ -1959,6 +2245,100 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":9,\"Name\":\"admin\",\"DisplayName\":\"管理员\",\"Description\":\"管理员\",\"Perms\":null,\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"}]}");
                             document.getElementById('response-body-3-5').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-3-6">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:[{&#34;Id&#34;:12,&#34;Name&#34;:&#34;admin&#34;,&#34;DisplayName&#34;:&#34;管理员&#34;,&#34;Description&#34;:&#34;管理员&#34;,&#34;Perms&#34;:null,&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:54&#43;08:00&#34;}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":12,\"Name\":\"admin\",\"DisplayName\":\"管理员\",\"Description\":\"管理员\",\"Perms\":null,\"CreatedAt\":\"2020-08-02T20:37:54+08:00\"}]}");
+                            document.getElementById('response-body-3-6').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
@@ -2735,6 +3115,194 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":8,\"Name\":\"name\",\"Username\":\"username\",\"RoleName\":\"管理员\",\"RoleIds\":[9],\"CreatedAt\":\"2020-08-02T12:26:28+08:00\"},{\"Id\":9,\"Name\":\"pppp\",\"Username\":\"sfs\",\"RoleName\":\"管理员\",\"RoleIds\":[9],\"CreatedAt\":\"2020-08-02T15:51:43+08:00\"},{\"Id\":10,\"Name\":\"pppp1\",\"Username\":\"pppp1\",\"RoleName\":\"管理员\",\"RoleIds\":[9],\"CreatedAt\":\"2020-08-02T15:52:23+08:00\"}]}");
                             document.getElementById('response-body-4-7').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-4-8">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:[{&#34;Id&#34;:13,&#34;Name&#34;:&#34;name&#34;,&#34;Username&#34;:&#34;username&#34;,&#34;RoleName&#34;:&#34;管理员&#34;,&#34;RoleIds&#34;:[12],&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:55&#43;08:00&#34;}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":13,\"Name\":\"name\",\"Username\":\"username\",\"RoleName\":\"管理员\",\"RoleIds\":[12],\"CreatedAt\":\"2020-08-02T20:37:55+08:00\"}]}");
+                            document.getElementById('response-body-4-8').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-4-9">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:[{&#34;Id&#34;:13,&#34;Name&#34;:&#34;name&#34;,&#34;Username&#34;:&#34;username&#34;,&#34;RoleName&#34;:&#34;管理员&#34;,&#34;RoleIds&#34;:[12],&#34;CreatedAt&#34;:&#34;2020-08-02T20:37:55&#43;08:00&#34;},{&#34;Id&#34;:14,&#34;Name&#34;:&#34;aaa&#34;,&#34;Username&#34;:&#34;aaa&#34;,&#34;RoleName&#34;:&#34;管理员&#34;,&#34;RoleIds&#34;:[12],&#34;CreatedAt&#34;:&#34;2020-08-02T20:38:15&#43;08:00&#34;}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":13,\"Name\":\"name\",\"Username\":\"username\",\"RoleName\":\"管理员\",\"RoleIds\":[12],\"CreatedAt\":\"2020-08-02T20:37:55+08:00\"},{\"Id\":14,\"Name\":\"aaa\",\"Username\":\"aaa\",\"RoleName\":\"管理员\",\"RoleIds\":[12],\"CreatedAt\":\"2020-08-02T20:38:15+08:00\"}]}");
+                            document.getElementById('response-body-4-9').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
@@ -4564,6 +5132,121 @@
                 
                 <hr>
             
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td>  application/json</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p> <H4> Request Body </H4> </p>
+                <pre id="request-body-12-5" class="prettyprint">{&#34;password&#34;:&#34;111111&#34;,&#34;name&#34;:&#34;aaa&#34;,&#34;username&#34;:&#34;aaa&#34;,&#34;role_ids&#34;:[12]}</pre>
+                <script>
+                     
+                    var requestHeader ={"Authorization":" Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU0NzksImlhdCI6MTU5NjM3MTg3OX0.Ov08-hs4oy8RPtA1pr2HLFvjl32lKCJYGKzquV-zGbM\r","Content-Type":" application/json\r","Referer":" http","Sec-Fetch-Dest":" empty\r","Sec-Fetch-Mode":" cors\r","Sec-Fetch-Site":" same-site\r"};
+
+                    if (requestHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"password\":\"111111\",\"name\":\"aaa\",\"username\":\"aaa\",\"role_ids\":[12]}");
+                            document.getElementById('request-body-12-5').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-12-5">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:null}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":null}");
+                            document.getElementById('response-body-12-5').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
         </div>
         
         <div id="13top"  role="tabpanel" class="tab-pane col-md-10">
@@ -5030,6 +5713,121 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":null}");
                             document.getElementById('response-body-14-3').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td>  application/json</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p> <H4> Request Body </H4> </p>
+                <pre id="request-body-14-4" class="prettyprint">{&#34;name&#34;:&#34;简单爱爱&#34;,&#34;url&#34;:&#34;http://files.pandaleo.cn/简单爱 - 周杰伦 (Jay Chou)-2020-08-02.mp3&#34;}</pre>
+                <script>
+                     
+                    var requestHeader ={"Authorization":" Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA\r","Content-Type":" application/json\r","Referer":" http","Sec-Fetch-Dest":" empty\r","Sec-Fetch-Mode":" cors\r","Sec-Fetch-Site":" same-site\r"};
+
+                    if (requestHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"name\":\"简单爱爱\",\"url\":\"http://files.pandaleo.cn/简单爱 - 周杰伦 (Jay Chou)-2020-08-02.mp3\"}");
+                            document.getElementById('request-body-14-4').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-14-4">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:null}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":null}");
+                            document.getElementById('response-body-14-4').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
@@ -5605,6 +6403,100 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":1,\"Name\":\"简单爱-周杰伦\",\"Url\":\"http://files.pandaleo.cn/%E7%AE%80%E5%8D%95%E7%88%B1%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6%20%28Jay%20Chou%29.mp3\",\"Cover\":\"https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=268382703,4143786858\\u0026fm=74\\u0026app=80\\u0026f=JPEG\\u0026size=f121,121?sec=1880279984\\u0026t=a529cd9f38621d09d28e133c422b0f89\",\"ArtistID\":0,\"Artist\":{\"Name\":\"\",\"Poster\":\"\"}}]}");
                             document.getElementById('response-body-16-3').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-16-4">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:[{&#34;Id&#34;:1,&#34;Name&#34;:&#34;简单爱-周杰伦&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/%E7%AE%80%E5%8D%95%E7%88%B1%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6%20%28Jay%20Chou%29.mp3&#34;,&#34;Cover&#34;:&#34;https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=268382703,4143786858\u0026fm=74\u0026app=80\u0026f=JPEG\u0026size=f121,121?sec=1880279984\u0026t=a529cd9f38621d09d28e133c422b0f89&#34;,&#34;ArtistID&#34;:0,&#34;Artist&#34;:{&#34;Name&#34;:&#34;&#34;,&#34;Poster&#34;:&#34;&#34;}},{&#34;Id&#34;:2,&#34;Name&#34;:&#34;简单爱爱&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/简单爱 - 周杰伦 (Jay Chou)-2020-08-02.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;ArtistID&#34;:0,&#34;Artist&#34;:{&#34;Name&#34;:&#34;&#34;,&#34;Poster&#34;:&#34;&#34;}}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":1,\"Name\":\"简单爱-周杰伦\",\"Url\":\"http://files.pandaleo.cn/%E7%AE%80%E5%8D%95%E7%88%B1%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6%20%28Jay%20Chou%29.mp3\",\"Cover\":\"https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=268382703,4143786858\\u0026fm=74\\u0026app=80\\u0026f=JPEG\\u0026size=f121,121?sec=1880279984\\u0026t=a529cd9f38621d09d28e133c422b0f89\",\"ArtistID\":0,\"Artist\":{\"Name\":\"\",\"Poster\":\"\"}},{\"Id\":2,\"Name\":\"简单爱爱\",\"Url\":\"http://files.pandaleo.cn/简单爱 - 周杰伦 (Jay Chou)-2020-08-02.mp3\",\"Cover\":\"\",\"ArtistID\":0,\"Artist\":{\"Name\":\"\",\"Poster\":\"\"}}]}");
+                            document.getElementById('response-body-16-4').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
@@ -6578,6 +7470,2548 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":{\"Id\":0,\"Name\":\"\",\"Username\":\"\",\"RoleName\":\"\",\"RoleIds\":null,\"CreatedAt\":\"2020-08-02T17:28:27+08:00\"}}");
                             document.getElementById('response-body-21-0').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+        </div>
+        
+        <div id="22top"  role="tabpanel" class="tab-pane col-md-10">
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzNzU1MDEsImlhdCI6MTU5NjM3MTkwMX0.P9piW0imbPUOPCTTxS5Nf-FQOn3lkIp7EvXgUbzNvVs</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Postman-Token</td>
+                        <td>  7291866f-b08c-405e-980f-a829207c89fa</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-0">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:01rhI_E36YCEgwO-tQA9cECXNQs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzNzU1MjF9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:01rhI_E36YCEgwO-tQA9cECXNQs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzNzU1MjF9\"}");
+                            document.getElementById('response-body-22-0').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-1">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:bWEEdPUi1McXifOfhIcQe0dF-6w=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODAyNjV9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:bWEEdPUi1McXifOfhIcQe0dF-6w=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODAyNjV9\"}");
+                            document.getElementById('response-body-22-1').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-2">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:l6RX5Eqj3JwTdNWJ6pgNv_2Xd_s=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyMTl9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:l6RX5Eqj3JwTdNWJ6pgNv_2Xd_s=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyMTl9\"}");
+                            document.getElementById('response-body-22-2').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-3">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:YXhGwJv730HdxY2nuuowp2OIuHs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNDN9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:YXhGwJv730HdxY2nuuowp2OIuHs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNDN9\"}");
+                            document.getElementById('response-body-22-3').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-4">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:SPq84keBNwUlDkdVJNPMw67r-QQ=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNTB9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:SPq84keBNwUlDkdVJNPMw67r-QQ=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNTB9\"}");
+                            document.getElementById('response-body-22-4').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-5">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:PWaBgeRpzXVjlJV4WPS2rU4SDVw=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNTd9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:PWaBgeRpzXVjlJV4WPS2rU4SDVw=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNTd9\"}");
+                            document.getElementById('response-body-22-5').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-6">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:hZPLXaKWaNVSUel9kk33pPe1Hms=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNjB9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:hZPLXaKWaNVSUel9kk33pPe1Hms=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEyNjB9\"}");
+                            document.getElementById('response-body-22-6').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-7">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:esHyIdCxORSUyGVlHlLzV0sc8iM=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEzNTB9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:esHyIdCxORSUyGVlHlLzV0sc8iM=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEzNTB9\"}");
+                            document.getElementById('response-body-22-7').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-8">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:ZYignkCAxmaqt5RusstqhncaeUA=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEzNzZ9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:ZYignkCAxmaqt5RusstqhncaeUA=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODEzNzZ9\"}");
+                            document.getElementById('response-body-22-8').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-9">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:z_yohit37JKVf63KBKNpMRQOGSk=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE1NTB9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:z_yohit37JKVf63KBKNpMRQOGSk=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE1NTB9\"}");
+                            document.getElementById('response-body-22-9').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-10">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:1GPQfNWJiCBds073Sn2y7kek344=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE1NTR9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:1GPQfNWJiCBds073Sn2y7kek344=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE1NTR9\"}");
+                            document.getElementById('response-body-22-10').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-11">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:HvI4H-JBV9Q0oyY-uDRK0o0uvQ0=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE1OTB9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:HvI4H-JBV9Q0oyY-uDRK0o0uvQ0=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE1OTB9\"}");
+                            document.getElementById('response-body-22-11').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-12">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:pTQTtTybWon9ne8xWwxk-zBXIxI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE3NTV9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:pTQTtTybWon9ne8xWwxk-zBXIxI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODE3NTV9\"}");
+                            document.getElementById('response-body-22-12').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-13">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:JiDsU_LalKbue8DbX3JXT1f7BLs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIxMzh9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:JiDsU_LalKbue8DbX3JXT1f7BLs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIxMzh9\"}");
+                            document.getElementById('response-body-22-13').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-14">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:pI9OB6W4rc5NUrmc5rEXRvzjaHU=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIxNTR9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:pI9OB6W4rc5NUrmc5rEXRvzjaHU=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIxNTR9\"}");
+                            document.getElementById('response-body-22-14').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-15">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:p1IPx8S_wyVKGMsR6HgsKagvG3Y=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIyODd9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:p1IPx8S_wyVKGMsR6HgsKagvG3Y=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIyODd9\"}");
+                            document.getElementById('response-body-22-15').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-16">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:49eFXHpOeRmzYBI4GTtWx_dMcZo=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzMTZ9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:49eFXHpOeRmzYBI4GTtWx_dMcZo=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzMTZ9\"}");
+                            document.getElementById('response-body-22-16').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-17">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:Hz7APFf2VK_k567DNNAOVDeObCw=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzMjF9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:Hz7APFf2VK_k567DNNAOVDeObCw=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzMjF9\"}");
+                            document.getElementById('response-body-22-17').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-18">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:57uz7_Dqdk9t7ZVVbR-CdGib5Gg=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzNzR9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:57uz7_Dqdk9t7ZVVbR-CdGib5Gg=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzNzR9\"}");
+                            document.getElementById('response-body-22-18').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-19">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:G0ebKaTu9TGomnVkj6RWHtw7CvM=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzNzh9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:G0ebKaTu9TGomnVkj6RWHtw7CvM=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODIzNzh9\"}");
+                            document.getElementById('response-body-22-19').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-20">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:5s_EVvCWBiTSBnBvi4Pi2zJxNdI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0MDN9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:5s_EVvCWBiTSBnBvi4Pi2zJxNdI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0MDN9\"}");
+                            document.getElementById('response-body-22-20').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-21">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:3hpMD6KmEjwJCBw8nS2S0lLeWHI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0MDZ9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:3hpMD6KmEjwJCBw8nS2S0lLeWHI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0MDZ9\"}");
+                            document.getElementById('response-body-22-21').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Pragma</td>
+                        <td>  no-cache</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-22">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:WQLJQjVH63jN75k62qJXUujSRrI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0NDd9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:WQLJQjVH63jN75k62qJXUujSRrI=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0NDd9\"}");
+                            document.getElementById('response-body-22-22').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-23">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:ISiNfoOJTrztH1bq6b25pmIB1bs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0NTd9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:ISiNfoOJTrztH1bq6b25pmIB1bs=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0NTd9\"}");
+                            document.getElementById('response-body-22-23').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-22-24">{&#34;status&#34;:true,&#34;msg&#34;:&#34;&#34;,&#34;data&#34;:&#34;nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:NKxhaWlVDiR8bFSmji4R1KTpXnQ=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0ODh9&#34;}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"\",\"data\":\"nGhnoTK0Yabi98wjmrfdRnChtATkptKg-kZ86YoV:NKxhaWlVDiR8bFSmji4R1KTpXnQ=:eyJzY29wZSI6ImZpbGVzIiwiZGVhZGxpbmUiOjE1OTYzODI0ODh9\"}");
+                            document.getElementById('response-body-22-24').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+        </div>
+        
+        <div id="23top"  role="tabpanel" class="tab-pane col-md-10">
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTYzODAyNjAsImlhdCI6MTU5NjM3NjY2MH0.jN77vGZtxELAYLYOumMbpJZbtoSNfxol09Jn23Xd8yA</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-23-0">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:{&#34;Id&#34;:2,&#34;Name&#34;:&#34;简单爱爱&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/简单爱 - 周杰伦 (Jay Chou)-2020-08-02.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;ArtistID&#34;:0,&#34;Artist&#34;:{&#34;Name&#34;:&#34;&#34;,&#34;Poster&#34;:&#34;&#34;}}}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":{\"Id\":2,\"Name\":\"简单爱爱\",\"Url\":\"http://files.pandaleo.cn/简单爱 - 周杰伦 (Jay Chou)-2020-08-02.mp3\",\"Cover\":\"\",\"ArtistID\":0,\"Artist\":{\"Name\":\"\",\"Poster\":\"\"}}}");
+                            document.getElementById('response-body-23-0').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
