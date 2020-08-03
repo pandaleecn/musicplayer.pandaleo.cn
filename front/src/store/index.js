@@ -10,39 +10,39 @@ const store = new Vuex.Store({
     PermissionsData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
     RolesData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
     SongsData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
     AdminsData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
     PlaylistsData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
     AlbumsData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
     ArtistsData: {
       ListData: [],
       queryData: {},
-      total: 0,
+      total: 0
     },
-    QiniuToken: [],
+    QiniuToken: []
   },
   mutations: {
     QiniuToken(state, data) {
@@ -71,7 +71,7 @@ const store = new Vuex.Store({
     },
     ArtistsData(state, data) {
       state.ArtistsData.ListData = data;
-    },
+    }
   },
   actions: {
     async getUserProfile({ state, commit }) {
@@ -105,8 +105,8 @@ const store = new Vuex.Store({
     async getArtists({ state, commit }, datas) {
       const data = await utils.getArtists(datas);
       commit("ArtistsData", data.data.data);
-    },
-  },
+    }
+  }
 });
 
 export default store;

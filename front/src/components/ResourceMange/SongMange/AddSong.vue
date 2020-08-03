@@ -15,7 +15,7 @@
 
           <el-form-item prop="Url" class="margin-left-lg margin-top must" label="歌曲链接">
             <el-input class="form-input-h" v-model="ruleForm.Url" placeholder="请输入" />
-            <p>
+            <p class="audio-box">
               <audio ref="audio" controls />
             </p>
             <p class="form_p_g">请输入歌曲链接或直接上传！</p>
@@ -26,12 +26,18 @@
             </el-upload>
           </el-form-item>
 
-          <el-form-item prop="Artist" class="margin-left-lg margin-top rolement" label="选择歌手">
-            <div class="tree-box">
-              <!--  :default-expanded-keys="[2, 3]" -->
-              <!-- 默认展开的的节点 -->
-              <el-tree ref="tree" :data="data" show-checkbox node-key="Id" :props="defaultProps" :default-checked-keys="per_ids">
-              </el-tree>
+          <el-form-item prop="" class="margin-left-lg margin-top rolement" label="选择歌手">
+            <!-- <div class="tree-box"> -->
+            <!--  :default-expanded-keys="[2, 3]" -->
+            <!-- 默认展开的的节点 -->
+            <!-- <el-tree ref="tree" :data="data" show-checkbox node-key="Id" :props="defaultProps" :default-checked-keys="per_ids"> -->
+            <!-- </el-tree> -->
+            <!-- </div> -->
+            <div>
+              <el-select v-model="ruleForm.ArtistID" placeholder="请选择">
+                <el-option v-for="item in ArtistsData.ListData" :key="item.Id" :label="item.Name" :value="item.Id">
+                </el-option>
+              </el-select>
             </div>
           </el-form-item>
 
@@ -59,7 +65,8 @@ export default {
       ruleForm: {
         Name: '',
         Url: '',
-        ID: this.$route.params.id
+        ID: this.$route.params.id,
+        ArtistID: ''
       },
       rules: {
         Name: [{
@@ -94,12 +101,12 @@ export default {
   },
   computed: {
     ...mapState([
-
+      'ArtistsData'
     ])
   },
   methods: {
     ...mapActions([
-
+      'getArtists'
     ]),
     async getData () {
       if (this.$route.params.id) {
@@ -239,6 +246,7 @@ export default {
     }
   },
   mounted: function () {
+    this.getArtists()
     this.getData()
     this.getQiniuToken()
   },
@@ -283,6 +291,11 @@ export default {
   min-height: 220px;
   max-height: 500px;
   overflow: scroll;
+}
+
+.audio-box {
+  margin-top: 10px;
+  width: 800px;
 }
 
 .avatar-uploader {

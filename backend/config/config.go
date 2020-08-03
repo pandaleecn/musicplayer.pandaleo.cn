@@ -30,7 +30,8 @@ var Config = struct {
 	}
 }{}
 
-var Root = "/Users/lidapeng/Desktop/musicplayer.pandaleo.cn/backend/"
+//var Root = "/Users/lidapeng/Desktop/musicplayer.pandaleo.cn/backend/"
+var Root = "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/"
 
 func init() {
 	configPath := filepath.Join(Root, "config/application.yml")

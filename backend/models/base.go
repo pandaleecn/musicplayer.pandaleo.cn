@@ -148,6 +148,10 @@ func DelAllData() {
 	sysinit.Db.Unscoped().Delete(&Role{})
 	sysinit.Db.Unscoped().Delete(&User{})
 	sysinit.Db.Unscoped().Delete(&Stream{})
+	sysinit.Db.Unscoped().Delete(&Song{})
+	sysinit.Db.Unscoped().Delete(&Album{})
+	sysinit.Db.Unscoped().Delete(&Artist{})
+	sysinit.Db.Unscoped().Delete(&Playlist{})
 	sysinit.Db.Exec("DELETE FROM casbin_rule;")
 }
 

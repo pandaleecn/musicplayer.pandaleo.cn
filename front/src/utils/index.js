@@ -7,7 +7,7 @@ const api_url = apiUrl;
 
 const utils = {
   api_url: api_url,
-  getCookie: (name) => {
+  getCookie: name => {
     var arr,
       reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
     arr = document.cookie.match(reg);
@@ -47,7 +47,7 @@ const utils = {
     let reg = new RegExp("(^|\\s)" + className + "(\\s|$)", "g");
     el.className = el.className.replace(reg, " ");
   },
-  delCookie: (name) => {
+  delCookie: name => {
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
     var cval = utils.getCookie(name);
@@ -59,7 +59,7 @@ const utils = {
     var raf =
       window.requestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
-      function (fun) {
+      function(fun) {
         setTimeout(fun, 1000 / 60);
       };
 
@@ -101,200 +101,200 @@ const utils = {
     }
 
     scrollTo(element, endOffset, {
-      horizontal: true,
+      horizontal: true
     });
   },
   // 登陆
   resetData: () => axios.get(`v1/admin/resetData`),
   // 登陆
-  getToken: (item) =>
+  getToken: item =>
     axios.post(`v1/admin/login`, {
       username: item.name,
-      password: item.password,
+      password: item.password
     }),
   // 登陆用户信息
   getUserProfile: () => axios.get(`v1/admin/users/profile`),
-  getAdminsDetail: (id) => axios.get(`v1/admin/users/${id}`),
+  getAdminsDetail: id => axios.get(`v1/admin/users/${id}`),
 
   // 修改密码
-  putUsersPassword: (form) =>
+  putUsersPassword: form =>
     axios.put(`v1/admin/users/${form.Id}/password`, {
-      password: form.password,
+      password: form.password
     }),
   /* ----------------权限管理------------------- */
   // 权限列表
-  getPermissions: (datas) => axios.get(`v1/admin/permissions`, datas),
+  getPermissions: datas => axios.get(`v1/admin/permissions`, datas),
   // 新建权限
-  postPermissions: (form) =>
+  postPermissions: form =>
     axios.post(`v1/admin/permissions`, {
       name: form.Name,
       description: form.Description,
-      display_name: form.DisplayName,
+      display_name: form.DisplayName
     }),
   // 编辑权限
-  putPermissions: (form) =>
+  putPermissions: form =>
     axios.put(`v1/admin/permissions/${form.Id}`, {
       name: form.Name,
       description: form.Description,
-      display_name: form.DisplayName,
+      display_name: form.DisplayName
     }),
   // 删除权限
-  deletePermissions: (id) => axios.delete(`v1/admin/permissions/${id}`),
+  deletePermissions: id => axios.delete(`v1/admin/permissions/${id}`),
   // 权限详情
-  getPermissionsDetail: (id) => axios.get(`v1/admin/permissions/${id}`),
+  getPermissionsDetail: id => axios.get(`v1/admin/permissions/${id}`),
   /* ----------------角色管理------------------- */
   // 角色列表
-  getRoles: (datas) => axios.get(`v1/admin/roles`, datas),
+  getRoles: datas => axios.get(`v1/admin/roles`, datas),
   // 新建角色
-  postRoles: (form) =>
+  postRoles: form =>
     axios.post(`v1/admin/roles`, {
       name: form.Name,
       display_name: form.DisplayName,
-      permissions_ids: form.permissions_ids,
+      permissions_ids: form.permissions_ids
     }),
   // 编辑角色
-  putRoles: (form) =>
+  putRoles: form =>
     axios.put(`v1/admin/roles/${form.Id}`, {
       name: form.Name,
       display_name: form.DisplayName,
-      permissions_ids: form.permissions_ids,
+      permissions_ids: form.permissions_ids
     }),
   // 删除角色
-  deleteRoles: (id) => axios.delete(`v1/admin/roles/${id}`),
+  deleteRoles: id => axios.delete(`v1/admin/roles/${id}`),
   // 角色详情
-  getRolesDetail: (id) => axios.get(`v1/admin/roles/${id}`),
+  getRolesDetail: id => axios.get(`v1/admin/roles/${id}`),
   /* ----------------账号管理------------------- */
   // 账号列表
-  getAdmins: (datas) => axios.get(`v1/admin/users`, datas),
+  getAdmins: datas => axios.get(`v1/admin/users`, datas),
   // 新建账号
-  postAdmins: (form) =>
+  postAdmins: form =>
     axios.post(`v1/admin/users`, {
       password: form.Password,
       name: form.Name,
       username: form.Username,
-      role_ids: form.RoleIds,
+      role_ids: form.RoleIds
     }),
   /* ---------------- 设置 ----------------- */
   // 编辑用户
-  putAdmins: (form) =>
+  putAdmins: form =>
     axios.put(`v1/admin/users/${form.Id}`, {
       password: form.Password,
       name: form.Name,
       username: form.Username,
-      role_ids: form.RoleIds,
+      role_ids: form.RoleIds
     }),
 
   // 删除账号
-  deleteAdmins: (id) => axios.delete(`v1/admin/users/${id}`),
+  deleteAdmins: id => axios.delete(`v1/admin/users/${id}`),
 
   // 账号详情
-  getAdminsDetail: (id) => axios.get(`v1/admin/users/${id}`),
+  getAdminsDetail: id => axios.get(`v1/admin/users/${id}`),
 
   /* ----------------歌曲管理------------------- */
   // 歌曲列表
-  getSongs: (datas) => axios.get(`v1/admin/songs`, datas),
+  getSongs: datas => axios.get(`v1/admin/songs`, datas),
   // 新增歌曲
-  postSongs: (form) =>
+  postSongs: form =>
     axios.post(`v1/admin/songs`, {
       name: form.Name,
       url: form.Url,
-      aritist: form.Aitist,
+      artist_id: form.ArtistID
     }),
   // 编辑歌曲
-  putSongs: (form) =>
+  putSongs: form =>
     axios.put(`v1/admin/songs/${form.Id}`, {
       name: form.Name,
       url: form.Url,
-      aritist: form.Aitist,
+      artist: form.Aitist
     }),
   // 删除歌曲
-  deleteSongs: (id) => axios.delete(`v1/admin/songs/${id}`),
+  deleteSongs: id => axios.delete(`v1/admin/songs/${id}`),
   // 歌曲详情
-  getSongsDetail: (id) => axios.get(`v1/admin/songs/${id}`),
+  getSongsDetail: id => axios.get(`v1/admin/songs/${id}`),
   // 获取七牛 token
   getQiniuToken: () => axios.get(`v1/admin/qiniutoken`),
 
   /* ----------------歌单管理------------------- */
   // 歌单列表
-  getPlaylists: (datas) => axios.get(`v1/admin/playlists`, datas),
+  getPlaylists: datas => axios.get(`v1/admin/playlists`, datas),
   // 新增歌单
-  postPlaylist: (form) =>
+  postPlaylist: form =>
     axios.post(`v1/admin/playlists`, {
-      name: form.Name,
+      name: form.Name
     }),
   // 编辑歌单
-  putPlaylist: (form) =>
+  putPlaylist: form =>
     axios.put(`v1/admin/playlists/${form.Id}`, {
-      name: form.Name,
+      name: form.Name
     }),
   // 删除歌单
-  deletePlaylist: (id) => axios.delete(`v1/admin/playlists/${id}`),
+  deletePlaylist: id => axios.delete(`v1/admin/playlists/${id}`),
   // 歌单详情
-  getPlaylistDetail: (id) => axios.get(`v1/admin/playlists/${id}`),
+  getPlaylistDetail: id => axios.get(`v1/admin/playlists/${id}`),
 
   /* ----------------专辑管理------------------- */
   // 专辑列表
-  getAlbums: (datas) => axios.get(`v1/admin/albums`, datas),
+  getAlbums: datas => axios.get(`v1/admin/albums`, datas),
   // 新增专辑
-  postAlbum: (form) =>
+  postAlbum: form =>
     axios.post(`v1/admin/albums`, {
-      name: form.Name,
+      name: form.Name
     }),
   // 编辑专辑
-  putAlbum: (form) =>
+  putAlbum: form =>
     axios.put(`v1/admin/albums/${form.Id}`, {
-      name: form.Name,
+      name: form.Name
     }),
   // 删除专辑
-  deleteAlbum: (id) => axios.delete(`v1/admin/albums/${id}`),
+  deleteAlbum: id => axios.delete(`v1/admin/albums/${id}`),
   // 专辑详情
-  getAlbumDetail: (id) => axios.get(`v1/admin/albums/${id}`),
+  getAlbumDetail: id => axios.get(`v1/admin/albums/${id}`),
 
   /* ----------------歌手管理------------------- */
   // 歌手列表
-  getArtists: (datas) => axios.get(`v1/admin/artists`, datas),
+  getArtists: datas => axios.get(`v1/admin/artists`, datas),
   // 新增歌手
-  postArtist: (form) =>
+  postArtist: form =>
     axios.post(`v1/admin/artists`, {
-      name: form.Name,
+      name: form.Name
     }),
   // 编辑歌手
-  putArtist: (form) =>
+  putArtist: form =>
     axios.put(`v1/admin/artists/${form.Id}`, {
-      name: form.Name,
+      name: form.Name
     }),
   // 删除歌手
-  deleteArtist: (id) => axios.delete(`v1/admin/artists/${id}`),
+  deleteArtist: id => axios.delete(`v1/admin/artists/${id}`),
   // 歌手详情
-  getArtistDetail: (id) => axios.get(`v1/admin/artists/${id}`),
+  getArtistDetail: id => axios.get(`v1/admin/artists/${id}`)
 };
 
 // 请求拦截器
 axios.interceptors.request.use(
-  (config) => {
+  config => {
     config.timeout = 6000;
     let token = "Bearer " + utils.getCookie("token");
     if (token) {
       config.headers = {
         Authorization: token,
         Accept: "application/json",
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       };
     }
     if (config.url === "refresh") {
       config.headers = {
         "refresh-token": sessionStorage.getItem("refresh_token"),
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       };
     }
     return config;
   },
-  (error) => {
+  error => {
     if (error) {
       Vue.prototype.$message({
         showClose: true,
         message: error.Error,
-        type: "warning",
+        type: "warning"
       });
     }
 
@@ -304,7 +304,7 @@ axios.interceptors.request.use(
 
 // 响应拦截器
 axios.interceptors.response.use(
-  (response) => {
+  response => {
     //   console.log(response);
     //   // 定时刷新access-token
     //   // if (!response.data.value && response.data.data.message === 'token invalid') {
@@ -319,14 +319,14 @@ axios.interceptors.response.use(
     //
     return response;
   },
-  (error) => {
+  error => {
     if (error) {
       if (error.response.status === 401) {
         router
           .replace({
-            name: "Login",
+            name: "Login"
           })
-          .then((r) => {
+          .then(r => {
             // console.log(r);
           });
       }
@@ -334,7 +334,7 @@ axios.interceptors.response.use(
         Vue.prototype.$message({
           showClose: true,
           message: "你没有操作权限",
-          type: "warning",
+          type: "warning"
         });
       }
 
@@ -342,14 +342,14 @@ axios.interceptors.response.use(
         Vue.prototype.$message({
           showClose: true,
           message: "你的操作太频繁，请稍后再试",
-          type: "warning",
+          type: "warning"
         });
       }
 
       Vue.prototype.$message({
         showClose: true,
         message: error,
-        type: "warning",
+        type: "warning"
       });
     }
     return Promise.reject(error);

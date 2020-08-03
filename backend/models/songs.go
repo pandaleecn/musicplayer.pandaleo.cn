@@ -17,9 +17,9 @@ type Song struct {
 	Url				string	`gorm:"VARCHAR(191)"`
 	Cover	 		string 	`gorm:"VARCHAR(191)"`
 	Playlists		[]Playlist	`gorm:"many2many:songs_playlists;"`
-	AlbumID			uint	`gorm:"VARCHAR(191)"`
-	ArtistID		uint	`gorm:"VARCHAR(191)"`
-	UploadUserID	uint	`gorm:"VARCHAR(191)"`
+	AlbumID			int	`gorm:"VARCHAR(191)"`
+	ArtistID		int	`gorm:"VARCHAR(191)"`
+	UploadUserID	int	`gorm:"VARCHAR(191)"`
 	Lrc				string	`gorm:"VARCHAR(191)"`
 }
 

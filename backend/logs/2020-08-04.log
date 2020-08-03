@@ -1,0 +1,961 @@
+[DBUG] 2020/08/04 00:02 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:02 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:02 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:02 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:02 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:02 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:02 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:02 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:02 Host: register startup notifier
+[DBUG] 2020/08/04 00:02 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:02 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:02 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjMxNTksImlhdCI6MTU5NjQ2Njc1OX0.FD5wDea76O_PUTpqSgdGprGBfm_fgIE_VNlkPeCW44M
+[DBUG] 2020/08/04 00:02 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjMxNTksImlhdCI6MTU5NjQ2Njc1OX0.FD5wDea76O_PUTpqSgdGprGBfm_fgIE_VNlkPeCW44M 0xc0003a0040 map[alg:HS256 typ:JWT] map[exp:1.956463159e+09 iat:1.596466759e+09] FD5wDea76O_PUTpqSgdGprGBfm_fgIE_VNlkPeCW44M true}
+[INFO] 2020/08/04 00:02 aaa 登录系统
+[INFO] 2020/08/04 00:02 username 登录系统
+[DBUG] 2020/08/04 00:02 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:02 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0003a0040 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:03 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:03 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:03 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:03 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:03 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:03 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:03 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:03 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:03 Host: register startup notifier
+[DBUG] 2020/08/04 00:03 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:03 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:03 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:03 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc000492020 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:04 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:04 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:04 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:04 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:04 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:04 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:04 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:04 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:04 Host: register startup notifier
+[DBUG] 2020/08/04 00:04 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:04 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:15 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:15 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:15 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:15 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:15 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:15 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:15 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:15 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:15 Host: register startup notifier
+[DBUG] 2020/08/04 00:15 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:15 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:15 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:15 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0004ea5e0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:20 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:20 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:20 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:20 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:20 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:20 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:20 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:20 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:20 Host: register startup notifier
+[DBUG] 2020/08/04 00:20 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:20 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:20 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:20 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0002e87c0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:21 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:21 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:21 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:21 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:21 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:21 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:21 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:21 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:21 Host: register startup notifier
+[DBUG] 2020/08/04 00:21 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:21 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:22 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:22 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc000119220 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:24 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:24 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:24 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:24 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:24 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:24 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:24 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:24 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:24 Host: register startup notifier
+[DBUG] 2020/08/04 00:24 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:24 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:24 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:24 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc00008aa40 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:47 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:47 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:47 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:47 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:47 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:47 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:47 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:47 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:47 Host: register startup notifier
+[DBUG] 2020/08/04 00:47 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:47 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[HTTP Server] http: panic serving [::1]:55760: reflect: call of reflect.Value.SetInt on uint Value
+goroutine 66 [running]:
+net/http.(*conn).serve.func1(0xc0003a40a0)
+	C:/Go/src/net/http/server.go:1772 +0x140
+panic(0xdfd620, 0xc0000e9200)
+	C:/Go/src/runtime/panic.go:975 +0x3f1
+reflect.Value.SetInt(0xdc35a0, 0xc000066730, 0x187, 0x9)
+	C:/Go/src/reflect/value.go:1604 +0x119
+github.com/snowlyg/gotransformer.(*Transform).transformerPtr(0xc0001cf500)
+	C:/Users/panda/go/pkg/mod/github.com/snowlyg/gotransformer@v0.1.0/gotransformer.go:198 +0xb35
+github.com/snowlyg/gotransformer.(*Transform).Transformer(0xc0001cf500, 0xc000066730, 0x0)
+	C:/Users/panda/go/pkg/mod/github.com/snowlyg/gotransformer@v0.1.0/gotransformer.go:112 +0xb0
+musicplayer.pandaleo.cn/backend/controllers.songTransform(0xc0001346e0, 0xc00032da00)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/controllers/songs.go:225 +0x9f
+musicplayer.pandaleo.cn/backend/controllers.songsTransform(0xc0000e9180, 0x3, 0x4, 0x1, 0xf, 0xc0000e9180)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/controllers/songs.go:216 +0x75
+musicplayer.pandaleo.cn/backend/controllers.GetSongByUser(0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/controllers/songs.go:36 +0x208
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+musicplayer.pandaleo.cn/backend/middleware.(*Casbin).ServeHTTP(0xc000006100, 0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/middleware/casbin.go:36 +0x1ee
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+github.com/iris-contrib/middleware/jwt.(*Middleware).Serve(0xc0003c20f0, 0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/iris-contrib/middleware/jwt@v0.0.0-20191219204441-78279b78a367/jwt.go:123 +0xa5
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+github.com/betacraft/yaag/irisyaag.New.func1(0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/betacraft/yaag@v1.0.1-0.20191027021412-565f65e36090/irisyaag/middleware.go:30 +0xae
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+github.com/iris-contrib/middleware/cors.(*Cors).Serve(0xc0003b0280, 0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/iris-contrib/middleware/cors@v0.0.0-20191219204441-78279b78a367/cors.go:185 +0x1b6
+github.com/kataras/iris/v12/context.Do(0x109a5a0, 0xc0002302d0, 0xc00069b7d0, 0x5, 0x5)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1030 +0x88
+github.com/kataras/iris/v12/context.(*context).Do(0xc0002302d0, 0xc00069b7d0, 0x5, 0x5)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1217 +0x5c
+github.com/kataras/iris/v12/core/router.(*routerHandler).HandleRequest(0xc0006a2820, 0x109a5a0, 0xc0002302d0)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/core/router/handler.go:250 +0x55d
+github.com/kataras/iris/v12/core/router.(*Router).BuildRouter.func1(0x107ea80, 0xc0006e40e0, 0xc00030a100)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/core/router/router.go:135 +0x96
+github.com/kataras/iris/v12/core/router.(*Router).ServeHTTP(0xc000310370, 0x107ea80, 0xc0006e40e0, 0xc00030a100)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/core/router/router.go:227 +0x4f
+net/http.serverHandler.ServeHTTP(0xc0006e4000, 0x107ea80, 0xc0006e40e0, 0xc00030a100)
+	C:/Go/src/net/http/server.go:2807 +0xaa
+net/http.(*conn).serve(0xc0003a40a0, 0x1080fc0, 0xc0002e8140)
+	C:/Go/src/net/http/server.go:1895 +0x873
+created by net/http.(*Server).Serve
+	C:/Go/src/net/http/server.go:2933 +0x363
+[DBUG] 2020/08/04 00:48 Token extracted: 
+[DBUG] 2020/08/04 00:48 Error: No credentials found (CredentialsOptional=false)
+[DBUG] 2020/08/04 00:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk
+[DBUG] 2020/08/04 00:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956464921e+09 iat:1.596468521e+09] HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk true}
+[DBUG] 2020/08/04 00:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk
+[DBUG] 2020/08/04 00:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956464921e+09 iat:1.596468521e+09] HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956464921e+09 iat:1.596468521e+09] HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956464921e+09 iat:1.596468521e+09] HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjQ5MjEsImlhdCI6MTU5NjQ2ODUyMX0.HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956464921e+09 iat:1.596468521e+09] HdvnuuP0hpW_SEnIB1Q3WNLlXEQH0_9MnAJ0vFlTqmk true}
+[INFO] 2020/08/04 00:49 username 登录系统
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:50 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:50 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0003044c0 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[HTTP Server] http: panic serving [::1]:55801: reflect: call of reflect.Value.SetInt on uint Value
+goroutine 68 [running]:
+net/http.(*conn).serve.func1(0xc0003a4320)
+	C:/Go/src/net/http/server.go:1772 +0x140
+panic(0xdfd620, 0xc00040d1e0)
+	C:/Go/src/runtime/panic.go:975 +0x3f1
+reflect.Value.SetInt(0xdc35a0, 0xc000310000, 0x187, 0x9)
+	C:/Go/src/reflect/value.go:1604 +0x119
+github.com/snowlyg/gotransformer.(*Transform).transformerPtr(0xc000369500)
+	C:/Users/panda/go/pkg/mod/github.com/snowlyg/gotransformer@v0.1.0/gotransformer.go:198 +0xb35
+github.com/snowlyg/gotransformer.(*Transform).Transformer(0xc000369500, 0xc000310000, 0x0)
+	C:/Users/panda/go/pkg/mod/github.com/snowlyg/gotransformer@v0.1.0/gotransformer.go:112 +0xb0
+musicplayer.pandaleo.cn/backend/controllers.songTransform(0xc0005c9b80, 0xc0006b9040)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/controllers/songs.go:225 +0x9f
+musicplayer.pandaleo.cn/backend/controllers.songsTransform(0xc00040d160, 0x3, 0x4, 0x1, 0xf, 0xc00040d160)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/controllers/songs.go:216 +0x75
+musicplayer.pandaleo.cn/backend/controllers.GetSongByUser(0x109a5a0, 0xc000230d80)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/controllers/songs.go:36 +0x208
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+musicplayer.pandaleo.cn/backend/middleware.(*Casbin).ServeHTTP(0xc000006100, 0x109a5a0, 0xc000230d80)
+	C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/middleware/casbin.go:36 +0x1ee
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+github.com/iris-contrib/middleware/jwt.(*Middleware).Serve(0xc0003c20f0, 0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/iris-contrib/middleware/jwt@v0.0.0-20191219204441-78279b78a367/jwt.go:123 +0xa5
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+github.com/betacraft/yaag/irisyaag.New.func1(0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/betacraft/yaag@v1.0.1-0.20191027021412-565f65e36090/irisyaag/middleware.go:30 +0xae
+github.com/kataras/iris/v12/context.DefaultNext(0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1343 +0x10e
+github.com/kataras/iris/v12/context.(*context).Next(0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1352 +0x45
+github.com/iris-contrib/middleware/cors.(*Cors).Serve(0xc0003b0280, 0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/iris-contrib/middleware/cors@v0.0.0-20191219204441-78279b78a367/cors.go:185 +0x1b6
+github.com/kataras/iris/v12/context.Do(0x109a5a0, 0xc000230d80, 0xc00069b7d0, 0x5, 0x5)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1030 +0x88
+github.com/kataras/iris/v12/context.(*context).Do(0xc000230d80, 0xc00069b7d0, 0x5, 0x5)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/context/context.go:1217 +0x5c
+github.com/kataras/iris/v12/core/router.(*routerHandler).HandleRequest(0xc0006a2820, 0x109a5a0, 0xc000230d80)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/core/router/handler.go:250 +0x55d
+github.com/kataras/iris/v12/core/router.(*Router).BuildRouter.func1(0x107ea80, 0xc0006e40e0, 0xc00037e100)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/core/router/router.go:135 +0x96
+github.com/kataras/iris/v12/core/router.(*Router).ServeHTTP(0xc000310370, 0x107ea80, 0xc0006e40e0, 0xc00037e100)
+	C:/Users/panda/go/pkg/mod/github.com/kataras/iris/v12@v12.1.8/core/router/router.go:227 +0x4f
+net/http.serverHandler.ServeHTTP(0xc0006e4000, 0x107ea80, 0xc0006e40e0, 0xc00037e100)
+	C:/Go/src/net/http/server.go:2807 +0xaa
+net/http.(*conn).serve(0xc0003a4320, 0x1080fc0, 0xc0002e8200)
+	C:/Go/src/net/http/server.go:1895 +0x873
+created by net/http.(*Server).Serve
+	C:/Go/src/net/http/server.go:2933 +0x363
+[DBUG] 2020/08/04 00:54 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:54 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:54 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:54 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:54 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:54 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:54 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:54 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:54 Host: register startup notifier
+[DBUG] 2020/08/04 00:54 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:54 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms
+[DBUG] 2020/08/04 00:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0NjY5NDQsImlhdCI6MTU5NjQ3MDU0NH0.uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms 0xc0002a4b20 map[alg:HS256 typ:JWT] map[exp:1.956466944e+09 iat:1.596470544e+09] uaXzdEW-NXJruuz6kgDRBEpIUv7c50bmowHEkUFD0ms true}
+[DBUG] 2020/08/04 00:55 [./routes\route.go:73] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:66] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:87] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:80] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:71] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:78] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:64] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:90] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:85] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:55 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/04 00:55 [./routes\route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:64] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:65] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:66] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:69] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:70] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:71] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:72] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:73] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:76] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:77] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:78] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:79] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:80] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:83] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:84] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:85] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:86] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:22] GET: /static/{file:path} -> HandleDir(directory: "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/resources/app/static") and 1 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:87] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/04 00:55 [./routes\route.go:90] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/04 00:55 Application: 1 registered view engine(s)
+[DBUG] 2020/08/04 00:55 Application: running using 1 host(s)
+[DBUG] 2020/08/04 00:55 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:55 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/04 00:55 Host: register startup notifier
+[DBUG] 2020/08/04 00:55 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/04 00:55 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CTRL+C to shut down.
+[DBUG] 2020/08/04 00:55 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:55 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:55 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:55 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:55 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:55 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:55 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:55 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:55 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:55 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:55 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:55 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
+[DBUG] 2020/08/04 00:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM
+[DBUG] 2020/08/04 00:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY0Njk3NjAsImlhdCI6MTU5NjQ3MzM2MH0.LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM 0xc000004500 map[alg:HS256 typ:JWT] map[exp:1.95646976e+09 iat:1.59647336e+09] LAvwuJLETCywhmqooRbJ_ceeqABnwI43_MhacffHBaM true}
