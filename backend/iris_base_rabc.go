@@ -30,7 +30,7 @@ func NewLogFile() *os.File {
 
 func NewApp() *iris.Application {
 	api := iris.New()
-	api.Options("{root:path}", func(context context.Context) {
+	api.Options("{root:path:path}", func(context context.Context) {
 		context.Header("Access-Control-Allow-Credentials", "true")
 		context.Header("Access-Control-Allow-Headers", "Origin,Authorization,Content-Type,Accept,X-Total,X-Limit,X-Offset")
 		context.Header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS,HEAD")
@@ -57,6 +57,7 @@ func NewApp() *iris.Application {
 		&models.Album{},
 		&models.Playlist{},
 	)
+	db.LogMode(true)
 
 	iris.RegisterOnInterrupt(func() {
 		_ = db.Close()

@@ -58,11 +58,33 @@ func App(api *iris.Application) {
 					permissions.Delete("/{id:uint}", controllers.DeletePermission).Name = "删除权限"
 				})
 				app.PartyFunc("/songs", func(songs iris.Party) {
-					songs.Get("/", controllers.GetAllSongs).Name = "歌曲列表"
+					//songs.Get("/", controllers.GetAllSongs).Name = "歌曲列表"
+					songs.Get("/", controllers.GetSongByUser).Name = "用户歌曲列表"
 					songs.Get("/{id:uint}", controllers.GetSong).Name = "歌曲详情"
 					songs.Post("/", controllers.CreateSong).Name = "新增歌曲"
 					songs.Put("/{id:uint}", controllers.UpdateSong).Name = "编辑歌曲"
 					songs.Delete("/{id:uint}", controllers.DeleteSong).Name = "删除歌曲"
+				})
+				app.PartyFunc("/playlists", func(playlists iris.Party) {
+					playlists.Get("/", controllers.GetAllPlayList).Name = "歌单列表"
+					playlists.Get("/{id:uint}", controllers.GetPlaylistDetail).Name = "歌单详情"
+					playlists.Post("/", controllers.CreatePlayList).Name = "新增歌单"
+					playlists.Put("/{id:uint}", controllers.UpdatePlaylist).Name = "编辑歌单"
+					playlists.Delete("/{id:uint}", controllers.DeletePlaylist).Name = "删除歌单"
+				})
+				app.PartyFunc("/albums", func(albums iris.Party) {
+					albums.Get("/", controllers.GetAllAlbums).Name = "专辑列表"
+					albums.Get("/{id:uint}", controllers.GetAlbumDetail).Name = "专辑详情"
+					albums.Post("/", controllers.CreateAlbum).Name = "新增专辑"
+					albums.Put("/{id:uint}", controllers.UpdateAlbums).Name = "编辑专辑"
+					albums.Delete("/{id:uint}", controllers.DeleteAlbums).Name = "删除专辑"
+				})
+				app.PartyFunc("/artists", func(artists iris.Party) {
+					artists.Get("/", controllers.GetAllArtists).Name = "歌手列表"
+					artists.Get("/{id:uint}", controllers.GetArtistDetail).Name = "歌手详情"
+					artists.Post("/", controllers.CreateArtist).Name = "新增歌手"
+					artists.Put("/{id:uint}", controllers.UpdateArtist).Name = "编辑歌手"
+					artists.Delete("/{id:uint}", controllers.DeleteArtist).Name = "删除歌手"
 				})
 				app.PartyFunc("/qiniutoken", func(qiniu iris.Party) {
 					qiniu.Get("/", controllers.GetQiniuToken).Name = "七牛token"

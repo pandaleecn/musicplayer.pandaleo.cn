@@ -5,6 +5,6 @@ type Song struct {
 	Name     string
 	Url      string
 	Cover    string
+	UploadUserID int
 	ArtistID int
-	Artist   Artist
 }

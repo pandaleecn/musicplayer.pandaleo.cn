@@ -3,7 +3,7 @@
     <div class="head">
       <h1 class="head-title">{{$route.meta.title}}</h1>
       <div class="head-action">
-        <el-input v-model="customFilters[0].vals" prefix-icon="el-icon-search" placeholder="搜索歌曲名" class="class_input_width">
+        <el-input v-model="customFilters[0].vals" prefix-icon="el-icon-search" placeholder="搜索歌单名" class="class_input_width">
         </el-input>
         <el-button type="primary" @click="goSeed">新增歌单</el-button>
       </div>
@@ -81,7 +81,7 @@ export default {
         type: 'warning'
       }).then(async () => {
         this.loading = true
-        const data = await utils.deletePlaylists(row.Id)
+        const data = await utils.deletePlaylist(row.Id)
         if (data.data.status) {
           this.$message({
             message: data.data.msg,
@@ -120,12 +120,12 @@ export default {
     },
     goSeed () {
       this.$router.push({
-        name: 'AddPlaylists'
+        name: 'AddPlaylist'
       })
     },
     edit (row) {
       this.$router.push({
-        name: 'EditPlaylists',
+        name: 'EditPlaylist',
         params: {
           id: row.Id
         }

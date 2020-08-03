@@ -116,6 +116,32 @@ func GetAll(string, orderBy string, offset, limit int) *gorm.DB {
 	return db
 }
 
+/**
+ * 获取列表
+ * @method GetAllId
+ * @param  {[type]} string string    [description]
+ * @param  {[type]} orderBy string    [description]
+ * @param  {[type]} relation string    [description]
+ * @param  {[type]} offset int    [description]
+ * @param  {[type]} limit int    [description]
+ */
+func GetAllList(orderBy string, offset, limit int) *gorm.DB {
+	db := sysinit.Db
+	if len(orderBy) > 0 {
+		db.Order(orderBy + "desc")
+	} else {
+		db.Order("created_at desc")
+	}
+
+	if offset > 0 {
+		db.Offset((offset - 1) * limit)
+	}
+	if limit > 0 {
+		db.Limit(limit)
+	}
+	return db
+}
+
 func DelAllData() {
 	sysinit.Db.Unscoped().Delete(&OauthToken{})
 	sysinit.Db.Unscoped().Delete(&Permission{})

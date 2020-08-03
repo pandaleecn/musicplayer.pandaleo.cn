@@ -13,12 +13,14 @@ import (
 type Song struct {
 	gorm.Model
 
-	Name		string	`gorm:"not null VARCHAR(191)"`
-	Url			string	`gorm:"VARCHAR(191)"`
-	Cover	 	string 	`gorm:"VARCHAR(191)"`
-	ArtistID	uint	`gorm:"VARCHAR(191)"`
-	UserID		uint	`gorm:"VARCHAR(191)"`
-	Lrc			string	`gorm:"VARCHAR(191)"`
+	Name			string	`gorm:"not null VARCHAR(191)"`
+	Url				string	`gorm:"VARCHAR(191)"`
+	Cover	 		string 	`gorm:"VARCHAR(191)"`
+	Playlists		[]Playlist	`gorm:"many2many:songs_playlists;"`
+	AlbumID			uint	`gorm:"VARCHAR(191)"`
+	ArtistID		uint	`gorm:"VARCHAR(191)"`
+	UploadUserID	uint	`gorm:"VARCHAR(191)"`
+	Lrc				string	`gorm:"VARCHAR(191)"`
 }
 
 func NewSong(id uint, name string) *Song {
@@ -43,7 +45,7 @@ func NewSongByStruct(vs *validates.CreateUpdateSongRequest) *Song {
 		Url:	vs.Url,
 		Cover:	vs.Cover,
 		ArtistID:	vs.ArtistID,
-		UserID:		vs.UserID,
+		UploadUserID:		vs.UploadUserID,
 	}
 }
 
@@ -53,6 +55,10 @@ func (s *Song) GetSongBySongName() {
 
 func (s *Song) GetSongById() {
 	IsNotFound(sysinit.Db.Where("id = ?", s.ID).First(s).Error)
+}
+
+func (s *Song) GetSongByUser() {
+	IsNotFound(sysinit.Db.Where("upload_user_id = ?", s.UploadUserID).First(s).Error)
 }
 
 func (s *Song) GetSongByArtistId() {
@@ -82,6 +88,25 @@ func GetAllSongs(name, orderBy string, offset, limit int) []*Song {
 	var songs []*Song
 	q := GetAll(name, orderBy, offset, limit)
 	if err := q.Find(&songs).Error; err != nil {
+		color.Red(fmt.Sprintf("GetAllSongErr:%s \n ", err))
+		return nil
+	}
+	return songs
+}
+
+/**
+ * 获取所有的歌曲
+ * @method GetAllUser
+ * @param  {[type]} name string [description]
+ * @param  {[type]} artist_id int [description]
+ * @param  {[type]} orderBy string [description]
+ * @param  {[type]} offset int    [description]
+ * @param  {[type]} limit int    [description]
+ */
+func GetAllSongsByUserId(id uint, orderBy string, offset, limit int) []*Song {
+	var songs []*Song
+	q := GetAllList(orderBy, offset, limit)
+	if err := q.Where("upload_user_id = ?", id).Find(&songs).Error; err != nil {
 		color.Red(fmt.Sprintf("GetAllSongErr:%s \n ", err))
 		return nil
 	}

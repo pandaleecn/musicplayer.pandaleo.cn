@@ -13,6 +13,31 @@ import (
 )
 
 /**
+* @api {get} /admin/songs/:user_id 根据id获取歌曲
+* @apiName 根据id获取歌曲
+* @apiGroup Songs
+* @apiVersion 1.0.0
+* @apiDescription 根据用户id获取歌曲信息
+* @apiSampleRequest /admin/songs/:user_id
+* @apiSuccess {String} msg 消息
+* @apiSuccess {bool} state 状态
+* @apiSuccess {String} data 返回数据
+* @apiPermission 登陆用户
+ */
+func GetSongByUser(ctx iris.Context) {
+	offset := ctx.URLParamIntDefault("offset", 1)
+	limit := ctx.URLParamIntDefault("limit", 15)
+	orderBy := ctx.URLParam("orderBy")
+
+	Id := ctx.Values().Get("auth_user_id").(uint)
+	songs := models.GetAllSongsByUserId(Id, orderBy, offset, limit)
+
+	ctx.StatusCode(iris.StatusOK)
+	_, _ = ctx.JSON(ApiResource(true, songsTransform(songs), "操作成功"))
+
+}
+
+/**
 * @api {get} /admin/songs/:id 根据id获取歌曲
 * @apiName 根据id获取歌曲
 * @apiGroup Songs
@@ -71,7 +96,10 @@ func CreateSong(ctx iris.Context) {
 		}
 	}
 
+	userId := ctx.Values().Get("auth_user_id").(uint)
+	aul.UploadUserID = userId
 	song := models.NewSongByStruct(aul)
+
 	song.CreateSong(aul)
 	ctx.StatusCode(iris.StatusOK)
 	if song.ID == 0 {

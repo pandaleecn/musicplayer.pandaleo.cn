@@ -10,29 +10,7 @@
 
           <el-form-item prop="Name" class="margin-left-lg margin-top must" label="歌曲名">
             <el-input class="form-input-h" v-model="ruleForm.Name" placeholder="请输入" />
-            <p class="form_p_g">请输入歌曲名称！</p>
-          </el-form-item>
-
-          <el-form-item prop="Url" class="margin-left-lg margin-top must" label="歌曲链接">
-            <el-input class="form-input-h" v-model="ruleForm.Url" placeholder="请输入" />
-            <p>
-              <audio ref="audio" controls />
-            </p>
-            <p class="form_p_g">请输入歌曲链接或直接上传！</p>
-            <el-upload class="upload-pic" :action="uploaddomain" :data="QiniuData" :on-remove="handleRemove" :on-error="uploadError"
-              :on-success="uploadSuccess" :before-remove="beforeRemove" :before-upload="beforeSongUpload" :limit="3" multiple
-              :on-exceed="handleExceed" :file-list="fileList">
-              <el-button size="small" type="primary">上传歌曲</el-button>
-            </el-upload>
-          </el-form-item>
-
-          <el-form-item prop="Artist" class="margin-left-lg margin-top rolement" label="选择歌手">
-            <div class="tree-box">
-              <!--  :default-expanded-keys="[2, 3]" -->
-              <!-- 默认展开的的节点 -->
-              <el-tree ref="tree" :data="data" show-checkbox node-key="Id" :props="defaultProps" :default-checked-keys="per_ids">
-              </el-tree>
-            </div>
+            <p class="form_p_g">请输入歌单名称！</p>
           </el-form-item>
 
           <el-form-item class="text-center margin-top-lg">
@@ -58,8 +36,6 @@ export default {
       per_ids: [],
       ruleForm: {
         Name: '',
-        Url: '',
-        ID: this.$route.params.id
       },
       rules: {
         Name: [{
@@ -67,13 +43,6 @@ export default {
           message: '请输入名',
           trigger: 'blur'
         }],
-        Url: [{
-          message: '请输入标识',
-          trigger: 'blur'
-        }],
-        Artist: [{
-          trigger: 'blur'
-        }]
       },
       loading: false,
       resetdata: false,
@@ -81,15 +50,6 @@ export default {
         children: 'children',
         label: 'Description'
       },
-      QiniuData: {
-        key: '', // 图片名字处理
-        token: '' // 七牛云token
-      },
-      uploaddomain: 'https://up-z0.qiniup.com', // 七牛云的上传地址（华南区）
-      qiniuaddr: 'http://files.pandaleo.cn', // 七牛云的图片外链地址
-      uploadPicUrl: '', // 提交到后台图片地址
-      originName: '',
-      fileList: []
     }
   },
   computed: {
@@ -104,10 +64,9 @@ export default {
     async getData () {
       if (this.$route.params.id) {
         this.loading = true
-        const data = await utils.getSongsDetail(this.$route.params.id)
+        const data = await utils.getPlaylistDetail(this.$route.params.id)
         let ruleForm = data.data.data
         this.ruleForm = ruleForm
-        this.$refs.audio.src = data.data.data.Url
 
         if (ruleForm.Perms) {
           ruleForm.Perms.forEach(e => {
@@ -128,9 +87,9 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           if (id) {
-            this.putSongs()
+            this.putPlaylists()
           } else {
-            this.postSongs()
+            this.postPlaylists()
           }
         } else {
           console.log('error submit!!')
@@ -138,16 +97,16 @@ export default {
         }
       })
     },
-    async postSongs () {
+    async postPlaylists () {
       this.loading = true
-      const data = await utils.postSongs(this.ruleForm)
+      const data = await utils.postPlaylist(this.ruleForm)
       if (data.data.status) {
         this.$message({
           type: 'success',
           message: data.data.msg
         })
         this.$router.push({
-          name: 'SongMange'
+          name: 'PlaylistMange'
         })
       } else {
         this.$message({
@@ -157,16 +116,16 @@ export default {
       }
       this.loading = false
     },
-    async putSongs () {
+    async putPlaylists () {
       this.loading = true
-      const data = await utils.putSongs(this.ruleForm)
+      const data = await utils.putPlaylist(this.ruleForm)
       if (data.data.status) {
         this.$message({
           type: 'success',
           message: data.data.msg
         })
         await this.$router.push({
-          name: 'SongMange'
+          name: 'PlaylistMange'
         })
       } else {
         this.$message({
@@ -176,45 +135,8 @@ export default {
       }
       this.loading = false
     },
-    async getQiniuToken () {
-      this.loading = true
-      const data = await utils.getQiniuToken()
-      if (data.data.status) {
-        this.QiniuData.token = data.data.data
-      } else {
-        console.log('获取七牛 token 失败！')
-      }
-
-      this.loading = false
-    },
     handleRemove (file, fileList) {
       this.uploadPicUrl = ''
-    },
-    handleExceed (files, fileList) {
-
-    },
-    beforeSongUpload (file) {
-      var date = new Date().format('yyyy-MM-dd')
-      var time = new Date().toLocaleTimeString().replace(/:/g, '-')
-      let dot = file.name.lastIndexOf('.')
-      let fileOriginName = file.name.substring(0, dot)
-      this.originName = fileOriginName
-      var fileName = fileOriginName + '-' + date + time + '.mp3'
-      this.QiniuData.key = fileName
-    },
-    uploadSuccess (response, file, fileList) {
-      this.ruleForm.Url = `${this.qiniuaddr}/${this.QiniuData.key}`
-      this.ruleForm.Name = this.originName
-    },
-    uploadError (err, file, fileList) {
-      console.log('歌曲上传失败！')
-    },
-    beforeRemove (file, fileList) {
-      // return this.$confirm(`确定移除 ${ file.name }？`);
-    },
-    // 提交数据到后台
-    handleSubmit () {
-
     },
     resetForm (formName) {
       // this.$refs[formName].resetFields();
@@ -240,7 +162,6 @@ export default {
   },
   mounted: function () {
     this.getData()
-    this.getQiniuToken()
   },
   watch: {
     ruleForm: {
