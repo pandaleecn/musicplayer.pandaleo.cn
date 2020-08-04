@@ -13,7 +13,8 @@ type Playlist struct {
 	gorm.Model
 	UserId		uint	`gorm:"not null VARCHAR(191)"`
 	Name		string 	`gorm:"not null VARCHAR(191)"`
-	Songs 		[]Song 	`gorm:"ForeignKey:ID;AssociationForeignKey:ID"`
+	Songs 		[]Song 	`gorm:"many2many:playlists_songs;"`
+
 }
 
 func NewPlaylist(id uint, name string) *Playlist {
@@ -93,6 +94,27 @@ func GetAllPlaylist(id uint, orderBy string, offset, limit int) []*Playlist {
 		return nil
 	}
 	return playlists
+}
+
+/**
+ * 获取所有的歌单歌曲
+ * @method GetAllSong
+ * @param  {[type]} name string [description]
+ * @param  {[type]} artist_id int [description]
+ * @param  {[type]} orderBy string [description]
+ * @param  {[type]} offset int    [description]
+ * @param  {[type]} limit int    [description]
+ */
+func GetAllSongByPlaylist(id uint, orderBy string, offset, limit int) []*Song {
+	playlist := NewPlaylist(id, "")
+	//q := GetAllList(orderBy, offset, limit)
+
+	var songs []*Song
+	if err := sysinit.Db.Model(&playlist).Related(&songs,"Songs").Error; err != nil {
+		color.Red(fmt.Sprintf("GetAllSongErr:%s \n ", err))
+		return nil
+	}
+	return songs
 }
 
 /**

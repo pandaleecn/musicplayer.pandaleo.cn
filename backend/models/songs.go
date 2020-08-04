@@ -19,6 +19,7 @@ type Song struct {
 	ArtistID		uint	`gorm:"VARCHAR(191)"`
 	UploadUserID	uint	`gorm:"VARCHAR(191)"`
 	Lrc				string	`gorm:"VARCHAR(191)"`
+	Playlists		[]*Playlist     `gorm:"many2many:playlists_songs;"`
 }
 
 func NewSong(id uint, name string) *Song {
@@ -90,6 +91,27 @@ func GetAllSongs(name, orderBy string, offset, limit int) []*Song {
 		return nil
 	}
 	return songs
+}
+
+/**
+ * 获取所有的歌曲歌单
+ * @method GetAllUser
+ * @param  {[type]} name string [description]
+ * @param  {[type]} artist_id int [description]
+ * @param  {[type]} orderBy string [description]
+ * @param  {[type]} offset int    [description]
+ * @param  {[type]} limit int    [description]
+ */
+func GetAllPlaylistsBySong(id uint, orderBy string, offset, limit int) []*Playlist {
+	song := NewSong(id, "")
+	//q := GetAllList(orderBy, offset, limit)
+
+	var playlists []*Playlist
+	if err := sysinit.Db.Model(&song).Related(&playlists,"Playlists").Error; err != nil {
+		color.Red(fmt.Sprintf("GetAllSongErr:%s \n ", err))
+		return nil
+	}
+	return playlists
 }
 
 /**

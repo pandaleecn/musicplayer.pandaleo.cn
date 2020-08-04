@@ -213,6 +213,8 @@ const utils = {
   deleteSongs: id => axios.delete(`v1/admin/songs/${id}`),
   // 歌曲详情
   getSongsDetail: id => axios.get(`v1/admin/songs/${id}`),
+  // 歌曲歌单
+  getSongsPlaylists: id => axios.get(`v1/admin/songs/${id}/playlists`),
   // 获取七牛 token
   getQiniuToken: () => axios.get(`v1/admin/qiniutoken`),
 

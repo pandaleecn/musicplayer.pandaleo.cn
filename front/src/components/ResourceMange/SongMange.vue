@@ -15,9 +15,9 @@
 
         <el-table-column prop="Name" label="歌曲名" key="Name" sortable="custom">
         </el-table-column>
-        <el-table-column prop="Cover" label="封面" key="Cover" sortable="custom">
+        <el-table-column prop="AlbumName" label="专辑名" key="AlbumName" sortable="custom">
         </el-table-column>
-        <el-table-column prop="Url" label="链接" key="Url" sortable="custom">
+        <el-table-column prop="ArtistName" label="歌手" key="ArtistName" sortable="custom">
         </el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">

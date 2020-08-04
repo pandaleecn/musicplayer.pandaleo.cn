@@ -46,7 +46,7 @@
 
           <el-form-item prop="" class="margin-left-lg margin-top rolement" label="选择歌单">
             <div>
-              <el-select v-model="ruleForm.PlaylistIds" placeholder="请选择" multiple>
+              <el-select v-model="ruleForm.PlaylistIds" placeholder="请选择" multiple filterable>
                 <el-option v-for="item in PlaylistsData.ListData" :key="item.Id" :label="item.Name" :value="item.Id">
                 </el-option>
               </el-select>
@@ -80,6 +80,8 @@ export default {
         ID: this.$route.params.id,
         ArtistID: '',
         AlbumID: '',
+        PlaylistIds: [],
+        Playlists: []
       },
       rules: {
         Name: [{
@@ -128,10 +130,18 @@ export default {
     async getData () {
       if (this.$route.params.id) {
         this.loading = true
+
         const data = await utils.getSongsDetail(this.$route.params.id)
         let ruleForm = data.data.data
-        this.ruleForm = ruleForm
+        ruleForm.PlaylistIds = []
+        // const playlistsdata = await utils.getSongsPlaylists(this.$route.params.id)
+        if (ruleForm.Playlists) {
+          ruleForm.Playlists.forEach(e => {
+            ruleForm.PlaylistIds.push(e.Id)
+          })
+        }
         this.$refs.audio.src = data.data.data.Url
+        this.ruleForm = ruleForm
 
         if (ruleForm.Perms) {
           ruleForm.Perms.forEach(e => {

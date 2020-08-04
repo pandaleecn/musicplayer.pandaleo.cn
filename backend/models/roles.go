@@ -17,6 +17,7 @@ type Role struct {
 	Name        string `gorm:"unique;not null VARCHAR(191)"`
 	DisplayName string `gorm:"VARCHAR(191)"`
 	Description string `gorm:"VARCHAR(191)"`
+
 }
 
 func NewRole(id uint, name string) *Role {

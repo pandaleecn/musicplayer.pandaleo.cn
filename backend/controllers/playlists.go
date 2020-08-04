@@ -109,6 +109,7 @@ func GetPlaylistDetail(ctx iris.Context) {
 	_, _ = ctx.JSON(ApiResource(true, playlistTransform(playlist), "操作成功"))
 }
 
+
 /**
 * @api {post} /admin/playlists/:id/update 更新账号
 * @apiName 更新歌曲
@@ -188,9 +189,29 @@ func playlistsTransform(playlists []*models.Playlist) []*transformer.Playlist {
 	return ps
 }
 
-func playlistTransform(playlist *models.Playlist) *transformer.Playlist {
+func playlistsTransformAvoidCycle(playlists []*models.Playlist) []*transformer.Playlist {
+	var ps []*transformer.Playlist
+	for _, playlist := range playlists {
+		p := playlistTransformAvoidCycle(playlist)
+		ps = append(ps, p)
+	}
+	return ps
+}
+
+// 多对多关系，需要一方停止引用，否则会循环
+func playlistTransformAvoidCycle(playlist *models.Playlist) *transformer.Playlist {
 	p := &transformer.Playlist{}
 	g := gf.NewTransform(p, playlist, time.RFC3339)
 	_ = g.Transformer()
+
+	return p
+}
+
+func playlistTransform(playlist *models.Playlist) *transformer.Playlist {
+
+	p := playlistTransformAvoidCycle(playlist)
+	ss := models.GetAllSongByPlaylist(p.Id, "", 0, 0)
+	p.Songs = songsTransform(ss)
+
 	return p
 }

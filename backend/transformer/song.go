@@ -7,4 +7,8 @@ type Song struct {
 	Cover			string
 	UploadUserID	uint
 	ArtistID 		uint
+	AlbumID 		uint
+	Playlists		[]*Playlist
+	AlbumName		string
+	ArtistName		string
 }

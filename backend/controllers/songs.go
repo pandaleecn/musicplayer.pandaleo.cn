@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"musicplayer.pandaleo.cn/backend/sysinit"
 	"time"
 
@@ -36,6 +35,31 @@ func GetSongByUser(ctx iris.Context) {
 
 	ctx.StatusCode(iris.StatusOK)
 	_, _ = ctx.JSON(ApiResource(true, songsTransform(songs), "操作成功"))
+
+}
+
+/**
+* @api {get} /admin/songs/:song_id/playlists 根据id获取歌单
+* @apiName 根据id获取歌单
+* @apiGroup Songs
+* @apiVersion 1.0.0
+* @apiDescription 根据用户id获取歌单
+* @apiSampleRequest /admin/songs/:user_id/playlists
+* @apiSuccess {String} msg 消息
+* @apiSuccess {bool} state 状态
+* @apiSuccess {String} data 返回数据
+* @apiPermission 登陆用户
+ */
+func GetSongPlaylists(ctx iris.Context) {
+	offset := ctx.URLParamIntDefault("offset", 1)
+	limit := ctx.URLParamIntDefault("limit", 15)
+	orderBy := ctx.URLParam("orderBy")
+
+	id, _ := ctx.Params().GetUint("id")
+	playlists := models.GetAllPlaylistsBySong(id, orderBy, offset, limit)
+
+	ctx.StatusCode(iris.StatusOK)
+	_, _ = ctx.JSON(ApiResource(true, playlistsTransform(playlists), "操作成功"))
 
 }
 
@@ -150,7 +174,7 @@ func UpdateSong(ctx iris.Context) {
 			}
 		}
 	}
-	log.Printf("111================%s", aul.PlaylistsIds)
+
 	id, _ := ctx.Params().GetUint("id")
 	song := models.NewSong(id, "")
 
@@ -159,10 +183,10 @@ func UpdateSong(ctx iris.Context) {
 
 	var playlists []*models.Playlist
 	sysinit.Db.Where("id in (?)", playlistsIds).Find(&playlists)
-	log.Printf("222==================%s", playlists)
 	aul.Playlists = playlists
 
 	song.UpdateSong(aul)
+	sysinit.Db.Model(&song).Association("Playlists").Replace(playlists)
 	ctx.StatusCode(iris.StatusOK)
 	if song.ID == 0 {
 		_, _ = ctx.JSON(ApiResource(false, song, "操作失败"))
@@ -217,6 +241,7 @@ func GetAllSongs(ctx iris.Context) {
 	songs := models.GetAllSongs(name, orderBy, offset, limit)
 
 	ctx.StatusCode(iris.StatusOK)
+
 	_, _ = ctx.JSON(ApiResource(true, songsTransform(songs), "操作成功"))
 }
 
@@ -229,9 +254,37 @@ func songsTransform(songs []*models.Song) []*transformer.Song {
 	return ss
 }
 
+func songsTransformAvoidCycle(songs []*models.Song) []*transformer.Song {
+	var ss []*transformer.Song
+	for _, song := range songs {
+		s := songTransformAvoidCycle(song)
+		ss = append(ss, s)
+	}
+	return ss
+}
+
 func songTransform(song *models.Song) *transformer.Song {
+	s := songTransformAvoidCycle(song)
+
+	album := models.NewAlbum(s.AlbumID, "")
+	album.GetAlbumById()
+	s.AlbumName = album.Name
+
+	artist := models.NewArtist(s.ArtistID, "")
+	artist.GetArtistId()
+	s.ArtistName = artist.Name
+
+	playlists := models.GetAllPlaylistsBySong(s.Id, "", 0, 0)
+	s.Playlists = playlistsTransformAvoidCycle(playlists)
+
+	return s
+}
+
+
+func songTransformAvoidCycle(song *models.Song) *transformer.Song {
 	s := &transformer.Song{}
 	g := gf.NewTransform(s, song, time.RFC3339)
 	_ = g.Transformer()
+
 	return s
 }

@@ -8,7 +8,7 @@
         <el-form @submit.native.prevent class="margin-top-lg" :label-position="labelPosition" label-width="130px" :model="ruleForm"
           ref="ruleForm" :rules="rules">
 
-          <el-form-item prop="Name" class="margin-left-lg margin-top must" label="歌曲名">
+          <el-form-item prop="Name" class="margin-left-lg margin-top must" label="歌单名">
             <el-input class="form-input-h" v-model="ruleForm.Name" placeholder="请输入" />
             <p class="form_p_g">请输入歌单名称！</p>
           </el-form-item>
@@ -45,21 +45,21 @@ export default {
       per_ids: [],
       ruleForm: {
         Name: '',
-        SongIds: '',
+        SongIds: ''
       },
       rules: {
         Name: [{
           required: true,
           message: '请输入名',
           trigger: 'blur'
-        }],
+        }]
       },
       loading: false,
       resetdata: false,
       defaultProps: {
         children: 'children',
         label: 'Description'
-      },
+      }
     }
   },
   computed: {

@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"log"
 	"strconv"
 	"time"
 
@@ -29,6 +30,7 @@ func GetProfile(ctx iris.Context) {
 	userId := ctx.Values().Get("auth_user_id").(uint)
 	user := models.NewUser(userId, "")
 	user.GetUserById()
+	log.Printf("=======================%d", user.ID)
 	ctx.StatusCode(iris.StatusOK)
 	_, _ = ctx.JSON(ApiResource(true, userTransform(user), ""))
 }
