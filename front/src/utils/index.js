@@ -205,7 +205,9 @@ const utils = {
     axios.put(`v1/admin/songs/${form.Id}`, {
       name: form.Name,
       url: form.Url,
-      artist: form.Aitist
+      artist_id: form.ArtistID,
+      album_id: form.AlbumID,
+      playlist_ids: form.PlaylistIds
     }),
   // 删除歌曲
   deleteSongs: id => axios.delete(`v1/admin/songs/${id}`),
@@ -225,7 +227,8 @@ const utils = {
   // 编辑歌单
   putPlaylist: form =>
     axios.put(`v1/admin/playlists/${form.Id}`, {
-      name: form.Name
+      name: form.Name,
+      song_ids: form.SongIds
     }),
   // 删除歌单
   deletePlaylist: id => axios.delete(`v1/admin/playlists/${id}`),

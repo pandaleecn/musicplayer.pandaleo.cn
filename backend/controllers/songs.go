@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"log"
+	"musicplayer.pandaleo.cn/backend/sysinit"
 	"time"
 
 	"github.com/go-playground/validator/v10"
@@ -77,7 +79,7 @@ func GetSong(ctx iris.Context) {
  */
 func CreateSong(ctx iris.Context) {
 
-	aul := new(validates.CreateUpdateSongRequest)
+	aul := new(models.CreateUpdateSongRequest)
 	if err := ctx.ReadJSON(aul); err != nil {
 		ctx.StatusCode(iris.StatusOK)
 		_, _ = ctx.JSON(ApiResource(false, nil, err.Error()))
@@ -113,7 +115,7 @@ func CreateSong(ctx iris.Context) {
 }
 
 /**
-* @api {post} /admin/songs/:id/update 更新账号
+* @api {post} /admin/songs/:id/update 更新歌曲
 * @apiName 更新歌曲
 * @apiGroup Songs
 * @apiVersion 1.0.0
@@ -130,7 +132,7 @@ func CreateSong(ctx iris.Context) {
 * @apiPermission null
  */
 func UpdateSong(ctx iris.Context) {
-	aul := new(validates.CreateUpdateSongRequest)
+	aul := new(models.CreateUpdateSongRequest)
 
 	if err := ctx.ReadJSON(aul); err != nil {
 		ctx.StatusCode(iris.StatusOK)
@@ -148,9 +150,17 @@ func UpdateSong(ctx iris.Context) {
 			}
 		}
 	}
-
+	log.Printf("111================%s", aul.PlaylistsIds)
 	id, _ := ctx.Params().GetUint("id")
 	song := models.NewSong(id, "")
+
+	playlistsIds := aul.PlaylistsIds
+	aul.PlaylistsIds = nil
+
+	var playlists []*models.Playlist
+	sysinit.Db.Where("id in (?)", playlistsIds).Find(&playlists)
+	log.Printf("222==================%s", playlists)
+	aul.Playlists = playlists
 
 	song.UpdateSong(aul)
 	ctx.StatusCode(iris.StatusOK)

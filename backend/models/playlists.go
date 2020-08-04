@@ -12,8 +12,8 @@ import (
 type Playlist struct {
 	gorm.Model
 	UserId		uint	`gorm:"not null VARCHAR(191)"`
-	Name		string `gorm:"not null VARCHAR(191)"`
-	Songs 		[]Song `gorm:"many2many:playlists_songs;"`
+	Name		string 	`gorm:"not null VARCHAR(191)"`
+	Songs 		[]Song 	`gorm:"ForeignKey:ID;AssociationForeignKey:ID"`
 }
 
 func NewPlaylist(id uint, name string) *Playlist {

@@ -13,6 +13,15 @@
             <p class="form_p_g">请输入歌单名称！</p>
           </el-form-item>
 
+          <el-form-item prop="" class="margin-left-lg margin-top rolement" label="选择歌曲">
+            <div>
+              <el-select v-model="ruleForm.SongIds" placeholder="请选择" multiple>
+                <el-option v-for="item in SongsData.ListData" :key="item.Id" :label="item.Name" :value="item.Id">
+                </el-option>
+              </el-select>
+            </div>
+          </el-form-item>
+
           <el-form-item class="text-center margin-top-lg">
             <el-button :disabled="loading" type="primary" @click="submitForm('ruleForm')">提交</el-button>
             <el-button @click="resetForm('ruleForm')">返回</el-button>
@@ -36,6 +45,7 @@ export default {
       per_ids: [],
       ruleForm: {
         Name: '',
+        SongIds: '',
       },
       rules: {
         Name: [{
@@ -54,12 +64,12 @@ export default {
   },
   computed: {
     ...mapState([
-
+      'SongsData'
     ])
   },
   methods: {
     ...mapActions([
-
+      'getSongs'
     ]),
     async getData () {
       if (this.$route.params.id) {
@@ -161,6 +171,7 @@ export default {
     }
   },
   mounted: function () {
+    this.getSongs()
     this.getData()
   },
   watch: {

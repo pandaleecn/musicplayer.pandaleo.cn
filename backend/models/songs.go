@@ -7,7 +7,6 @@ import (
 	"github.com/fatih/color"
 	"github.com/jinzhu/gorm"
 	"musicplayer.pandaleo.cn/backend/sysinit"
-	"musicplayer.pandaleo.cn/backend/validates"
 )
 
 type Song struct {
@@ -16,7 +15,6 @@ type Song struct {
 	Name			string	`gorm:"not null VARCHAR(191)"`
 	Url				string	`gorm:"VARCHAR(191)"`
 	Cover	 		string 	`gorm:"VARCHAR(191)"`
-	Playlists		[]Playlist	`gorm:"many2many:songs_playlists;"`
 	AlbumID			uint	`gorm:"VARCHAR(191)"`
 	ArtistID		uint	`gorm:"VARCHAR(191)"`
 	UploadUserID	uint	`gorm:"VARCHAR(191)"`
@@ -34,7 +32,7 @@ func NewSong(id uint, name string) *Song {
 	}
 }
 
-func NewSongByStruct(vs *validates.CreateUpdateSongRequest) *Song {
+func NewSongByStruct(vs *CreateUpdateSongRequest) *Song {
 	return &Song{
 		Model: gorm.Model{
 			ID:        0,
@@ -120,7 +118,7 @@ func GetAllSongsByUserId(id uint, orderBy string, offset, limit int) []*Song {
  * @param  {[type]} cp int    [description]
  * @param  {[type]} mp int    [description]
  */
-func (s *Song) CreateSong(aul *validates.CreateUpdateSongRequest) {
+func (s *Song) CreateSong(aul *CreateUpdateSongRequest) {
 	if err := sysinit.Db.Create(s).Error; err != nil {
 		color.Red(fmt.Sprintf("CreateUserErr:%s \n ", err))
 	}
@@ -134,8 +132,20 @@ func (s *Song) CreateSong(aul *validates.CreateUpdateSongRequest) {
  * @param  {[type]} cp int    [description]
  * @param  {[type]} mp int    [description]
  */
-func (s *Song) UpdateSong(uj *validates.CreateUpdateSongRequest) {
+func (s *Song) UpdateSong(uj *CreateUpdateSongRequest) {
 	if err := Update(s, uj); err != nil {
 		color.Red(fmt.Sprintf("UpdateSongErr:%s \n ", err))
 	}
+}
+
+type CreateUpdateSongRequest struct {
+	Name			string 	`json:"name" comment:"歌名"`
+	Url				string	`json:"url"  comment:"歌曲地址"`
+	Cover    		string 	`json:"cover" comment:"封面"`
+	ArtistID    	uint	`json:"artist_id" comment:"歌手ID"`
+	UploadUserID	uint	`json:"upload_user_id" comment:"用户ID"`
+	Lrc    			string 	`json:"lrc" comment:"歌词"`
+	AlbumID			uint 	`json:"album_id" comment:"歌词"`
+	PlaylistsIds 	[]uint 	`json:"playlist_ids" comment:"权限"`
+	Playlists		[]*Playlist
 }

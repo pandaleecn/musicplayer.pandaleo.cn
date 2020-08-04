@@ -27,15 +27,27 @@
           </el-form-item>
 
           <el-form-item prop="" class="margin-left-lg margin-top rolement" label="选择歌手">
-            <!-- <div class="tree-box"> -->
-            <!--  :default-expanded-keys="[2, 3]" -->
-            <!-- 默认展开的的节点 -->
-            <!-- <el-tree ref="tree" :data="data" show-checkbox node-key="Id" :props="defaultProps" :default-checked-keys="per_ids"> -->
-            <!-- </el-tree> -->
-            <!-- </div> -->
             <div>
               <el-select v-model="ruleForm.ArtistID" placeholder="请选择">
                 <el-option v-for="item in ArtistsData.ListData" :key="item.Id" :label="item.Name" :value="item.Id">
+                </el-option>
+              </el-select>
+            </div>
+          </el-form-item>
+
+          <el-form-item prop="" class="margin-left-lg margin-top rolement" label="选择专辑">
+            <div>
+              <el-select v-model="ruleForm.AlbumID" placeholder="请选择">
+                <el-option v-for="item in AlbumsData.ListData" :key="item.Id" :label="item.Name" :value="item.Id">
+                </el-option>
+              </el-select>
+            </div>
+          </el-form-item>
+
+          <el-form-item prop="" class="margin-left-lg margin-top rolement" label="选择歌单">
+            <div>
+              <el-select v-model="ruleForm.PlaylistIds" placeholder="请选择" multiple>
+                <el-option v-for="item in PlaylistsData.ListData" :key="item.Id" :label="item.Name" :value="item.Id">
                 </el-option>
               </el-select>
             </div>
@@ -66,7 +78,8 @@ export default {
         Name: '',
         Url: '',
         ID: this.$route.params.id,
-        ArtistID: ''
+        ArtistID: '',
+        AlbumID: '',
       },
       rules: {
         Name: [{
@@ -101,12 +114,16 @@ export default {
   },
   computed: {
     ...mapState([
-      'ArtistsData'
+      'ArtistsData',
+      'AlbumsData',
+      'PlaylistsData'
     ])
   },
   methods: {
     ...mapActions([
-      'getArtists'
+      'getArtists',
+      'getAlbums',
+      'getPlaylists'
     ]),
     async getData () {
       if (this.$route.params.id) {
@@ -247,6 +264,8 @@ export default {
   },
   mounted: function () {
     this.getArtists()
+    this.getAlbums()
+    this.getPlaylists()
     this.getData()
     this.getQiniuToken()
   },
