@@ -1,7 +1,7 @@
 package transformer
 
 type Album struct {
-	Id          int
+	Id          uint
 	Name        string
 	CreateUserId		uint
 	Songs		[]Song

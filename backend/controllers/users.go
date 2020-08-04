@@ -223,11 +223,11 @@ func userTransform(user *models.User) *transformer.User {
 	_ = g.Transformer()
 
 	roleIds := models.GetRolesForUser(user.ID)
-	var ris []int
+	var ris []uint
 	var roleName string
 	for num, roleId := range roleIds {
-		ri, _ := strconv.Atoi(roleId)
-		ris = append(ris, ri)
+		ri, _ := strconv.ParseUint(roleId, 10, 32)
+		ris = append(ris, uint(ri))
 		role := models.NewRole(uint(ri), "")
 		role.GetRoleById()
 		if num == len(roleIds)-1 {

@@ -1,7 +1,7 @@
 package transformer
 
 type Role struct {
-	Id          int
+	Id          uint
 	Name        string
 	DisplayName string
 	Description string

@@ -63,6 +63,13 @@ export default {
           url: 'ArtistMange',
           description: '歌手管理',
           icon: ''
+        },
+        {
+          id: 15,
+          name: 'LyricMange',
+          url: 'LyricMange',
+          description: '歌词管理',
+          icon: ''
         }]
       },
       {

@@ -86,6 +86,13 @@ func App(api *iris.Application) {
 					artists.Put("/{id:uint}", controllers.UpdateArtist).Name = "编辑歌手"
 					artists.Delete("/{id:uint}", controllers.DeleteArtist).Name = "删除歌手"
 				})
+				app.PartyFunc("/lyrics", func(lyrics iris.Party) {
+					lyrics.Get("/", controllers.GetAllLyrics).Name = "歌词列表"
+					lyrics.Get("/{id:uint}", controllers.GetLyricDetail).Name = "歌词详情"
+					lyrics.Post("/", controllers.CreateLyric).Name = "新增歌词"
+					lyrics.Put("/{id:uint}", controllers.UpdateLyrics).Name = "编辑歌词"
+					lyrics.Delete("/{id:uint}", controllers.DeleteLyrics).Name = "删除歌词"
+				})
 				app.PartyFunc("/qiniutoken", func(qiniu iris.Party) {
 					qiniu.Get("/", controllers.GetQiniuToken).Name = "七牛token"
 				})

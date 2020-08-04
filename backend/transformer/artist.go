@@ -1,7 +1,7 @@
 package transformer
 
 type Artist struct {
-	Id          int
+	Id          uint
 	Name        string
 	CreateUserId		uint
 	Poster	 string

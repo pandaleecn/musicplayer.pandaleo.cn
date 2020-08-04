@@ -19,9 +19,11 @@ import AlbumMange from "@/components/ResourceMange/AlbumMange";
 import AddAlbum from "@/components/ResourceMange/AlbumMange/AddAlbum";
 import ArtistMange from "@/components/ResourceMange/ArtistMange";
 import AddArtist from "@/components/ResourceMange/ArtistMange/AddArtist";
+import LyricMange from "@/components/ResourceMange/LyricMange";
+import AddLyric from "@/components/ResourceMange/LyricMange/AddLyric";
 
 const parentComponent = {
-  template: `<router-view></router-view>`,
+  template: `<router-view></router-view>`
 };
 Vue.use(Router);
 
@@ -38,16 +40,16 @@ export default new Router({
           meta: {
             title: "主页",
             requireAuth: true,
-            cid: 1,
+            cid: 1
           },
-          component: Home,
+          component: Home
         },
         {
           path: "ResourceMange",
           name: "ResourceMange",
           meta: {
             title: "资源管理",
-            requireAuth: true,
+            requireAuth: true
           },
           component: parentComponent,
           children: [
@@ -57,9 +59,9 @@ export default new Router({
               meta: {
                 title: "歌曲管理",
                 requireAuth: true,
-                cid: 11,
+                cid: 11
               },
-              component: SongMange,
+              component: SongMange
             },
             {
               path: "AddSong",
@@ -67,9 +69,9 @@ export default new Router({
               meta: {
                 title: "新增歌曲",
                 requireAuth: true,
-                cid: 11,
+                cid: 11
               },
-              component: AddSong,
+              component: AddSong
             },
             {
               path: "EditSong",
@@ -77,9 +79,9 @@ export default new Router({
               meta: {
                 title: "编辑歌曲",
                 requireAuth: true,
-                cid: 11,
+                cid: 11
               },
-              component: AddSong,
+              component: AddSong
             },
             {
               path: "PlaylistMange",
@@ -87,9 +89,9 @@ export default new Router({
               meta: {
                 title: "歌单管理",
                 requireAuth: true,
-                cid: 12,
+                cid: 12
               },
-              component: PlaylistMange,
+              component: PlaylistMange
             },
             {
               path: "AddPlaylist",
@@ -97,9 +99,9 @@ export default new Router({
               meta: {
                 title: "新增歌单",
                 requireAuth: true,
-                cid: 12,
+                cid: 12
               },
-              component: AddPlaylist,
+              component: AddPlaylist
             },
             {
               path: "EditPlaylist",
@@ -107,9 +109,9 @@ export default new Router({
               meta: {
                 title: "编辑歌单",
                 requireAuth: true,
-                cid: 12,
+                cid: 12
               },
-              component: AddPlaylist,
+              component: AddPlaylist
             },
             ,
             {
@@ -118,9 +120,9 @@ export default new Router({
               meta: {
                 title: "专辑管理",
                 requireAuth: true,
-                cid: 13,
+                cid: 13
               },
-              component: AlbumMange,
+              component: AlbumMange
             },
             {
               path: "AddAlbum",
@@ -128,9 +130,9 @@ export default new Router({
               meta: {
                 title: "新增专辑",
                 requireAuth: true,
-                cid: 13,
+                cid: 13
               },
-              component: AddAlbum,
+              component: AddAlbum
             },
             {
               path: "EditAlbum",
@@ -138,20 +140,19 @@ export default new Router({
               meta: {
                 title: "编辑歌单",
                 requireAuth: true,
-                cid: 13,
+                cid: 13
               },
-              component: AddAlbum,
+              component: AddAlbum
             },
-            ,
             {
               path: "ArtistMange",
               name: "ArtistMange",
               meta: {
                 title: "歌手管理",
                 requireAuth: true,
-                cid: 14,
+                cid: 14
               },
-              component: ArtistMange,
+              component: ArtistMange
             },
             {
               path: "AddArtist",
@@ -159,28 +160,58 @@ export default new Router({
               meta: {
                 title: "新增歌单",
                 requireAuth: true,
-                cid: 14,
+                cid: 14
               },
-              component: AddArtist,
+              component: AddArtist
             },
             {
               path: "EditArtist",
               name: "EditArtist",
               meta: {
-                title: "编辑",
+                title: "编辑歌手",
                 requireAuth: true,
-                cid: 14,
+                cid: 14
               },
-              component: AddArtist,
+              component: AddArtist
             },
-          ],
+            {
+              path: "LyricMange",
+              name: "LyricMange",
+              meta: {
+                title: "歌词管理",
+                requireAuth: true,
+                cid: 15
+              },
+              component: LyricMange
+            },
+            {
+              path: "AddLyric",
+              name: "AddLyric",
+              meta: {
+                title: "新增歌词",
+                requireAuth: true,
+                cid: 15
+              },
+              component: AddLyric
+            },
+            {
+              path: "EditLyric",
+              name: "EditLyric",
+              meta: {
+                title: "编辑歌词",
+                requireAuth: true,
+                cid: 15
+              },
+              component: AddLyric
+            }
+          ]
         },
         {
           path: "SetUp",
           name: "SetUp",
           meta: {
             title: "设置",
-            requireAuth: true,
+            requireAuth: true
           },
           component: parentComponent,
           children: [
@@ -190,9 +221,9 @@ export default new Router({
               meta: {
                 title: "权限管理",
                 requireAuth: true,
-                cid: 7,
+                cid: 7
               },
-              component: PermissionsMange,
+              component: PermissionsMange
             },
             {
               path: "AddPermissions",
@@ -200,9 +231,9 @@ export default new Router({
               meta: {
                 title: "新建权限",
                 requireAuth: true,
-                cid: 7,
+                cid: 7
               },
-              component: AddPermissions,
+              component: AddPermissions
             },
             {
               path: "EditPermissions/:id",
@@ -210,9 +241,9 @@ export default new Router({
               meta: {
                 title: "编辑权限",
                 requireAuth: true,
-                cid: 7,
+                cid: 7
               },
-              component: AddPermissions,
+              component: AddPermissions
             },
             {
               path: "RoleMange",
@@ -220,9 +251,9 @@ export default new Router({
               meta: {
                 title: "角色管理",
                 requireAuth: true,
-                cid: 8,
+                cid: 8
               },
-              component: RoleMange,
+              component: RoleMange
             },
             {
               path: "AddRole",
@@ -230,9 +261,9 @@ export default new Router({
               meta: {
                 title: "新建角色",
                 requireAuth: true,
-                cid: 8,
+                cid: 8
               },
-              component: AddRole,
+              component: AddRole
             },
             {
               path: "EditRole/:id",
@@ -240,9 +271,9 @@ export default new Router({
               meta: {
                 title: "编辑角色",
                 requireAuth: true,
-                cid: 8,
+                cid: 8
               },
-              component: AddRole,
+              component: AddRole
             },
             {
               path: "UsersMange",
@@ -250,9 +281,9 @@ export default new Router({
               meta: {
                 title: "账号管理",
                 requireAuth: true,
-                cid: 9,
+                cid: 9
               },
-              component: UsersMange,
+              component: UsersMange
             },
             {
               path: "AddUsers",
@@ -260,9 +291,9 @@ export default new Router({
               meta: {
                 title: "新建账号",
                 requireAuth: true,
-                cid: 9,
+                cid: 9
               },
-              component: AddUsers,
+              component: AddUsers
             },
             {
               path: "EditUsers/:id",
@@ -270,22 +301,22 @@ export default new Router({
               meta: {
                 title: "编辑账号",
                 requireAuth: true,
-                cid: 9,
+                cid: 9
               },
-              component: AddUsers,
-            },
-          ],
-        },
-      ],
+              component: AddUsers
+            }
+          ]
+        }
+      ]
     },
     {
       path: "/login",
       name: "Login",
       meta: {
         title: "登录页",
-        requireAuth: false,
+        requireAuth: false
       },
-      component: Login,
-    },
-  ],
+      component: Login
+    }
+  ]
 });

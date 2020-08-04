@@ -56,6 +56,7 @@ func NewApp() *iris.Application {
 		&models.Artist{},
 		&models.Album{},
 		&models.Playlist{},
+		&models.Lyric{},
 	)
 	db.LogMode(true)
 

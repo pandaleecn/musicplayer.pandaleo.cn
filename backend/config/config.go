@@ -30,8 +30,8 @@ var Config = struct {
 	}
 }{}
 
-//var Root = "/Users/lidapeng/Desktop/musicplayer.pandaleo.cn/backend/"
-var Root = "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/"
+var Root = "/Users/lidapeng/Desktop/musicplayer.pandaleo.cn/backend/"
+//var Root = "C:/Users/panda/Desktop/GitHub/musicplayer.pandaleo.cn/backend/"
 
 func init() {
 	configPath := filepath.Join(Root, "config/application.yml")
@@ -44,3 +44,8 @@ func init() {
 	}
 
 }
+
+/* package gotransformer.go
+of.SetInt(int64(inf.FieldByName("ID").Interface().(uint)))
+改为 of.SetUint(uint64(inf.FieldByName("ID").Interface().(uint)))
+ */

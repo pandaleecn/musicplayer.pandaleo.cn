@@ -1,6 +1,6 @@
 package transformer
 
 type Playlist struct {
-	Id          int
+	Id          uint
 	Name        string
 }

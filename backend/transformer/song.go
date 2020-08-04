@@ -1,10 +1,10 @@
 package transformer
 
 type Song struct {
-	Id				int
+	Id				uint
 	Name			string
 	Url				string
 	Cover			string
-	UploadUserID	int
-	ArtistID 		int
+	UploadUserID	uint
+	ArtistID 		uint
 }

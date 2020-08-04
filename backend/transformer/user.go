@@ -1,10 +1,10 @@
 package transformer
 
 type User struct {
-	Id        int
+	Id        uint
 	Name      string
 	Username  string
 	RoleName  string
-	RoleIds   []int
+	RoleIds   []uint
 	CreatedAt string
 }

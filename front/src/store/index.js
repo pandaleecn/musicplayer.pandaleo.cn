@@ -42,6 +42,11 @@ const store = new Vuex.Store({
       queryData: {},
       total: 0
     },
+    LyricsData: {
+      ListData: [],
+      queryData: {},
+      total: 0
+    },
     QiniuToken: []
   },
   mutations: {
@@ -71,6 +76,9 @@ const store = new Vuex.Store({
     },
     ArtistsData(state, data) {
       state.ArtistsData.ListData = data;
+    },
+    LyricsData(state, data) {
+      state.LyricsData.ListData = data;
     }
   },
   actions: {
@@ -105,6 +113,10 @@ const store = new Vuex.Store({
     async getArtists({ state, commit }, datas) {
       const data = await utils.getArtists(datas);
       commit("ArtistsData", data.data.data);
+    },
+    async getLyrics({ state, commit }, datas) {
+      const data = await utils.getLyrics(datas);
+      commit("LyricsData", data.data.data);
     }
   }
 });

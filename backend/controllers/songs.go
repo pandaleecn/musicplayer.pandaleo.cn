@@ -96,7 +96,7 @@ func CreateSong(ctx iris.Context) {
 		}
 	}
 
-	userId := ctx.Values().Get("auth_user_id").(int)
+	userId := ctx.Values().Get("auth_user_id").(uint)
 	aul.UploadUserID = userId
 	song := models.NewSongByStruct(aul)
 

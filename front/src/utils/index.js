@@ -266,7 +266,25 @@ const utils = {
   // 删除歌手
   deleteArtist: id => axios.delete(`v1/admin/artists/${id}`),
   // 歌手详情
-  getArtistDetail: id => axios.get(`v1/admin/artists/${id}`)
+  getArtistDetail: id => axios.get(`v1/admin/artists/${id}`),
+
+  /* ----------------歌词管理------------------- */
+  // 歌词列表
+  getLyrics: datas => axios.get(`v1/admin/lyrics`, datas),
+  // 新增歌词
+  postLyric: form =>
+    axios.post(`v1/admin/lyrics`, {
+      name: form.Name
+    }),
+  // 编辑歌词
+  putLyric: form =>
+    axios.put(`v1/admin/lyrics/${form.Id}`, {
+      name: form.Name
+    }),
+  // 删除歌词
+  deleteLyric: id => axios.delete(`v1/admin/lyrics/${id}`),
+  // 歌词详情
+  getLyricDetail: id => axios.get(`v1/admin/lyrics/${id}`)
 };
 
 // 请求拦截器
