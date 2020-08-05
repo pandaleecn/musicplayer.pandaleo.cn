@@ -930,3 +930,882 @@ Application started. Press CTRL+C to shut down.
 [DBUG] 2020/08/05 00:40 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1NTM5MDEsImlhdCI6MTU5NjU1NzUwMX0.lgvS9L1W1dEWXgkDTYsM0pZ_CzUU5jkQEjGH3yMiWQI 0xc0006929c0 map[alg:HS256 typ:JWT] map[exp:1.956553901e+09 iat:1.596557501e+09] lgvS9L1W1dEWXgkDTYsM0pZ_CzUU5jkQEjGH3yMiWQI true}
 [DBUG] 2020/08/05 00:40 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1NTM5MDEsImlhdCI6MTU5NjU1NzUwMX0.lgvS9L1W1dEWXgkDTYsM0pZ_CzUU5jkQEjGH3yMiWQI
 [DBUG] 2020/08/05 00:40 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1NTM5MDEsImlhdCI6MTU5NjU1NzUwMX0.lgvS9L1W1dEWXgkDTYsM0pZ_CzUU5jkQEjGH3yMiWQI 0xc0006929c0 map[alg:HS256 typ:JWT] map[exp:1.956553901e+09 iat:1.596557501e+09] lgvS9L1W1dEWXgkDTYsM0pZ_CzUU5jkQEjGH3yMiWQI true}
+[DBUG] 2020/08/05 09:28 [./routes/route.go:64] OPTIONS: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:81] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:95] OPTIONS: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:88] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:67] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:74] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:86] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:72] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:65] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:98] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:93] OPTIONS: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:79] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:28 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/05 09:28 [./routes/route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:64] GET: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:65] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:66] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:67] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:70] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:71] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:72] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:73] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:74] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:77] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:78] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:79] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:80] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:81] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:84] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:85] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:86] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:87] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:88] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:91] GET: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.GetAllLyrics() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:92] GET: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetLyricDetail() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:93] POST: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:94] PUT: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateLyrics() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:22] GET: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:95] DELETE: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:28 [./routes/route.go:98] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:28 Application: 1 registered view engine(s)
+[DBUG] 2020/08/05 09:28 Application: running using 1 host(s)
+[DBUG] 2020/08/05 09:28 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:28 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:28 Host: register startup notifier
+[DBUG] 2020/08/05 09:28 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/05 09:28 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CMD+C to shut down.
+[INFO] 2020/08/05 09:28 username 登录系统
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:28 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:28 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:30 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:30 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:31 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:31 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:32 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:32 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:33 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:33 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:34 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:34 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0004d37a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:36 [./routes/route.go:64] OPTIONS: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:81] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:95] OPTIONS: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:88] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:67] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:74] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:86] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:72] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:65] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:98] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:93] OPTIONS: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:79] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:36 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/05 09:36 [./routes/route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:64] GET: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:65] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:66] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:67] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:70] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:71] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:72] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:73] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:74] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:77] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:78] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:79] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:80] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:81] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:84] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:85] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:86] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:87] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:88] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:91] GET: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.GetAllLyrics() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:92] GET: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetLyricDetail() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:93] POST: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:94] PUT: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateLyrics() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:22] GET: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:95] DELETE: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:36 [./routes/route.go:98] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:36 Application: 1 registered view engine(s)
+[DBUG] 2020/08/05 09:36 Application: running using 1 host(s)
+[DBUG] 2020/08/05 09:36 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:36 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:36 Host: register startup notifier
+[DBUG] 2020/08/05 09:36 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/05 09:36 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CMD+C to shut down.
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:37 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:37 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:38 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:38 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:41 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:41 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:43 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:43 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc00050f420 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 [./routes/route.go:64] OPTIONS: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:81] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:95] OPTIONS: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:88] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:67] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:74] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:86] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:72] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:65] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:98] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:93] OPTIONS: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:79] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:45 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/05 09:45 [./routes/route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:64] GET: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:65] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:66] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:67] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:70] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:71] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:72] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:73] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:74] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:77] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:78] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:79] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:80] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:81] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:84] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:85] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:86] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:87] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:88] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:91] GET: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.GetAllLyrics() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:92] GET: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetLyricDetail() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:93] POST: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:94] PUT: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateLyrics() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:22] GET: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:95] DELETE: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:45 [./routes/route.go:98] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:45 Application: 1 registered view engine(s)
+[DBUG] 2020/08/05 09:45 Application: running using 1 host(s)
+[DBUG] 2020/08/05 09:45 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:45 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:45 Host: register startup notifier
+[DBUG] 2020/08/05 09:45 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/05 09:45 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CMD+C to shut down.
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:45 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:45 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:46 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:46 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:47 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:47 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:48 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:48 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:49 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:49 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:53 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:53 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:53 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:53 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:53 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:53 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:53 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:53 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:53 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:53 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:53 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:53 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:54 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:54 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:56 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:56 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:57 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:57 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:58 Token extracted: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k
+[DBUG] 2020/08/05 09:58 JWT: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY1ODczMDksImlhdCI6MTU5NjU5MDkwOX0.B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k 0xc0005154a0 map[alg:HS256 typ:JWT] map[exp:1.956587309e+09 iat:1.596590909e+09] B76Ls_FmwvHTnEmyaUUgB2YoFBQO826EqQXlrlvvF0k true}
+[DBUG] 2020/08/05 09:59 [./routes/route.go:64] OPTIONS: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:81] OPTIONS: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:58] OPTIONS: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:95] OPTIONS: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:42] OPTIONS: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:88] OPTIONS: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:67] OPTIONS: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:74] OPTIONS: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:50] OPTIONS: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:43] OPTIONS: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:55] OPTIONS: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:32] OPTIONS: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:86] OPTIONS: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:72] OPTIONS: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:40] OPTIONS: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:29] OPTIONS: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:65] OPTIONS: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:98] OPTIONS: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:93] OPTIONS: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:79] OPTIONS: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:35] OPTIONS: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:56] OPTIONS: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:48] OPTIONS: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:22] OPTIONS: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:59 [./iris_base_rabc.go:33] OPTIONS: /{root:path:path} -> main.NewApp.func1()
+[DBUG] 2020/08/05 09:59 [./routes/route.go:49] PUT: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateRole() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:48] POST: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.CreateRole() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:50] DELETE: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteRole() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:53] GET: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.GetAllPermissions() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:54] GET: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:47] GET: /v1/admin/roles/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetRole() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:55] POST: /v1/admin/permissions/import -> musicplayer.pandaleo.cn/backend/controllers.ImportPermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:46] GET: /v1/admin/roles -> musicplayer.pandaleo.cn/backend/controllers.GetAllRoles() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:56] POST: /v1/admin/permissions -> musicplayer.pandaleo.cn/backend/controllers.CreatePermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:57] PUT: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:43] GET: /v1/admin/users/profile -> musicplayer.pandaleo.cn/backend/controllers.GetProfile() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:58] DELETE: /v1/admin/permissions/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePermission() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:62] GET: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.GetSongByUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:63] GET: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetSong() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:42] DELETE: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:64] GET: /v1/admin/songs/{id:uint}/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetSongPlaylists() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:41] PUT: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:65] POST: /v1/admin/songs -> musicplayer.pandaleo.cn/backend/controllers.CreateSong() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:66] PUT: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateSong() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:40] POST: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.CreateUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:67] DELETE: /v1/admin/songs/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteSong() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:70] GET: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.GetAllPlayList() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:71] GET: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetPlaylistDetail() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:39] GET: /v1/admin/users/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetUser() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:72] POST: /v1/admin/playlists -> musicplayer.pandaleo.cn/backend/controllers.CreatePlayList() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:73] PUT: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdatePlaylist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:38] GET: /v1/admin/users -> musicplayer.pandaleo.cn/backend/controllers.GetAllUsers() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:74] DELETE: /v1/admin/playlists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeletePlaylist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:77] GET: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.GetAllAlbums() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:78] GET: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetAlbumDetail() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:35] GET: /v1/admin/logout -> musicplayer.pandaleo.cn/backend/controllers.UserLogout() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:79] POST: /v1/admin/albums -> musicplayer.pandaleo.cn/backend/controllers.CreateAlbum() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:80] PUT: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateAlbums() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:32] GET: /v1/admin/resetData -> musicplayer.pandaleo.cn/backend/controllers.ResetData() and 2 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:81] DELETE: /v1/admin/albums/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteAlbums() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:84] GET: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.GetAllArtists() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:85] GET: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetArtistDetail() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:29] POST: /v1/admin/login -> musicplayer.pandaleo.cn/backend/controllers.UserLogin() and 1 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:86] POST: /v1/admin/artists -> musicplayer.pandaleo.cn/backend/controllers.CreateArtist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:87] PUT: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateArtist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:23] GET: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:88] DELETE: /v1/admin/artists/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteArtist() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:91] GET: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.GetAllLyrics() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:92] GET: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.GetLyricDetail() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:22] HEAD: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:93] POST: /v1/admin/lyrics -> musicplayer.pandaleo.cn/backend/controllers.CreateLyric() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:94] PUT: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.UpdateLyrics() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:22] GET: /static/{file:path} -> HandleDir(directory: "resources/app/static") and 1 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:95] DELETE: /v1/admin/lyrics/{id:uint} -> musicplayer.pandaleo.cn/backend/controllers.DeleteLyrics() and 4 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:23] OPTIONS: / -> musicplayer.pandaleo.cn/backend/routes.App.func1() and 1 more
+[DBUG] 2020/08/05 09:59 [./routes/route.go:98] GET: /v1/admin/qiniutoken -> musicplayer.pandaleo.cn/backend/controllers.GetQiniuToken() and 4 more
+[DBUG] 2020/08/05 09:59 Application: 1 registered view engine(s)
+[DBUG] 2020/08/05 09:59 Application: running using 1 host(s)
+[DBUG] 2020/08/05 09:59 Host: addr is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:59 Host: virtual host is 0.0.0.0:8085
+[DBUG] 2020/08/05 09:59 Host: register startup notifier
+[DBUG] 2020/08/05 09:59 Host: register server shutdown on interrupt(CTRL+C/CMD+C)
+[DBUG] 2020/08/05 09:59 Host: server will ignore the following errors: [http: Server closed]
+Now listening on: http://0.0.0.0:8085
+Application started. Press CMD+C to shut down.

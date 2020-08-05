@@ -1,8 +1,9 @@
 package controllers
 
 import (
-	"musicplayer.pandaleo.cn/backend/sysinit"
 	"time"
+
+	"musicplayer.pandaleo.cn/backend/sysinit"
 
 	"github.com/go-playground/validator/v10"
 	gf "github.com/snowlyg/gotransformer"
@@ -125,6 +126,13 @@ func CreateSong(ctx iris.Context) {
 	userId := ctx.Values().Get("auth_user_id").(uint)
 	aul.UploadUserID = userId
 	song := models.NewSongByStruct(aul)
+
+	playlistsIds := aul.PlaylistsIds
+	aul.PlaylistsIds = nil
+
+	var playlists []*models.Playlist
+	sysinit.Db.Where("id in (?)", playlistsIds).Find(&playlists)
+	aul.Playlists = playlists
 
 	song.CreateSong(aul)
 	ctx.StatusCode(iris.StatusOK)
@@ -279,7 +287,6 @@ func songTransform(song *models.Song) *transformer.Song {
 
 	return s
 }
-
 
 func songTransformAvoidCycle(song *models.Song) *transformer.Song {
 	s := &transformer.Song{}

@@ -12,14 +12,14 @@ import (
 type Song struct {
 	gorm.Model
 
-	Name			string	`gorm:"not null VARCHAR(191)"`
-	Url				string	`gorm:"VARCHAR(191)"`
-	Cover	 		string 	`gorm:"VARCHAR(191)"`
-	AlbumID			uint	`gorm:"VARCHAR(191)"`
-	ArtistID		uint	`gorm:"VARCHAR(191)"`
-	UploadUserID	uint	`gorm:"VARCHAR(191)"`
-	Lrc				string	`gorm:"VARCHAR(191)"`
-	Playlists		[]*Playlist     `gorm:"many2many:playlists_songs;"`
+	Name         string      `gorm:"not null VARCHAR(191)"`
+	Url          string      `gorm:"VARCHAR(191)"`
+	Cover        string      `gorm:"VARCHAR(191)"`
+	AlbumID      uint        `gorm:"VARCHAR(191)"`
+	ArtistID     uint        `gorm:"VARCHAR(191)"`
+	UploadUserID uint        `gorm:"VARCHAR(191)"`
+	Lrc          string      `gorm:"VARCHAR(191)"`
+	Playlists    []*Playlist `gorm:"many2many:playlists_songs;"`
 }
 
 func NewSong(id uint, name string) *Song {
@@ -40,11 +40,12 @@ func NewSongByStruct(vs *CreateUpdateSongRequest) *Song {
 			CreatedAt: time.Now(),
 			UpdatedAt: time.Now(),
 		},
-		Name:	vs.Name,
-		Url:	vs.Url,
-		Cover:	vs.Cover,
-		ArtistID:	vs.ArtistID,
-		UploadUserID:		vs.UploadUserID,
+		Name:         vs.Name,
+		Url:          vs.Url,
+		Cover:        vs.Cover,
+		AlbumID:      vs.AlbumID,
+		ArtistID:     vs.ArtistID,
+		UploadUserID: vs.UploadUserID,
 	}
 }
 
@@ -107,7 +108,7 @@ func GetAllPlaylistsBySong(id uint, orderBy string, offset, limit int) []*Playli
 	//q := GetAllList(orderBy, offset, limit)
 
 	var playlists []*Playlist
-	if err := sysinit.Db.Model(&song).Related(&playlists,"Playlists").Error; err != nil {
+	if err := sysinit.Db.Model(&song).Related(&playlists, "Playlists").Error; err != nil {
 		color.Red(fmt.Sprintf("GetAllSongErr:%s \n ", err))
 		return nil
 	}
@@ -161,13 +162,13 @@ func (s *Song) UpdateSong(uj *CreateUpdateSongRequest) {
 }
 
 type CreateUpdateSongRequest struct {
-	Name			string 	`json:"name" comment:"歌名"`
-	Url				string	`json:"url"  comment:"歌曲地址"`
-	Cover    		string 	`json:"cover" comment:"封面"`
-	ArtistID    	uint	`json:"artist_id" comment:"歌手ID"`
-	UploadUserID	uint	`json:"upload_user_id" comment:"用户ID"`
-	Lrc    			string 	`json:"lrc" comment:"歌词"`
-	AlbumID			uint 	`json:"album_id" comment:"歌词"`
-	PlaylistsIds 	[]uint 	`json:"playlist_ids" comment:"权限"`
-	Playlists		[]*Playlist
+	Name         string `json:"name" comment:"歌名"`
+	Url          string `json:"url"  comment:"歌曲地址"`
+	Cover        string `json:"cover" comment:"封面"`
+	ArtistID     uint   `json:"artist_id" comment:"歌手ID"`
+	UploadUserID uint   `json:"upload_user_id" comment:"用户ID"`
+	Lrc          string `json:"lrc" comment:"歌词"`
+	AlbumID      uint   `json:"album_id" comment:"歌词"`
+	PlaylistsIds []uint `json:"playlist_ids" comment:"权限"`
+	Playlists    []*Playlist
 }

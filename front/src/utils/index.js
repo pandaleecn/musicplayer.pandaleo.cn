@@ -198,7 +198,9 @@ const utils = {
     axios.post(`v1/admin/songs`, {
       name: form.Name,
       url: form.Url,
-      artist_id: form.ArtistID
+      artist_id: form.ArtistID,
+      album_id: form.AlbumID,
+      playlist_ids: form.PlaylistIds
     }),
   // 编辑歌曲
   putSongs: form =>
