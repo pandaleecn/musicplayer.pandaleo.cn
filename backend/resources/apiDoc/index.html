@@ -259,6 +259,10 @@
             
                 <li role="presentation"><a href="#79top" role="tab" data-toggle="tab">GET : /v1/admin/songs/16</a></li>
             
+                <li role="presentation"><a href="#80top" role="tab" data-toggle="tab">GET : /v1/admin/playlists/5</a></li>
+            
+                <li role="presentation"><a href="#81top" role="tab" data-toggle="tab">PUT : /v1/admin/playlists/5</a></li>
+            
         <ul>
     </div>
     <div class="col-md-8 tab-content">
@@ -59994,6 +59998,100 @@
                 
                 <hr>
             
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY2OTYxMTAsImlhdCI6MTU5NjY5OTcxMH0.gX_cmfrWWKqzKdLrVSbcrh0DIGjVUIFLglNp7GS1_R4</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-26-20">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:[{&#34;Id&#34;:5,&#34;Name&#34;:&#34;周杰伦 - 发如雪&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 发如雪-2020-08-05上午9-30-28.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:5,&#34;Name&#34;:&#34;工作&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;},{&#34;Id&#34;:6,&#34;Name&#34;:&#34;周杰伦 - 枫&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 枫-2020-08-05上午9-33-45.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:4,&#34;Name&#34;:&#34;运动&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;},{&#34;Id&#34;:7,&#34;Name&#34;:&#34;周杰伦 - 黑色毛衣&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 黑色毛衣-2020-08-05上午9-34-47.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:4,&#34;Name&#34;:&#34;运动&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;}]},{&#34;Id&#34;:4,&#34;Name&#34;:&#34;运动&#34;,&#34;Songs&#34;:[{&#34;Id&#34;:6,&#34;Name&#34;:&#34;周杰伦 - 枫&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 枫-2020-08-05上午9-33-45.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:4,&#34;Name&#34;:&#34;运动&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;},{&#34;Id&#34;:7,&#34;Name&#34;:&#34;周杰伦 - 黑色毛衣&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 黑色毛衣-2020-08-05上午9-34-47.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:4,&#34;Name&#34;:&#34;运动&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;}]},{&#34;Id&#34;:5,&#34;Name&#34;:&#34;工作&#34;,&#34;Songs&#34;:[{&#34;Id&#34;:5,&#34;Name&#34;:&#34;周杰伦 - 发如雪&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 发如雪-2020-08-05上午9-30-28.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:5,&#34;Name&#34;:&#34;工作&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;}]}]}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":[{\"Id\":5,\"Name\":\"周杰伦 - 发如雪\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 发如雪-2020-08-05上午9-30-28.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":5,\"Name\":\"工作\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"},{\"Id\":6,\"Name\":\"周杰伦 - 枫\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 枫-2020-08-05上午9-33-45.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":4,\"Name\":\"运动\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"},{\"Id\":7,\"Name\":\"周杰伦 - 黑色毛衣\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 黑色毛衣-2020-08-05上午9-34-47.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":4,\"Name\":\"运动\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"}]},{\"Id\":4,\"Name\":\"运动\",\"Songs\":[{\"Id\":6,\"Name\":\"周杰伦 - 枫\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 枫-2020-08-05上午9-33-45.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":4,\"Name\":\"运动\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"},{\"Id\":7,\"Name\":\"周杰伦 - 黑色毛衣\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 黑色毛衣-2020-08-05上午9-34-47.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":4,\"Name\":\"运动\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"}]},{\"Id\":5,\"Name\":\"工作\",\"Songs\":[{\"Id\":5,\"Name\":\"周杰伦 - 发如雪\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 发如雪-2020-08-05上午9-30-28.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":5,\"Name\":\"工作\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"}]}]}");
+                            document.getElementById('response-body-26-20').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
         </div>
         
         <div id="27top"  role="tabpanel" class="tab-pane col-md-10">
@@ -75090,6 +75188,223 @@
                         try {
                             var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":{\"Id\":16,\"Name\":\"周杰伦 - 花海\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 花海-2020-08-05上午9-48-00.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":8,\"Playlists\":null,\"AlbumName\":\"魔杰座\",\"ArtistName\":\"周杰伦\"}}");
                             document.getElementById('response-body-79-0').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+        </div>
+        
+        <div id="80top"  role="tabpanel" class="tab-pane col-md-10">
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY2OTYxMTAsImlhdCI6MTU5NjY5OTcxMH0.gX_cmfrWWKqzKdLrVSbcrh0DIGjVUIFLglNp7GS1_R4</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-80-0">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:{&#34;Id&#34;:5,&#34;Name&#34;:&#34;日常&#34;,&#34;Songs&#34;:[{&#34;Id&#34;:5,&#34;Name&#34;:&#34;周杰伦 - 发如雪&#34;,&#34;Url&#34;:&#34;http://files.pandaleo.cn/周杰伦 - 发如雪-2020-08-05上午9-30-28.mp3&#34;,&#34;Cover&#34;:&#34;&#34;,&#34;UploadUserID&#34;:5,&#34;ArtistID&#34;:4,&#34;AlbumID&#34;:7,&#34;Playlists&#34;:[{&#34;Id&#34;:3,&#34;Name&#34;:&#34;学习&#34;,&#34;Songs&#34;:null},{&#34;Id&#34;:5,&#34;Name&#34;:&#34;日常&#34;,&#34;Songs&#34;:null}],&#34;AlbumName&#34;:&#34;11月的肖邦&#34;,&#34;ArtistName&#34;:&#34;周杰伦&#34;}]}}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":{\"Id\":5,\"Name\":\"日常\",\"Songs\":[{\"Id\":5,\"Name\":\"周杰伦 - 发如雪\",\"Url\":\"http://files.pandaleo.cn/周杰伦 - 发如雪-2020-08-05上午9-30-28.mp3\",\"Cover\":\"\",\"UploadUserID\":5,\"ArtistID\":4,\"AlbumID\":7,\"Playlists\":[{\"Id\":3,\"Name\":\"学习\",\"Songs\":null},{\"Id\":5,\"Name\":\"日常\",\"Songs\":null}],\"AlbumName\":\"11月的肖邦\",\"ArtistName\":\"周杰伦\"}]}}");
+                            document.getElementById('response-body-80-0').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <hr>
+            
+        </div>
+        
+        <div id="81top"  role="tabpanel" class="tab-pane col-md-10">
+            
+                
+                <p> <H4> Request Headers </H4> </p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Authorization</td>
+                        <td>  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY2OTYxMTAsImlhdCI6MTU5NjY5OTcxMH0.gX_cmfrWWKqzKdLrVSbcrh0DIGjVUIFLglNp7GS1_R4</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td>  application/json</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Referer</td>
+                        <td>  http</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Dest</td>
+                        <td>  empty</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Mode</td>
+                        <td>  cors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sec-Fetch-Site</td>
+                        <td>  same-site</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                
+                
+                <p> <H4> Request Body </H4> </p>
+                <pre id="request-body-81-0" class="prettyprint">{&#34;name&#34;:&#34;工作&#34;}</pre>
+                <script>
+                     
+                    var requestHeader ={"Authorization":" Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE5NTY2OTYxMTAsImlhdCI6MTU5NjY5OTcxMH0.gX_cmfrWWKqzKdLrVSbcrh0DIGjVUIFLglNp7GS1_R4\r","Content-Type":" application/json\r","Referer":" http","Sec-Fetch-Dest":" empty\r","Sec-Fetch-Mode":" cors\r","Sec-Fetch-Site":" same-site\r"};
+
+                    if (requestHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"name\":\"工作\"}");
+                            document.getElementById('request-body-81-0').innerHTML = syntaxHighlight(jsonStr);
+                        } catch (e) {
+                             
+                        }
+                    }
+                </script>
+                
+                <p><h4> Response Code</h4></p>
+                <pre class="prettyprint lang-json">200</pre>
+                
+                <p><h4> Response Headers</h4></p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Credentials</td>
+                        <td> true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Allow-Origin</td>
+                        <td> http://localhost:8080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Access-Control-Expose-Headers</td>
+                        <td> Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Content-Type</td>
+                        <td> application/json; charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Vary</td>
+                        <td> Origin</td>
+                    </tr>
+                    
+                </table>
+                
+                
+                <p> <H4> Response Body </H4> </p>
+                <pre class="prettyprint" id="response-body-81-0">{&#34;status&#34;:true,&#34;msg&#34;:&#34;操作成功&#34;,&#34;data&#34;:null}</pre>
+                <script>
+                     
+                    var responseHeader ={"Access-Control-Allow-Credentials":"true","Access-Control-Allow-Origin":"http://localhost:8080","Access-Control-Expose-Headers":"Accept, Content-Type, Content-Length, Accept-Encoding, X-Csrf-Token, Authorization","Content-Type":"application/json; charset=UTF-8","Vary":"Origin"};
+
+                    if (responseHeader["Content-Type"].includes("application/json")){
+                        try {
+                            var jsonStr = spaceJson("{\"status\":true,\"msg\":\"操作成功\",\"data\":null}");
+                            document.getElementById('response-body-81-0').innerHTML = syntaxHighlight(jsonStr);
                         } catch (e) {
                              
                         }
